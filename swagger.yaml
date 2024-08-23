@@ -1,718 +1,2891 @@
----
-swagger: "2.0"
+openapi: 3.0.0
 info:
-  description: "This is a sample server Petstore server.  You can find out more about\
-    \ Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).\
-    \  For this sample, you can use the api key `special-key` to test the authorization\
-    \ filters."
-  version: "1.0.5"
-  title: "Swagger Petstore"
-  termsOfService: "http://swagger.io/terms/"
+  title: API Protheus Macroex
+  description: API Protheus Macroex
+  version: 1.0.0
+  termsOfService: http://example.com/terms/
   contact:
-    email: "apiteam@swagger.io"
+    name: Érico Amorim Pedrosa
+    url: http://www.example.com/support
+    email: erico.pedrosa@totvs.com.br
   license:
-    name: "Apache 2.0"
-    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "petstore.swagger.io"
-basePath: "/v2"
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: 'http://localhost:3000'
+    description: Development server
+  - url: 'https://api.example.com'
+    description: Production server
 tags:
-- name: "pet"
-  description: "Everything about your Pets"
-  externalDocs:
-    description: "Find out more"
-    url: "http://swagger.io"
-- name: "store"
-  description: "Access to Petstore orders"
-- name: "user"
-  description: "Operations about user"
-  externalDocs:
-    description: "Find out more about our store"
-    url: "http://swagger.io"
-schemes:
-- "https"
-- "http"
+  - name: Fornecedor
+    # description: Fornecedor
+  # - name: Transportadora
+    # description: Transportadora
 paths:
-  /pet/{petId}/uploadImage:
+  /api/v1/create:
     post:
       tags:
-      - "pet"
-      summary: "uploads an image"
-      description: ""
-      operationId: "uploadFile"
-      consumes:
-      - "multipart/form-data"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "petId"
-        in: "path"
-        description: "ID of pet to update"
+        - Fornecedor
+      summary: EndPoint para criar fornecedor
+      # description: |
+        # EndPoint de Fornecedor.
+      operationId: createFornecedor
+      requestBody:
+        # description: The user's name to greet
         required: true
-        type: "integer"
-        format: "int64"
-      - name: "additionalMetadata"
-        in: "formData"
-        description: "Additional data to pass to server"
-        required: false
-        type: "string"
-      - name: "file"
-        in: "formData"
-        description: "file to upload"
-        required: false
-        type: "file"
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+
+                A2_FILIAL:
+                  type: string
+                  lenght: 4
+                  description: "Filial do Sistema"
+
+                A2_COD:
+                  type: string
+                  lenght: 6
+                  description: "Codigo do Fornecedor"
+
+                A2_LOJA:
+                  type: string
+                  lenght: 2
+                  description: "Loja do Fornecedor"
+
+                A2_NOME:
+                  type: string
+                  lenght: 40
+                  description: "Nome ou Razao Social"
+
+                A2_NREDUZ:
+                  type: string
+                  lenght: 20
+                  description: "Nome de Fantasia"
+
+                A2_END:
+                  type: string
+                  lenght: 40
+                  description: "Endereco do Fornecedor"
+
+                A2_NR_END:
+                  type: string
+                  lenght: 6
+                  description: "Numero do Endereco"
+
+                A2_BAIRRO:
+                  type: string
+                  lenght: 20
+                  description: "Bairro do Fornecedor"
+
+                A2_EST:
+                  type: string
+                  lenght: 2
+                  description: "Sigla da Federacao"
+
+                A2_CONTPRE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Não"
+                  description: "Contrib. Previdenciario"
+
+                A2_ESTADO:
+                  type: string
+                  lenght: 20
+                  description: "Nome do Estado Fornecedor"
+
+                A2_COD_MUN:
+                  type: string
+                  lenght: 5
+                  description: "Codigo do Municipio"
+
+                A2_IBGE:
+                  type: string
+                  lenght: 11
+                  description: "Codigo do IBGE"
+
+                A2_MUN:
+                  type: string
+                  lenght: 60
+                  description: "Municipio do Fornecedor"
+
+                A2_CEP:
+                  type: string
+                  lenght: 8
+                  description: "Cod Enderecamento Postal"
+                  example: "99999999"
+
+                A2_TIPO:
+                  type: string
+                  lenght: 1
+                  options: "F=Fisico;J=Juridico;X=Outros"
+                  description: "Tipo do Fornecedor"
+
+                A2_CX_POST:
+                  type: string
+                  lenght: 5
+                  description: "Caixa Postal"
+
+                A2_PFISICA:
+                  type: string
+                  lenght: 18
+                  description: "Reg.Geral/Ced.Estrangeiro"
+
+                A2_CGC:
+                  type: string
+                  lenght: 14
+                  description: "CNPJ/CPF do cliente"
+                  example: "99.999.999/9999-99"
+
+                A2_DDI:
+                  type: string
+                  lenght: 6
+                  description: "Codigo do DDI"
+                  example: "999999"
+
+                A2_DDD:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do DDD"
+                  example: "999"
+
+                A2_TEL:
+                  type: string
+                  lenght: 50
+                  description: "Numero do Telefone"
+                  example: "9999-9999"
+
+                A2_FAX:
+                  type: string
+                  lenght: 15
+                  description: "Numero do FAX do fornec."
+                  example: "999999999999999"
+
+                A2_INSCR:
+                  type: string
+                  lenght: 18
+                  description: "Inscricao Estadual"
+
+                A2_INSCRM:
+                  type: string
+                  lenght: 18
+                  description: "Inscricao Municipal"
+
+                A2_CONTATO:
+                  type: string
+                  lenght: 15
+                  description: "Contato na Empresa"
+
+                A2_BANCO:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do Banco"
+
+                A2_AGENCIA:
+                  type: string
+                  lenght: 5
+                  description: "Cod Agencia Fornecedor"
+
+                A2_NUMCON:
+                  type: string
+                  lenght: 10
+                  description: "Conta Corrente Fornecedor"
+
+                A2_SWIFT:
+                  type: string
+                  lenght: 30
+                  description: "Swift do Fornecedor"
+
+                A2_NATUREZ:
+                  type: string
+                  lenght: 10
+                  description: "Cod Natureza Financeira"
+
+                A2_TRANSP:
+                  type: string
+                  lenght: 6
+                  description: "Codigo da Transportadora"
+
+                A2_PRIOR:
+                  type: string
+                  lenght: 1
+                  description: "Prioridade de Pagamento"
+                  example: "9"
+
+                A2_RISCO:
+                  type: string
+                  lenght: 3
+                  description: "Nivel de Risco"
+
+                A2_COND:
+                  type: string
+                  lenght: 3
+                  description: "Condicao de Pagamento"
+
+                A2_LC:
+                  type: string
+                  lenght: 14
+                  description: "Limite de Credito"
+
+                A2_MATR:
+                  type: N
+                  lenght: 4
+                  description: "Maior Atraso em dias"
+                  example: "9999"
+
+                A2_MCOMPRA:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Maior Compra em Valor"
+                  example: "9999999999999.99"
+
+                A2_METR:
+                  type: N
+                  lenght: 5
+                  decimal: 1
+                  description: "Media de Atraso em dias"
+                  example: "999.9"
+
+                A2_MSALDO:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Maior Saldo Credor"
+                  example: "9999999999999.99"
+
+                A2_NROCOM:
+                  type: N
+                  lenght: 6
+                  description: "Numero total de Compras"
+                  example: "999999"
+
+                A2_PRICOM:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data da Primeira Compra"
+
+                A2_ULTCOM:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data da ultima Compra"
+
+                A2_SALDUP:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Saldo de Duplicatas"
+                  example: "9999999999999.99"
+
+                A2_DESVIO:
+                  type: N
+                  lenght: 6
+                  decimal: 1
+                  description: "Desvio do prz de entrega"
+                  example: "9999.9"
+
+                A2_SALDUPM:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Saldo em Moeda Forte"
+                  example: "9999999999999.99"
+
+                A2_CONTA:
+                  type: string
+                  lenght: 20
+                  description: "Codigo da Conta Contabil"
+
+                A2_TIPORUR:
+                  type: string
+                  lenght: 1
+                  options: "J=Juridico;F=Pessoa Fisica;L=Familiar"
+                  description: "Tp.Fornec.ref.Contr.Seg. "
+
+                A2_RECISS:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Recolhe ISS ?"
+
+                A2_PAIS:
+                  type: string
+                  lenght: 3
+                  description: "Pais do Fornecedor"
+
+                A2_PAISDES:
+                  type: string
+                  lenght: 25
+                  description: "Descr. Pais"
+
+                A2_DEPTO:
+                  type: string
+                  lenght: 30
+                  description: "Departamento p/ Contato"
+
+                A2_ID_FBFN:
+                  type: string
+                  lenght: 7
+                  description: "Identificacao do Fornec."
+
+                A2_STATUS:
+                  type: string
+                  lenght: 1
+                  options: "1=Homologado;2=Nao Homologado"
+                  description: "Fornecedor Homologado"
+
+                A2_GRUPO:
+                  type: string
+                  lenght: 3
+                  description: "Grupo"
+
+                A2_ATIVIDA:
+                  type: string
+                  lenght: 7
+                  description: "Cod.Atividade Economica"
+
+                A2_ORIG_1:
+                  type: string
+                  lenght: 3
+                  description: "Origem 1"
+
+                A2_ORIG_2:
+                  type: string
+                  lenght: 3
+                  description: "Origem 2"
+
+                A2_ORIG_3:
+                  type: string
+                  lenght: 3
+                  description: "Origem 3"
+
+                A2_VINCULA:
+                  type: string
+                  lenght: 1
+                  options: "1=Sem Vinculacao;2=ComSem Influencia de Preco;3=ComCom Influencia de Preco"
+                  description: "Tipo Vinculacao"
+
+                A2_REPRES:
+                  type: string
+                  lenght: 52
+                  description: "Representante"
+
+                A2_REPCONT:
+                  type: string
+                  lenght: 50
+                  description: "Contato"
+
+                A2_REPRTEL:
+                  type: string
+                  lenght: 50
+                  description: "Numero do Telefone"
+
+                A2_REPRFAX:
+                  type: string
+                  lenght: 30
+                  description: "Numero do FAX do Repres."
+
+                A2_REPR_EM:
+                  type: string
+                  lenght: 30
+                  description: "E-Mail Representante"
+
+                A2_REPR_EN:
+                  type: string
+                  lenght: 52
+                  description: "Endereco Representante"
+
+                A2_REPBAIR:
+                  type: string
+                  lenght: 30
+                  description: "Bairro do Representante"
+
+                A2_REPRMUN:
+                  type: string
+                  lenght: 30
+                  description: "Cidade do Represent."
+
+                A2_REPREST:
+                  type: string
+                  lenght: 2
+                  description: "Nome do Estado Represent."
+
+                A2_REPRCEP:
+                  type: string
+                  lenght: 8
+                  description: "Cod Enderecamento Postal"
+                  example: "99999-999"
+
+                A2_REPPAIS:
+                  type: string
+                  lenght: 3
+                  description: "Pais do Representante"
+
+                A2_ID_REPR:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Identifica Repres.na L.I."
+
+                A2_REPR_BA:
+                  type: string
+                  lenght: 3
+                  description: "Banco do Representate"
+
+                A2_REPR_AG:
+                  type: string
+                  lenght: 5
+                  description: "Agencia do Representante"
+
+                A2_REPR_CO:
+                  type: string
+                  lenght: 10
+                  description: "Conta Corrente Represent."
+
+                A2_REPRCGC:
+                  type: string
+                  lenght: 14
+                  description: "CNPJ Representante"
+                  example: "99.999.999/9999-99"
+
+                A2_RET_PAI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Comissao Retida no Pais"
+
+                A2_COMI_SO:
+                  type: string
+                  lenght: 1
+                  options: "1=FOB;2=CFR;3=EX-Works;4=F.A.S."
+                  description: "Tipo Comissao"
+
+                A2_EMAIL:
+                  type: string
+                  lenght: 30
+                  description: "E-Mail"
+
+                A2_HPAGE:
+                  type: string
+                  lenght: 30
+                  description: "Home Page"
+
+                A2_CODMUN:
+                  type: string
+                  lenght: 5
+                  description: "Cod. Mun. ZF Manaus e ALC"
+                  example: "99999"
+
+                A2_CONTCOM:
+                  type: string
+                  lenght: 15
+                  description: "Contato Comercial (NNC)"
+
+                A2_FABRICA:
+                  type: string
+                  lenght: 1
+                  description: "Fabricante"
+
+                A2_FATAVA:
+                  type: N
+                  lenght: 6
+                  decimal: 2
+                  description: "Fator de Avaliacao"
+                  example: "999.99"
+
+                A2_DTAVA:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data da Avaliacao"
+
+                A2_DTVAL:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Validade Avaliacao"
+
+                A2_OK:
+                  type: string
+                  lenght: 2
+                  description: "OK"
+
+                A2_RECINSS:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Calcula INSS p/ Fornec. ?"
+
+                A2_TELEX:
+                  type: string
+                  lenght: 10
+                  description: "Numero do Telex"
+
+                A2_TPESSOA:
+                  type: string
+                  lenght: 2
+                  options: "CI=Comercio/Industria;PF=Pessoa Fisica;OS=Prestaco de Servico"
+                  description: "Tipo de Pessoa"
+
+                A2_CODLOC:
+                  type: string
+                  lenght: 8
+                  description: "Codigo da Localidade"
+
+                A2_CODPAIS:
+                  type: string
+                  lenght: 5
+                  description: "Cd. pas Banco Central"
+                  example: "99999"
+
+                A2_MNOTA:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Maior Nota do Fornecedor"
+                  example: "9999999999999.99"
+
+                A2_TPISSRS:
+                  type: string
+                  lenght: 2
+                  description: "Tipo de Escriturao"
+                  example: "99"
+
+                A2_PAISSUB:
+                  type: string
+                  lenght: 6
+                  description: "Subdiviso Pas"
+
+                A2_RECCIDE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe CIDE"
+
+                A2_GRPTRIB:
+                  type: string
+                  lenght: 3
+                  description: "Grupo de Tributacao"
+
+                A2_UNFEDRP:
+                  type: string
+                  lenght: 30
+                  description: "Unidade Fed. no Exterior"
+
+                A2_CONTAB:
+                  type: string
+                  lenght: 15
+                  description: "Conta Contabil Importao"
+
+                A2_CLIQF:
+                  type: string
+                  lenght: 15
+                  description: "Liquidacao Futura"
+                  example: "999999999999999"
+
+                A2_PLGRUPO:
+                  type: string
+                  lenght: 3
+                  description: "Classe de Fornecedor"
+
+                A2_CODBLO:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do Bloqueio"
+
+                A2_PAISORI:
+                  type: string
+                  lenght: 20
+                  description: "Pais de Origem Fornecedor"
+
+                A2_ROYALTY:
+                  type: string
+                  lenght: 1
+                  description: "Royalty"
+
+                A2_TXTRIBU:
+                  type: N
+                  lenght: 6
+                  decimal: 2
+                  description: "Taxa de Bi-Tributacao"
+                  example: "999.99"
+
+                A2_B2B:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Utiliza B2B?"
+
+                A2_PLCRRES:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Obrigat. Dig. Resp. Mov ?"
+
+                A2_PLFIL:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Filial do Grupo"
+
+                A2_SIGLCR:
+                  type: string
+                  lenght: 7
+                  description: "Sigla C.R"
+
+                A2_CONREG:
+                  type: string
+                  lenght: 10
+                  description: "Numero do Conselho Regio."
+
+                A2_DATBLO:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data do Bloqueio"
+
+                A2_PLPEDES:
+                  type: N
+                  lenght: 13
+                  decimal: 4
+                  description: "% Desconto Producao Med."
+                  example: "999999999.9999"
+
+                A2_CBO:
+                  type: string
+                  lenght: 7
+                  description: "Codigo CBO do Fornecedor"
+
+                A2_CNAE:
+                  type: string
+                  lenght: 9
+                  description: "Codigo CNAE do Fornecedor"
+                  example: "9999-9/9999"
+
+                A2_CIVIL:
+                  type: string
+                  lenght: 1
+                  options: "1=Solteiro;2=Casado;3=Divorciado;4=Viuvo"
+                  description: "Estado civil"
+
+                A2_ROYMIN:
+                  type: N
+                  lenght: 7
+                  decimal: 2
+                  description: "Pagamento minimo Royalty"
+                  example: "9999.99"
+
+                A2_SATIV1:
+                  type: string
+                  lenght: 6
+                  description: "Segmentacao de Ativid. 1"
+                  example: "999999"
+
+                A2_PAGAMEN:
+                  type: string
+                  lenght: 1
+                  options: "1=Nao;2=Sim"
+                  description: "Recebe Pagamento?"
+
+                A2_ENDCOMP:
+                  type: string
+                  lenght: 21
+                  description: "Complemento Endereco"
+
+                A2_MSBLQL:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Bloqueia o Fornecedor"
+
+                A2_GRPDEP:
+                  type: string
+                  lenght: 5
+                  description: "Grupo de Almoxarifados"
+
+                A2_SUBCOD:
+                  type: string
+                  lenght: 1
+                  description: "Sub Codigo"
+
+                A2_TIPAWB:
+                  type: string
+                  lenght: 1
+                  description: "Tipo AWB"
+
+                A2_DTPAWB:
+                  type: string
+                  lenght: 30
+                  description: "Descricao do Tipo da AWB"
+
+                A2_RECSEST:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe SEST"
+
+                A2_FILDEB:
+                  type: string
+                  lenght: 4
+                  description: "Filial de Debito"
+
+                A2_RECPIS:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhimento de PIS"
+
+                A2_RECCSLL:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhimento da CSLL"
+
+                A2_RECCOFI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhimento da COFINS"
+
+                A2_ABICS:
+                  type: string
+                  lenght: 4
+                  description: "Cod. Abics"
+                  example: "9999"
+
+                A2_CODFAV:
+                  type: string
+                  lenght: 6
+                  description: "Codigo do Favorecido"
+
+                A2_LOJFAV:
+                  type: string
+                  lenght: 2
+                  description: "Loja do Favorecido"
+
+                A2_NOMFAV:
+                  type: string
+                  lenght: 40
+                  description: "Nome do Favorecido"
+
+                A2_NUMDEP:
+                  type: N
+                  lenght: 2
+                  description: "N de Dependentes"
+                  example: "99"
+
+                A2_CALCIRF:
+                  type: string
+                  lenght: 1
+                  options: "1=Normal;2=IRRF Baixa;3=Simples;4=Empresa Individual"
+                  description: "Cálculo do IRRF."
+
+                A2_VINCULO:
+                  type: string
+                  lenght: 2
+                  description: "Pessoa Vinculada"
+
+                A2_DTINIV:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Inicial do Vinculo"
+
+                A2_DTFIMV:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Final do Vinculo"
+
+                A2_CODADM:
+                  type: string
+                  lenght: 3
+                  description: "Cdigo Adm. Financeira"
+
+                A2_RETISI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Reten. a taxa de ISI"
+
+                A2_ISICM:
+                  type: string
+                  lenght: 1
+                  description: "Conv. Multilateral de ISI"
+
+                A2_INDRUR:
+                  type: string
+                  lenght: 1
+                  options: "0=No  prod.rural;1=Seg.Espec.Geral PF;2=Seg.Espec.Ent.PAA PF;3=Ent.PAA PJ"
+                  description: "Indicador produtor rural"
+
+                A2_UFFIC:
+                  type: string
+                  lenght: 2
+                  options: "ND=No Declarado;RE=Reexportao;CB=Consumo de Bordo;MN=Mercadoria Nacionalizada"
+                  description: "UF Ficticia"
+
+                A2_TPREG:
+                  type: string
+                  lenght: 1
+                  options: "1=No Cumulativo;2=Cumulativo"
+                  description: "Tipo de Regime"
+
+                A2_ISSRSLC:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "LC Enq. ISS"
+
+                A2_SUBCON:
+                  type: string
+                  lenght: 1
+                  options: "1=Sub Contratista;2=No Sub Contratista"
+                  description: "SUBCON - Sub Contratista"
+
+                A2_RFASEMT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FASE-MT"
+
+                A2_CCICMS:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Inscrito no CCICMS"
+
+                A2_RIMAMT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe IMA-MT"
+
+                A2_RFACS:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FACS"
+
+                A2_CONTRIB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Contribuinte do ICMS"
+
+                A2_TPCON:
+                  type: string
+                  lenght: 2
+                  description: "Tipo Contrato"
+
+                A2_RFABOV:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FABOV"
+
+                A2_NEMPR:
+                  type: string
+                  lenght: 150
+                  description: "Nome Empresarial"
+
+                A2_CPFIRP:
+                  type: string
+                  lenght: 11
+                  description: "CPF PJ ref IR Progressivo"
+                  example: "999.999.999-99"
+
+                A2_GROSSIR:
+                  type: string
+                  lenght: 1
+                  options: "0=Sem Gross UP;1=Imp. Serv. IRRF;2=Imp. Serv. IRRF + CIDE;3=Imp. Serv. IRRF + Val. Servio"
+                  description: "Base de Cálculo IRRF"
+
+                A2_DEDBSPC:
+                  type: string
+                  lenght: 1
+                  options: "1=Legado;2=ICMS e IPI;3=ICMS;4=IPI"
+                  description: "Ded. Base de PIS/COFINS"
+
+                A2_RECFMD:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FAMAD"
+
+                A2_CODFI:
+                  type: string
+                  lenght: 3
+                  description: "Cdigo FIESP"
+
+                A2_TPCONTA:
+                  type: string
+                  lenght: 1
+                  options: "1=Conta Corrente;2=Poupanca"
+                  description: "Tipo de Conta Bancaria"
+
+                A2_CODINSS:
+                  type: string
+                  lenght: 11
+                  description: "Cdigo do INSS"
+
+                A2_TIPCTA:
+                  type: string
+                  lenght: 1
+                  options: "1=Conta Corrente;2=Conta poupana"
+                  description: "Tipo de Conta Fornecedor"
+
+                A2_REGESIM:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Reg. Simlificado MT"
+
+                A2_CPRB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Indicativo Reteno CPRB"
+
+                A2_CPOMSP:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Registro CPOM"
+
+                A2_INDCP:
+                  type: string
+                  lenght: 1
+                  options: "1=Sobre a comercializacao da sua producao;2=Sobre a folha de pagamento"
+                  description: "Indicativo da opcao rural"
+
+                A2_DRPEXP:
+                  type: string
+                  lenght: 8
+                  description: "Ident.Exp.Dados"
+
+                A2_INCULT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Incentivo a Cultura"
+
+                A2_TPRNTRC:
+                  type: string
+                  lenght: 1
+                  options: "1=TAC;2=ETC;3=CTC"
+                  description: "Tipo RNTRC"
+
+                A2_DESPORT:
+                  type: string
+                  lenght: 1
+                  options: "0=Nao;1=Sim"
+                  description: "Associao Desportiva"
+
+                A2_EQPTAC:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Equipara  a um TAC"
+
+                A2_STRNTRC:
+                  type: string
+                  lenght: 1
+                  options: "1=Ativo;2=Inativo"
+                  description: "Status RNTRC"
+
+                A2_CALCINP:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Calcula INSS Patronal?"
+
+                A2_SITESBH:
+                  type: string
+                  lenght: 1
+                  options: "1=Ex Pr bde Ser;2=Pr de Ser c/ Ded;3=Con Civ;4=Ag de Tu/Adm Fun"
+                  description: "Situação Especial de Resp"
+
+                A2_RESPTRI:
+                  type: string
+                  lenght: 2
+                  description: "Reg. Esp. de Tributao"
+
+                A2_TPLOGR:
+                  type: string
+                  lenght: 3
+                  description: "Tipo Logradouro"
+
+                A2_FORMPAG:
+                  type: string
+                  lenght: 2
+                  description: "Forma de pagamento prefer"
+
+                A2_IMPIP:
+                  type: string
+                  lenght: 1
+                  options: "1=Pedido Compra;2=Recebimento;3=Nao Imprime;4=Documento Entrada"
+                  description: "Identificacao de Produto"
+
+                A2_CLIENTE:
+                  type: string
+                  lenght: 6
+                  description: "Cdigo Cliente"
+
+                A2_TPJ:
+                  type: string
+                  lenght: 1
+                  options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte;3=MEI - Microempreendedor Individual;4=Cooperativa"
+                  description: "Tipo de Pessoa Jurídica"
+
+                A2_INSCMU:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Ins. no Munc. do Tomador"
+
+                A2_SIMPNAC:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Optante Simples Nacional"
+
+                A2_NUMRA:
+                  type: string
+                  lenght: 6
+                  description: "Cdigo do funcionrio"
+
+                A2_CODNIT:
+                  type: string
+                  lenght: 11
+                  description: "Nmero Inscrio Autnomo"
+                  example: "9999.9999.999"
+
+                A2_IDHIST:
+                  type: string
+                  lenght: 20
+                  description: "ID Histrico"
+
+                A2_DTCONV:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data do Convite"
+
+                A2_CTARE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Contribuinte TARE ?"
+
+                A2_DTNASC:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data de nascimento"
+
+                A2_NIFEX:
+                  type: string
+                  lenght: 30
+                  description: "No.Identificacao Fiscal"
+                  example: "999999999999999999999999999999"
+
+                A2_RECFET:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FETHAB"
+
+                A2_PAISEX:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do Pais pela RFB"
+                  example: "999"
+
+                A2_RFUNDES:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FUNDESA."
+
+                A2_CATEG:
+                  type: string
+                  lenght: 2
+                  description: "Categoria para SEFIP"
+
+                A2_PRSTSER:
+                  type: string
+                  lenght: 1
+                  description: "Ind. Prestador de Serv."
+
+                A2_OCORREN:
+                  type: string
+                  lenght: 2
+                  description: "Ocorrncia SEFIP"
+
+                A2_CATEFD:
+                  type: string
+                  lenght: 3
+                  description: "Categoria eSocial"
+
+                A2_MJURIDI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Disponvel md. Jurdico"
+
+                A2_MUNSC:
+                  type: string
+                  lenght: 5
+                  description: "Codigo do Municipio de SC"
+
+                A2_CPFRUR:
+                  type: string
+                  lenght: 11
+                  description: "CPF do produtor rural"
+                  example: "999.999.999-99"
+
+                A2_TRIBFAV:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Pessoa Trib. Favor."
+
+                A2_TELRE:
+                  type: string
+                  lenght: 15
+                  description: "Numero do Telefone"
+
+                A2_NUMEX:
+                  type: string
+                  lenght: 6
+                  description: "Numero da Residencia"
+
+                A2_DTFIMR:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Final Contrato"
+
+                A2_DTINIR:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Inicio Contrato"
+
+                A2_FRETISS:
+                  type: string
+                  lenght: 1
+                  options: "1=Valor mnimo;2=Sempre retm"
+                  description: "Forma reteno ISSQN"
+
+                A2_MINIRF:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Valor Mnimo de IRRF"
+
+                A2_BREEX:
+                  type: string
+                  lenght: 3
+                  description: "Beneficiario Rendimento"
+                  example: "999"
+
+                A2_ESTEX:
+                  type: string
+                  lenght: 40
+                  description: "Estado/Provindia do Func."
+
+                A2_FILTRF:
+                  type: string
+                  lenght: 4
+                  description: "Filial para transferncia"
+
+                A2_MSBLQD:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Bloqueio Temporal"
+
+                A2_INCLTMG:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Incentivo Prod.Leite-MG"
+
+                A2_TRBEX:
+                  type: string
+                  lenght: 2
+                  description: "Forma de Tributao"
+                  example: "99"
+
+                A2_PAGGFE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Pagamento pelo SIGAGFE"
+
+                A2_RNTRC:
+                  type: string
+                  lenght: 14
+                  description: "Reg. Nac. Tr. Rod. Cargas"
+
+                A2_DTRNTRC:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Vencimento RNTRC"
+
+                A2_LOGEX:
+                  type: string
+                  lenght: 60
+                  description: "Logradouro do Fornecedor"
+
+                A2_FOMEZER:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Participao no Fome Zero"
+
+                A2_CODSIAF:
+                  type: string
+                  lenght: 4
+                  description: "Cod.Municipio SIAFI"
+
+                A2_COMPLR:
+                  type: string
+                  lenght: 25
+                  description: "Complemento Residencial"
+
+                A2_BAIEX:
+                  type: string
+                  lenght: 20
+                  description: "Bairro/Distrito do Func."
+
+                A2_TPREX:
+                  type: string
+                  lenght: 3
+                  description: "Tipo do Rendimento"
+                  example: "999"
+
+                A2_POSEX:
+                  type: string
+                  lenght: 10
+                  description: "Cod.Postal Fornecedor"
+
+                A2_CIDEX:
+                  type: string
+                  lenght: 40
+                  description: "Cidade do Fornecedor"
+
+                A2_COMPLEM:
+                  type: string
+                  lenght: 50
+                  description: "Complemento do endereo"
+
+                A2_APOLICE:
+                  type: string
+                  lenght: 20
+                  description: "Num. Apolice"
+
+                A2_FORNEMA:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Fornecedor de Mailing"
+
+                A2_ENDNOT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Endereo no formatado"
+
+                A2_MOTNIF:
+                  type: string
+                  lenght: 1
+                  options: "1=Dispensado do NIF;2=Pas no exige NIF"
+                  description: "Mot. N.Preench NIF"
+
+                A2_REGPB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Regime Paraba"
+
+                A2_MINPUB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Valor Mín. PCC e IR EmPub"
+
+                A2_LOJCLI:
+                  type: string
+                  lenght: 2
+                  description: "Loja Cliente"
+
+                A2_IRPROG:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Calcula IRRF Progressivo"
+
+                A2_INOVAUT:
+                  type: string
+                  lenght: 1
+                  options: "1=Participa;2=No Participa;3=Convidar"
+                  description: "Inovar Auto"
+
+                A2_NOMRESP:
+                  type: string
+                  lenght: 45
+                  description: "Nome do Responsavel"
+
+                A2_TPENT:
+                  type: string
+                  lenght: 1
+                  options: "1=Imune;2=Isento"
+                  description: "Class. Pessoa Jurdica"
+
+                A2_CARGO:
+                  type: string
+                  lenght: 40
+                  description: "Cargo Responsavel"
+
+                A2_LOCQUIT:
+                  type: string
+                  lenght: 1
+                  options: "0=Filial;1=Posto"
+                  description: "Local de Quitacao"
+
+                A2_DVCTA:
+                  type: string
+                  lenght: 2
+                  description: "Digito Verificador Conta"
+
+                A2_CGCEX:
+                  type: string
+                  lenght: 14
+                  description: "CNPJ Empresa Exterior"
+                  example: "99.999.999/9999-99"
+
+                A2_CONFFIS:
+                  type: string
+                  lenght: 1
+                  options: "0=Parmetro;1=Pr-Nota;2=Nota Fiscal;3=Nao utiliza"
+                  description: "Indica o local da confe."
+
+                A2_DVAGE:
+                  type: string
+                  lenght: 1
+                  description: "Digito Verific. Agencia"
+              required:
+                - A2_FILIAL
+                - A2_COD
+                - A2_LOJA
+                - A2_NOME
+                - A2_NREDUZ
+                - A2_END
+                - A2_EST
+                - A2_MUN
+                - A2_TIPO
       responses:
-        200:
-          description: "successful operation"
-          schema:
-            $ref: "#/definitions/ApiResponse"
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: '1'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: 'Invalid input, please confirm your parameters'
       security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-  /pet:
-    post:
-      tags:
-      - "pet"
-      summary: "Add a new pet to the store"
-      description: ""
-      operationId: "addPet"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Pet object that needs to be added to the store"
-        required: true
-        schema:
-          $ref: "#/definitions/Pet"
-      responses:
-        405:
-          description: "Invalid input"
-      security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-    put:
-      tags:
-      - "pet"
-      summary: "Update an existing pet"
-      description: ""
-      operationId: "updatePet"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Pet object that needs to be added to the store"
-        required: true
-        schema:
-          $ref: "#/definitions/Pet"
-      responses:
-        400:
-          description: "Invalid ID supplied"
-        404:
-          description: "Pet not found"
-        405:
-          description: "Validation exception"
-      security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-  /pet/findByStatus:
+        - apiKeyAuth: []
+  
+  /api/v1/getById/{id}:
     get:
       tags:
-      - "pet"
-      summary: "Finds Pets by status"
-      description: "Multiple status values can be provided with comma separated strings"
-      operationId: "findPetsByStatus"
-      produces:
-      - "application/json"
-      - "application/xml"
+        - Fornecedor
+      summary: EndPoint para pegar um fornecedor pelo Id
+      operationId: getFornecedorById
       parameters:
-      - name: "status"
-        in: "query"
-        description: "Status values that need to be considered for filter"
-        required: true
-        type: "array"
-        items:
-          type: "string"
-          enum:
-          - "available"
-          - "pending"
-          - "sold"
-          default: "available"
-        collectionFormat: "multi"
-      responses:
-        200:
-          description: "successful operation"
+        - name: Id
+          in: query
+          description: Numero do Id do fornecedor
+          required: true
           schema:
-            type: "array"
-            items:
-              $ref: "#/definitions/Pet"
-        400:
-          description: "Invalid status value"
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  A2_FILIAL:
+                    type: string
+                    example: "9999"
+
+                  A2_COD:
+                    type: string
+                    example: "999999"
+
+                  A2_LOJA:
+                    type: string
+                    example: "99"
+
+                  A2_NOME:
+                    type: string
+                    example: "99999999999"
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: 'Invalid input, please confirm your parameters'
       security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-  /pet/findByTags:
-    get:
-      tags:
-      - "pet"
-      summary: "Finds Pets by tags"
-      description: "Multiple tags can be provided with comma separated strings. Use\
-        \ tag1, tag2, tag3 for testing."
-      operationId: "findPetsByTags"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "tags"
-        in: "query"
-        description: "Tags to filter by"
-        required: true
-        type: "array"
-        items:
-          type: "string"
-        collectionFormat: "multi"
-      responses:
-        200:
-          description: "successful operation"
+        - apiKeyAuth: []
+  # /api/v1/createTransportadora:
+  #   post:
+  #     tags:
+  #       - Transportadora
+  #     summary: EndPoint para criar Transportadora
+  #     # description: |
+  #       # This endpoint retrieves a list of users from the database.
+  #     operationId: createTransporta
+  #     parameters:
+  #       - name: limit
+  #         in: query
+  #         description: Maximum number of users to return
+  #         required: false
+  #         schema:
+  #           type: integer
+  #           default: 10
+  #     responses:
+  #       '200':
+  #         description: A list of users
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 type: object
+  #                 properties:
+  #                   id:
+  #                     type: integer
+  #                     example: 1
+  #                   name:
+  #                     type: string
+  #                     example: 'John Doe'
+  #       '500':
+  #         description: Server error
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 error:
+  #                   type: string
+  #                   example: 'Internal server error'
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+  schemas:
+    Fornecedor:
+      type: object
+      properties:
+
+                A2_FILIAL:
+                  type: string
+                  lenght: 4
+                  description: "Filial do Sistema"
+
+                A2_COD:
+                  type: string
+                  lenght: 6
+                  description: "Codigo do Fornecedor"
+
+                A2_LOJA:
+                  type: string
+                  lenght: 2
+                  description: "Loja do Fornecedor"
+
+                A2_NOME:
+                  type: string
+                  lenght: 40
+                  description: "Nome ou Razao Social"
+
+                A2_NREDUZ:
+                  type: string
+                  lenght: 20
+                  description: "Nome de Fantasia"
+
+                A2_END:
+                  type: string
+                  lenght: 40
+                  description: "Endereco do Fornecedor"
+
+                A2_NR_END:
+                  type: string
+                  lenght: 6
+                  description: "Numero do Endereco"
+
+                A2_BAIRRO:
+                  type: string
+                  lenght: 20
+                  description: "Bairro do Fornecedor"
+
+                A2_EST:
+                  type: string
+                  lenght: 2
+                  description: "Sigla da Federacao"
+
+                A2_CONTPRE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Não"
+                  description: "Contrib. Previdenciario"
+
+                A2_ESTADO:
+                  type: string
+                  lenght: 20
+                  description: "Nome do Estado Fornecedor"
+
+                A2_COD_MUN:
+                  type: string
+                  lenght: 5
+                  description: "Codigo do Municipio"
+
+                A2_IBGE:
+                  type: string
+                  lenght: 11
+                  description: "Codigo do IBGE"
+
+                A2_MUN:
+                  type: string
+                  lenght: 60
+                  description: "Municipio do Fornecedor"
+
+                A2_CEP:
+                  type: string
+                  lenght: 8
+                  description: "Cod Enderecamento Postal"
+                  example: "99999999"
+
+                A2_TIPO:
+                  type: string
+                  lenght: 1
+                  options: "F=Fisico;J=Juridico;X=Outros"
+                  description: "Tipo do Fornecedor"
+
+                A2_CX_POST:
+                  type: string
+                  lenght: 5
+                  description: "Caixa Postal"
+
+                A2_PFISICA:
+                  type: string
+                  lenght: 18
+                  description: "Reg.Geral/Ced.Estrangeiro"
+
+                A2_CGC:
+                  type: string
+                  lenght: 14
+                  description: "CNPJ/CPF do cliente"
+                  example: "99.999.999/9999-99"
+
+                A2_DDI:
+                  type: string
+                  lenght: 6
+                  description: "Codigo do DDI"
+                  example: "999999"
+
+                A2_DDD:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do DDD"
+                  example: "999"
+
+                A2_TEL:
+                  type: string
+                  lenght: 50
+                  description: "Numero do Telefone"
+                  example: "9999-9999"
+
+                A2_FAX:
+                  type: string
+                  lenght: 15
+                  description: "Numero do FAX do fornec."
+                  example: "999999999999999"
+
+                A2_INSCR:
+                  type: string
+                  lenght: 18
+                  description: "Inscricao Estadual"
+
+                A2_INSCRM:
+                  type: string
+                  lenght: 18
+                  description: "Inscricao Municipal"
+
+                A2_CONTATO:
+                  type: string
+                  lenght: 15
+                  description: "Contato na Empresa"
+
+                A2_BANCO:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do Banco"
+
+                A2_AGENCIA:
+                  type: string
+                  lenght: 5
+                  description: "Cod Agencia Fornecedor"
+
+                A2_NUMCON:
+                  type: string
+                  lenght: 10
+                  description: "Conta Corrente Fornecedor"
+
+                A2_SWIFT:
+                  type: string
+                  lenght: 30
+                  description: "Swift do Fornecedor"
+
+                A2_NATUREZ:
+                  type: string
+                  lenght: 10
+                  description: "Cod Natureza Financeira"
+
+                A2_TRANSP:
+                  type: string
+                  lenght: 6
+                  description: "Codigo da Transportadora"
+
+                A2_PRIOR:
+                  type: string
+                  lenght: 1
+                  description: "Prioridade de Pagamento"
+                  example: "9"
+
+                A2_RISCO:
+                  type: string
+                  lenght: 3
+                  description: "Nivel de Risco"
+
+                A2_COND:
+                  type: string
+                  lenght: 3
+                  description: "Condicao de Pagamento"
+
+                A2_LC:
+                  type: string
+                  lenght: 14
+                  description: "Limite de Credito"
+
+                A2_MATR:
+                  type: N
+                  lenght: 4
+                  description: "Maior Atraso em dias"
+                  example: "9999"
+
+                A2_MCOMPRA:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Maior Compra em Valor"
+                  example: "9999999999999.99"
+
+                A2_METR:
+                  type: N
+                  lenght: 5
+                  decimal: 1
+                  description: "Media de Atraso em dias"
+                  example: "999.9"
+
+                A2_MSALDO:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Maior Saldo Credor"
+                  example: "9999999999999.99"
+
+                A2_NROCOM:
+                  type: N
+                  lenght: 6
+                  description: "Numero total de Compras"
+                  example: "999999"
+
+                A2_PRICOM:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data da Primeira Compra"
+
+                A2_ULTCOM:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data da ultima Compra"
+
+                A2_SALDUP:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Saldo de Duplicatas"
+                  example: "9999999999999.99"
+
+                A2_DESVIO:
+                  type: N
+                  lenght: 6
+                  decimal: 1
+                  description: "Desvio do prz de entrega"
+                  example: "9999.9"
+
+                A2_SALDUPM:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Saldo em Moeda Forte"
+                  example: "9999999999999.99"
+
+                A2_CONTA:
+                  type: string
+                  lenght: 20
+                  description: "Codigo da Conta Contabil"
+
+                A2_TIPORUR:
+                  type: string
+                  lenght: 1
+                  options: "J=Juridico;F=Pessoa Fisica;L=Familiar"
+                  description: "Tp.Fornec.ref.Contr.Seg. "
+
+                A2_RECISS:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Recolhe ISS ?"
+
+                A2_PAIS:
+                  type: string
+                  lenght: 3
+                  description: "Pais do Fornecedor"
+
+                A2_PAISDES:
+                  type: string
+                  lenght: 25
+                  description: "Descr. Pais"
+
+                A2_DEPTO:
+                  type: string
+                  lenght: 30
+                  description: "Departamento p/ Contato"
+
+                A2_ID_FBFN:
+                  type: string
+                  lenght: 7
+                  description: "Identificacao do Fornec."
+
+                A2_STATUS:
+                  type: string
+                  lenght: 1
+                  options: "1=Homologado;2=Nao Homologado"
+                  description: "Fornecedor Homologado"
+
+                A2_GRUPO:
+                  type: string
+                  lenght: 3
+                  description: "Grupo"
+
+                A2_ATIVIDA:
+                  type: string
+                  lenght: 7
+                  description: "Cod.Atividade Economica"
+
+                A2_ORIG_1:
+                  type: string
+                  lenght: 3
+                  description: "Origem 1"
+
+                A2_ORIG_2:
+                  type: string
+                  lenght: 3
+                  description: "Origem 2"
+
+                A2_ORIG_3:
+                  type: string
+                  lenght: 3
+                  description: "Origem 3"
+
+                A2_VINCULA:
+                  type: string
+                  lenght: 1
+                  options: "1=Sem Vinculacao;2=ComSem Influencia de Preco;3=ComCom Influencia de Preco"
+                  description: "Tipo Vinculacao"
+
+                A2_REPRES:
+                  type: string
+                  lenght: 52
+                  description: "Representante"
+
+                A2_REPCONT:
+                  type: string
+                  lenght: 50
+                  description: "Contato"
+
+                A2_REPRTEL:
+                  type: string
+                  lenght: 50
+                  description: "Numero do Telefone"
+
+                A2_REPRFAX:
+                  type: string
+                  lenght: 30
+                  description: "Numero do FAX do Repres."
+
+                A2_REPR_EM:
+                  type: string
+                  lenght: 30
+                  description: "E-Mail Representante"
+
+                A2_REPR_EN:
+                  type: string
+                  lenght: 52
+                  description: "Endereco Representante"
+
+                A2_REPBAIR:
+                  type: string
+                  lenght: 30
+                  description: "Bairro do Representante"
+
+                A2_REPRMUN:
+                  type: string
+                  lenght: 30
+                  description: "Cidade do Represent."
+
+                A2_REPREST:
+                  type: string
+                  lenght: 2
+                  description: "Nome do Estado Represent."
+
+                A2_REPRCEP:
+                  type: string
+                  lenght: 8
+                  description: "Cod Enderecamento Postal"
+                  example: "99999-999"
+
+                A2_REPPAIS:
+                  type: string
+                  lenght: 3
+                  description: "Pais do Representante"
+
+                A2_ID_REPR:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Identifica Repres.na L.I."
+
+                A2_REPR_BA:
+                  type: string
+                  lenght: 3
+                  description: "Banco do Representate"
+
+                A2_REPR_AG:
+                  type: string
+                  lenght: 5
+                  description: "Agencia do Representante"
+
+                A2_REPR_CO:
+                  type: string
+                  lenght: 10
+                  description: "Conta Corrente Represent."
+
+                A2_REPRCGC:
+                  type: string
+                  lenght: 14
+                  description: "CNPJ Representante"
+                  example: "99.999.999/9999-99"
+
+                A2_RET_PAI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Comissao Retida no Pais"
+
+                A2_COMI_SO:
+                  type: string
+                  lenght: 1
+                  options: "1=FOB;2=CFR;3=EX-Works;4=F.A.S."
+                  description: "Tipo Comissao"
+
+                A2_EMAIL:
+                  type: string
+                  lenght: 30
+                  description: "E-Mail"
+
+                A2_HPAGE:
+                  type: string
+                  lenght: 30
+                  description: "Home Page"
+
+                A2_CODMUN:
+                  type: string
+                  lenght: 5
+                  description: "Cod. Mun. ZF Manaus e ALC"
+                  example: "99999"
+
+                A2_CONTCOM:
+                  type: string
+                  lenght: 15
+                  description: "Contato Comercial (NNC)"
+
+                A2_FABRICA:
+                  type: string
+                  lenght: 1
+                  description: "Fabricante"
+
+                A2_FATAVA:
+                  type: N
+                  lenght: 6
+                  decimal: 2
+                  description: "Fator de Avaliacao"
+                  example: "999.99"
+
+                A2_DTAVA:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data da Avaliacao"
+
+                A2_DTVAL:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Validade Avaliacao"
+
+                A2_OK:
+                  type: string
+                  lenght: 2
+                  description: "OK"
+
+                A2_RECINSS:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Calcula INSS p/ Fornec. ?"
+
+                A2_TELEX:
+                  type: string
+                  lenght: 10
+                  description: "Numero do Telex"
+
+                A2_TPESSOA:
+                  type: string
+                  lenght: 2
+                  options: "CI=Comercio/Industria;PF=Pessoa Fisica;OS=Prestaco de Servico"
+                  description: "Tipo de Pessoa"
+
+                A2_CODLOC:
+                  type: string
+                  lenght: 8
+                  description: "Codigo da Localidade"
+
+                A2_CODPAIS:
+                  type: string
+                  lenght: 5
+                  description: "Cd. pas Banco Central"
+                  example: "99999"
+
+                A2_MNOTA:
+                  type: N
+                  lenght: 16
+                  decimal: 2
+                  description: "Maior Nota do Fornecedor"
+                  example: "9999999999999.99"
+
+                A2_TPISSRS:
+                  type: string
+                  lenght: 2
+                  description: "Tipo de Escriturao"
+                  example: "99"
+
+                A2_PAISSUB:
+                  type: string
+                  lenght: 6
+                  description: "Subdiviso Pas"
+
+                A2_RECCIDE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe CIDE"
+
+                A2_GRPTRIB:
+                  type: string
+                  lenght: 3
+                  description: "Grupo de Tributacao"
+
+                A2_UNFEDRP:
+                  type: string
+                  lenght: 30
+                  description: "Unidade Fed. no Exterior"
+
+                A2_CONTAB:
+                  type: string
+                  lenght: 15
+                  description: "Conta Contabil Importao"
+
+                A2_CLIQF:
+                  type: string
+                  lenght: 15
+                  description: "Liquidacao Futura"
+                  example: "999999999999999"
+
+                A2_PLGRUPO:
+                  type: string
+                  lenght: 3
+                  description: "Classe de Fornecedor"
+
+                A2_CODBLO:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do Bloqueio"
+
+                A2_PAISORI:
+                  type: string
+                  lenght: 20
+                  description: "Pais de Origem Fornecedor"
+
+                A2_ROYALTY:
+                  type: string
+                  lenght: 1
+                  description: "Royalty"
+
+                A2_TXTRIBU:
+                  type: N
+                  lenght: 6
+                  decimal: 2
+                  description: "Taxa de Bi-Tributacao"
+                  example: "999.99"
+
+                A2_B2B:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Utiliza B2B?"
+
+                A2_PLCRRES:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Obrigat. Dig. Resp. Mov ?"
+
+                A2_PLFIL:
+                  type: string
+                  lenght: 1
+                  options: "S=Sim;N=Nao"
+                  description: "Filial do Grupo"
+
+                A2_SIGLCR:
+                  type: string
+                  lenght: 7
+                  description: "Sigla C.R"
+
+                A2_CONREG:
+                  type: string
+                  lenght: 10
+                  description: "Numero do Conselho Regio."
+
+                A2_DATBLO:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data do Bloqueio"
+
+                A2_PLPEDES:
+                  type: N
+                  lenght: 13
+                  decimal: 4
+                  description: "% Desconto Producao Med."
+                  example: "999999999.9999"
+
+                A2_CBO:
+                  type: string
+                  lenght: 7
+                  description: "Codigo CBO do Fornecedor"
+
+                A2_CNAE:
+                  type: string
+                  lenght: 9
+                  description: "Codigo CNAE do Fornecedor"
+                  example: "9999-9/9999"
+
+                A2_CIVIL:
+                  type: string
+                  lenght: 1
+                  options: "1=Solteiro;2=Casado;3=Divorciado;4=Viuvo"
+                  description: "Estado civil"
+
+                A2_ROYMIN:
+                  type: N
+                  lenght: 7
+                  decimal: 2
+                  description: "Pagamento minimo Royalty"
+                  example: "9999.99"
+
+                A2_SATIV1:
+                  type: string
+                  lenght: 6
+                  description: "Segmentacao de Ativid. 1"
+                  example: "999999"
+
+                A2_PAGAMEN:
+                  type: string
+                  lenght: 1
+                  options: "1=Nao;2=Sim"
+                  description: "Recebe Pagamento?"
+
+                A2_ENDCOMP:
+                  type: string
+                  lenght: 21
+                  description: "Complemento Endereco"
+
+                A2_MSBLQL:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Bloqueia o Fornecedor"
+
+                A2_GRPDEP:
+                  type: string
+                  lenght: 5
+                  description: "Grupo de Almoxarifados"
+
+                A2_SUBCOD:
+                  type: string
+                  lenght: 1
+                  description: "Sub Codigo"
+
+                A2_TIPAWB:
+                  type: string
+                  lenght: 1
+                  description: "Tipo AWB"
+
+                A2_DTPAWB:
+                  type: string
+                  lenght: 30
+                  description: "Descricao do Tipo da AWB"
+
+                A2_RECSEST:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe SEST"
+
+                A2_FILDEB:
+                  type: string
+                  lenght: 4
+                  description: "Filial de Debito"
+
+                A2_RECPIS:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhimento de PIS"
+
+                A2_RECCSLL:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhimento da CSLL"
+
+                A2_RECCOFI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhimento da COFINS"
+
+                A2_ABICS:
+                  type: string
+                  lenght: 4
+                  description: "Cod. Abics"
+                  example: "9999"
+
+                A2_CODFAV:
+                  type: string
+                  lenght: 6
+                  description: "Codigo do Favorecido"
+
+                A2_LOJFAV:
+                  type: string
+                  lenght: 2
+                  description: "Loja do Favorecido"
+
+                A2_NOMFAV:
+                  type: string
+                  lenght: 40
+                  description: "Nome do Favorecido"
+
+                A2_NUMDEP:
+                  type: N
+                  lenght: 2
+                  description: "N de Dependentes"
+                  example: "99"
+
+                A2_CALCIRF:
+                  type: string
+                  lenght: 1
+                  options: "1=Normal;2=IRRF Baixa;3=Simples;4=Empresa Individual"
+                  description: "Cálculo do IRRF."
+
+                A2_VINCULO:
+                  type: string
+                  lenght: 2
+                  description: "Pessoa Vinculada"
+
+                A2_DTINIV:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Inicial do Vinculo"
+
+                A2_DTFIMV:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Final do Vinculo"
+
+                A2_CODADM:
+                  type: string
+                  lenght: 3
+                  description: "Cdigo Adm. Financeira"
+
+                A2_RETISI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Reten. a taxa de ISI"
+
+                A2_ISICM:
+                  type: string
+                  lenght: 1
+                  description: "Conv. Multilateral de ISI"
+
+                A2_INDRUR:
+                  type: string
+                  lenght: 1
+                  options: "0=No  prod.rural;1=Seg.Espec.Geral PF;2=Seg.Espec.Ent.PAA PF;3=Ent.PAA PJ"
+                  description: "Indicador produtor rural"
+
+                A2_UFFIC:
+                  type: string
+                  lenght: 2
+                  options: "ND=No Declarado;RE=Reexportao;CB=Consumo de Bordo;MN=Mercadoria Nacionalizada"
+                  description: "UF Ficticia"
+
+                A2_TPREG:
+                  type: string
+                  lenght: 1
+                  options: "1=No Cumulativo;2=Cumulativo"
+                  description: "Tipo de Regime"
+
+                A2_ISSRSLC:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "LC Enq. ISS"
+
+                A2_SUBCON:
+                  type: string
+                  lenght: 1
+                  options: "1=Sub Contratista;2=No Sub Contratista"
+                  description: "SUBCON - Sub Contratista"
+
+                A2_RFASEMT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FASE-MT"
+
+                A2_CCICMS:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Inscrito no CCICMS"
+
+                A2_RIMAMT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe IMA-MT"
+
+                A2_RFACS:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FACS"
+
+                A2_CONTRIB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Contribuinte do ICMS"
+
+                A2_TPCON:
+                  type: string
+                  lenght: 2
+                  description: "Tipo Contrato"
+
+                A2_RFABOV:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FABOV"
+
+                A2_NEMPR:
+                  type: string
+                  lenght: 150
+                  description: "Nome Empresarial"
+
+                A2_CPFIRP:
+                  type: string
+                  lenght: 11
+                  description: "CPF PJ ref IR Progressivo"
+                  example: "999.999.999-99"
+
+                A2_GROSSIR:
+                  type: string
+                  lenght: 1
+                  options: "0=Sem Gross UP;1=Imp. Serv. IRRF;2=Imp. Serv. IRRF + CIDE;3=Imp. Serv. IRRF + Val. Servio"
+                  description: "Base de Cálculo IRRF"
+
+                A2_DEDBSPC:
+                  type: string
+                  lenght: 1
+                  options: "1=Legado;2=ICMS e IPI;3=ICMS;4=IPI"
+                  description: "Ded. Base de PIS/COFINS"
+
+                A2_RECFMD:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FAMAD"
+
+                A2_CODFI:
+                  type: string
+                  lenght: 3
+                  description: "Cdigo FIESP"
+
+                A2_TPCONTA:
+                  type: string
+                  lenght: 1
+                  options: "1=Conta Corrente;2=Poupanca"
+                  description: "Tipo de Conta Bancaria"
+
+                A2_CODINSS:
+                  type: string
+                  lenght: 11
+                  description: "Cdigo do INSS"
+
+                A2_TIPCTA:
+                  type: string
+                  lenght: 1
+                  options: "1=Conta Corrente;2=Conta poupana"
+                  description: "Tipo de Conta Fornecedor"
+
+                A2_REGESIM:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Reg. Simlificado MT"
+
+                A2_CPRB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Indicativo Reteno CPRB"
+
+                A2_CPOMSP:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Registro CPOM"
+
+                A2_INDCP:
+                  type: string
+                  lenght: 1
+                  options: "1=Sobre a comercializacao da sua producao;2=Sobre a folha de pagamento"
+                  description: "Indicativo da opcao rural"
+
+                A2_DRPEXP:
+                  type: string
+                  lenght: 8
+                  description: "Ident.Exp.Dados"
+
+                A2_INCULT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Incentivo a Cultura"
+
+                A2_TPRNTRC:
+                  type: string
+                  lenght: 1
+                  options: "1=TAC;2=ETC;3=CTC"
+                  description: "Tipo RNTRC"
+
+                A2_DESPORT:
+                  type: string
+                  lenght: 1
+                  options: "0=Nao;1=Sim"
+                  description: "Associao Desportiva"
+
+                A2_EQPTAC:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Equipara  a um TAC"
+
+                A2_STRNTRC:
+                  type: string
+                  lenght: 1
+                  options: "1=Ativo;2=Inativo"
+                  description: "Status RNTRC"
+
+                A2_CALCINP:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Calcula INSS Patronal?"
+
+                A2_SITESBH:
+                  type: string
+                  lenght: 1
+                  options: "1=Ex Pr bde Ser;2=Pr de Ser c/ Ded;3=Con Civ;4=Ag de Tu/Adm Fun"
+                  description: "Situação Especial de Resp"
+
+                A2_RESPTRI:
+                  type: string
+                  lenght: 2
+                  description: "Reg. Esp. de Tributao"
+
+                A2_TPLOGR:
+                  type: string
+                  lenght: 3
+                  description: "Tipo Logradouro"
+
+                A2_FORMPAG:
+                  type: string
+                  lenght: 2
+                  description: "Forma de pagamento prefer"
+
+                A2_IMPIP:
+                  type: string
+                  lenght: 1
+                  options: "1=Pedido Compra;2=Recebimento;3=Nao Imprime;4=Documento Entrada"
+                  description: "Identificacao de Produto"
+
+                A2_CLIENTE:
+                  type: string
+                  lenght: 6
+                  description: "Cdigo Cliente"
+
+                A2_TPJ:
+                  type: string
+                  lenght: 1
+                  options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte;3=MEI - Microempreendedor Individual;4=Cooperativa"
+                  description: "Tipo de Pessoa Jurídica"
+
+                A2_INSCMU:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Ins. no Munc. do Tomador"
+
+                A2_SIMPNAC:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Optante Simples Nacional"
+
+                A2_NUMRA:
+                  type: string
+                  lenght: 6
+                  description: "Cdigo do funcionrio"
+
+                A2_CODNIT:
+                  type: string
+                  lenght: 11
+                  description: "Nmero Inscrio Autnomo"
+                  example: "9999.9999.999"
+
+                A2_IDHIST:
+                  type: string
+                  lenght: 20
+                  description: "ID Histrico"
+
+                A2_DTCONV:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data do Convite"
+
+                A2_CTARE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Contribuinte TARE ?"
+
+                A2_DTNASC:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data de nascimento"
+
+                A2_NIFEX:
+                  type: string
+                  lenght: 30
+                  description: "No.Identificacao Fiscal"
+                  example: "999999999999999999999999999999"
+
+                A2_RECFET:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FETHAB"
+
+                A2_PAISEX:
+                  type: string
+                  lenght: 3
+                  description: "Codigo do Pais pela RFB"
+                  example: "999"
+
+                A2_RFUNDES:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Recolhe FUNDESA."
+
+                A2_CATEG:
+                  type: string
+                  lenght: 2
+                  description: "Categoria para SEFIP"
+
+                A2_PRSTSER:
+                  type: string
+                  lenght: 1
+                  description: "Ind. Prestador de Serv."
+
+                A2_OCORREN:
+                  type: string
+                  lenght: 2
+                  description: "Ocorrncia SEFIP"
+
+                A2_CATEFD:
+                  type: string
+                  lenght: 3
+                  description: "Categoria eSocial"
+
+                A2_MJURIDI:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Disponvel md. Jurdico"
+
+                A2_MUNSC:
+                  type: string
+                  lenght: 5
+                  description: "Codigo do Municipio de SC"
+
+                A2_CPFRUR:
+                  type: string
+                  lenght: 11
+                  description: "CPF do produtor rural"
+                  example: "999.999.999-99"
+
+                A2_TRIBFAV:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Pessoa Trib. Favor."
+
+                A2_TELRE:
+                  type: string
+                  lenght: 15
+                  description: "Numero do Telefone"
+
+                A2_NUMEX:
+                  type: string
+                  lenght: 6
+                  description: "Numero da Residencia"
+
+                A2_DTFIMR:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Final Contrato"
+
+                A2_DTINIR:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Data Inicio Contrato"
+
+                A2_FRETISS:
+                  type: string
+                  lenght: 1
+                  options: "1=Valor mnimo;2=Sempre retm"
+                  description: "Forma reteno ISSQN"
+
+                A2_MINIRF:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Valor Mnimo de IRRF"
+
+                A2_BREEX:
+                  type: string
+                  lenght: 3
+                  description: "Beneficiario Rendimento"
+                  example: "999"
+
+                A2_ESTEX:
+                  type: string
+                  lenght: 40
+                  description: "Estado/Provindia do Func."
+
+                A2_FILTRF:
+                  type: string
+                  lenght: 4
+                  description: "Filial para transferncia"
+
+                A2_MSBLQD:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Bloqueio Temporal"
+
+                A2_INCLTMG:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Incentivo Prod.Leite-MG"
+
+                A2_TRBEX:
+                  type: string
+                  lenght: 2
+                  description: "Forma de Tributao"
+                  example: "99"
+
+                A2_PAGGFE:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Pagamento pelo SIGAGFE"
+
+                A2_RNTRC:
+                  type: string
+                  lenght: 14
+                  description: "Reg. Nac. Tr. Rod. Cargas"
+
+                A2_DTRNTRC:
+                  type: string
+                  format: date
+                  lenght: 8
+                  description: "Vencimento RNTRC"
+
+                A2_LOGEX:
+                  type: string
+                  lenght: 60
+                  description: "Logradouro do Fornecedor"
+
+                A2_FOMEZER:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Participao no Fome Zero"
+
+                A2_CODSIAF:
+                  type: string
+                  lenght: 4
+                  description: "Cod.Municipio SIAFI"
+
+                A2_COMPLR:
+                  type: string
+                  lenght: 25
+                  description: "Complemento Residencial"
+
+                A2_BAIEX:
+                  type: string
+                  lenght: 20
+                  description: "Bairro/Distrito do Func."
+
+                A2_TPREX:
+                  type: string
+                  lenght: 3
+                  description: "Tipo do Rendimento"
+                  example: "999"
+
+                A2_POSEX:
+                  type: string
+                  lenght: 10
+                  description: "Cod.Postal Fornecedor"
+
+                A2_CIDEX:
+                  type: string
+                  lenght: 40
+                  description: "Cidade do Fornecedor"
+
+                A2_COMPLEM:
+                  type: string
+                  lenght: 50
+                  description: "Complemento do endereo"
+
+                A2_APOLICE:
+                  type: string
+                  lenght: 20
+                  description: "Num. Apolice"
+
+                A2_FORNEMA:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Fornecedor de Mailing"
+
+                A2_ENDNOT:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Endereo no formatado"
+
+                A2_MOTNIF:
+                  type: string
+                  lenght: 1
+                  options: "1=Dispensado do NIF;2=Pas no exige NIF"
+                  description: "Mot. N.Preench NIF"
+
+                A2_REGPB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Regime Paraba"
+
+                A2_MINPUB:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Valor Mín. PCC e IR EmPub"
+
+                A2_LOJCLI:
+                  type: string
+                  lenght: 2
+                  description: "Loja Cliente"
+
+                A2_IRPROG:
+                  type: string
+                  lenght: 1
+                  options: "1=Sim;2=Nao"
+                  description: "Calcula IRRF Progressivo"
+
+                A2_INOVAUT:
+                  type: string
+                  lenght: 1
+                  options: "1=Participa;2=No Participa;3=Convidar"
+                  description: "Inovar Auto"
+
+                A2_NOMRESP:
+                  type: string
+                  lenght: 45
+                  description: "Nome do Responsavel"
+
+                A2_TPENT:
+                  type: string
+                  lenght: 1
+                  options: "1=Imune;2=Isento"
+                  description: "Class. Pessoa Jurdica"
+
+                A2_CARGO:
+                  type: string
+                  lenght: 40
+                  description: "Cargo Responsavel"
+
+                A2_LOCQUIT:
+                  type: string
+                  lenght: 1
+                  options: "0=Filial;1=Posto"
+                  description: "Local de Quitacao"
+
+                A2_DVCTA:
+                  type: string
+                  lenght: 2
+                  description: "Digito Verificador Conta"
+
+                A2_CGCEX:
+                  type: string
+                  lenght: 14
+                  description: "CNPJ Empresa Exterior"
+                  example: "99.999.999/9999-99"
+
+                A2_CONFFIS:
+                  type: string
+                  lenght: 1
+                  options: "0=Parmetro;1=Pr-Nota;2=Nota Fiscal;3=Nao utiliza"
+                  description: "Indica o local da confe."
+
+                A2_DVAGE:
+                  type: string
+                  lenght: 1
+                  description: "Digito Verific. Agencia"
+      required:
+        - A2_FILIAL
+        - A2_COD
+        - A2_LOJA
+        - A2_NOME
+        - A2_NREDUZ
+        - A2_END
+        - A2_EST
+        - A2_MUN
+        - A2_TIPO
+  responses:
+    UnauthorizedError:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
           schema:
-            type: "array"
-            items:
-              $ref: "#/definitions/Pet"
-        400:
-          description: "Invalid tag value"
-      security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-      deprecated: true
-  /pet/{petId}:
-    get:
-      tags:
-      - "pet"
-      summary: "Find pet by ID"
-      description: "Returns a single pet"
-      operationId: "getPetById"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "petId"
-        in: "path"
-        description: "ID of pet to return"
-        required: true
-        type: "integer"
-        format: "int64"
-      responses:
-        200:
-          description: "successful operation"
-          schema:
-            $ref: "#/definitions/Pet"
-        400:
-          description: "Invalid ID supplied"
-        404:
-          description: "Pet not found"
-      security:
-      - api_key: []
-    post:
-      tags:
-      - "pet"
-      summary: "Updates a pet in the store with form data"
-      description: ""
-      operationId: "updatePetWithForm"
-      consumes:
-      - "application/x-www-form-urlencoded"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "petId"
-        in: "path"
-        description: "ID of pet that needs to be updated"
-        required: true
-        type: "integer"
-        format: "int64"
-      - name: "name"
-        in: "formData"
-        description: "Updated name of the pet"
-        required: false
-        type: "string"
-      - name: "status"
-        in: "formData"
-        description: "Updated status of the pet"
-        required: false
-        type: "string"
-      responses:
-        405:
-          description: "Invalid input"
-      security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-    delete:
-      tags:
-      - "pet"
-      summary: "Deletes a pet"
-      description: ""
-      operationId: "deletePet"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "api_key"
-        in: "header"
-        required: false
-        type: "string"
-      - name: "petId"
-        in: "path"
-        description: "Pet id to delete"
-        required: true
-        type: "integer"
-        format: "int64"
-      responses:
-        400:
-          description: "Invalid ID supplied"
-        404:
-          description: "Pet not found"
-      security:
-      - petstore_auth:
-        - "write:pets"
-        - "read:pets"
-  /store/order:
-    post:
-      tags:
-      - "store"
-      summary: "Place an order for a pet"
-      description: ""
-      operationId: "placeOrder"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "order placed for purchasing the pet"
-        required: true
-        schema:
-          $ref: "#/definitions/Order"
-      responses:
-        200:
-          description: "successful operation"
-          schema:
-            $ref: "#/definitions/Order"
-        400:
-          description: "Invalid Order"
-  /store/order/{orderId}:
-    get:
-      tags:
-      - "store"
-      summary: "Find purchase order by ID"
-      description: "For valid response try integer IDs with value >= 1 and <= 10.\
-        \ Other values will generated exceptions"
-      operationId: "getOrderById"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "orderId"
-        in: "path"
-        description: "ID of pet that needs to be fetched"
-        required: true
-        type: "integer"
-        maximum: 10
-        minimum: 1
-        format: "int64"
-      responses:
-        200:
-          description: "successful operation"
-          schema:
-            $ref: "#/definitions/Order"
-        400:
-          description: "Invalid ID supplied"
-        404:
-          description: "Order not found"
-    delete:
-      tags:
-      - "store"
-      summary: "Delete purchase order by ID"
-      description: "For valid response try integer IDs with positive integer value.\
-        \ Negative or non-integer values will generate API errors"
-      operationId: "deleteOrder"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "orderId"
-        in: "path"
-        description: "ID of the order that needs to be deleted"
-        required: true
-        type: "integer"
-        minimum: 1
-        format: "int64"
-      responses:
-        400:
-          description: "Invalid ID supplied"
-        404:
-          description: "Order not found"
-  /store/inventory:
-    get:
-      tags:
-      - "store"
-      summary: "Returns pet inventories by status"
-      description: "Returns a map of status codes to quantities"
-      operationId: "getInventory"
-      produces:
-      - "application/json"
-      parameters: []
-      responses:
-        200:
-          description: "successful operation"
-          schema:
-            type: "object"
-            additionalProperties:
-              type: "integer"
-              format: "int32"
-      security:
-      - api_key: []
-  /user/createWithArray:
-    post:
-      tags:
-      - "user"
-      summary: "Creates list of users with given input array"
-      description: ""
-      operationId: "createUsersWithArrayInput"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "List of user object"
-        required: true
-        schema:
-          type: "array"
-          items:
-            $ref: "#/definitions/User"
-      responses:
-        default:
-          description: "successful operation"
-  /user/createWithList:
-    post:
-      tags:
-      - "user"
-      summary: "Creates list of users with given input array"
-      description: ""
-      operationId: "createUsersWithListInput"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "List of user object"
-        required: true
-        schema:
-          type: "array"
-          items:
-            $ref: "#/definitions/User"
-      responses:
-        default:
-          description: "successful operation"
-  /user/{username}:
-    get:
-      tags:
-      - "user"
-      summary: "Get user by user name"
-      description: ""
-      operationId: "getUserByName"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "username"
-        in: "path"
-        description: "The name that needs to be fetched. Use user1 for testing. "
-        required: true
-        type: "string"
-      responses:
-        200:
-          description: "successful operation"
-          schema:
-            $ref: "#/definitions/User"
-        400:
-          description: "Invalid username supplied"
-        404:
-          description: "User not found"
-    put:
-      tags:
-      - "user"
-      summary: "Updated user"
-      description: "This can only be done by the logged in user."
-      operationId: "updateUser"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "username"
-        in: "path"
-        description: "name that need to be updated"
-        required: true
-        type: "string"
-      - in: "body"
-        name: "body"
-        description: "Updated user object"
-        required: true
-        schema:
-          $ref: "#/definitions/User"
-      responses:
-        400:
-          description: "Invalid user supplied"
-        404:
-          description: "User not found"
-    delete:
-      tags:
-      - "user"
-      summary: "Delete user"
-      description: "This can only be done by the logged in user."
-      operationId: "deleteUser"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "username"
-        in: "path"
-        description: "The name that needs to be deleted"
-        required: true
-        type: "string"
-      responses:
-        400:
-          description: "Invalid username supplied"
-        404:
-          description: "User not found"
-  /user/login:
-    get:
-      tags:
-      - "user"
-      summary: "Logs user into the system"
-      description: ""
-      operationId: "loginUser"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - name: "username"
-        in: "query"
-        description: "The user name for login"
-        required: true
-        type: "string"
-      - name: "password"
-        in: "query"
-        description: "The password for login in clear text"
-        required: true
-        type: "string"
-      responses:
-        200:
-          description: "successful operation"
-          headers:
-            X-Expires-After:
-              type: "string"
-              format: "date-time"
-              description: "date in UTC when token expires"
-            X-Rate-Limit:
-              type: "integer"
-              format: "int32"
-              description: "calls per hour allowed by the user"
-          schema:
-            type: "string"
-        400:
-          description: "Invalid username/password supplied"
-  /user/logout:
-    get:
-      tags:
-      - "user"
-      summary: "Logs out current logged in user session"
-      description: ""
-      operationId: "logoutUser"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters: []
-      responses:
-        default:
-          description: "successful operation"
-  /user:
-    post:
-      tags:
-      - "user"
-      summary: "Create user"
-      description: "This can only be done by the logged in user."
-      operationId: "createUser"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      - "application/xml"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Created user object"
-        required: true
-        schema:
-          $ref: "#/definitions/User"
-      responses:
-        default:
-          description: "successful operation"
-securityDefinitions:
-  api_key:
-    type: "apiKey"
-    name: "api_key"
-    in: "header"
-  petstore_auth:
-    type: "oauth2"
-    authorizationUrl: "https://petstore.swagger.io/oauth/authorize"
-    flow: "implicit"
-    scopes:
-      read:pets: "read your pets"
-      write:pets: "modify pets in your account"
-definitions:
-  ApiResponse:
-    type: "object"
-    properties:
-      code:
-        type: "integer"
-        format: "int32"
-      type:
-        type: "string"
-      message:
-        type: "string"
-  Category:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      name:
-        type: "string"
-    xml:
-      name: "Category"
-  Pet:
-    type: "object"
-    required:
-    - "name"
-    - "photoUrls"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      category:
-        $ref: "#/definitions/Category"
-      name:
-        type: "string"
-        example: "doggie"
-      photoUrls:
-        type: "array"
-        xml:
-          wrapped: true
-        items:
-          type: "string"
-          xml:
-            name: "photoUrl"
-      tags:
-        type: "array"
-        xml:
-          wrapped: true
-        items:
-          xml:
-            name: "tag"
-          $ref: "#/definitions/Tag"
-      status:
-        type: "string"
-        description: "pet status in the store"
-        enum:
-        - "available"
-        - "pending"
-        - "sold"
-    xml:
-      name: "Pet"
-  Tag:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      name:
-        type: "string"
-    xml:
-      name: "Tag"
-  Order:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      petId:
-        type: "integer"
-        format: "int64"
-      quantity:
-        type: "integer"
-        format: "int32"
-      shipDate:
-        type: "string"
-        format: "date-time"
-      status:
-        type: "string"
-        description: "Order Status"
-        enum:
-        - "placed"
-        - "approved"
-        - "delivered"
-      complete:
-        type: "boolean"
-    xml:
-      name: "Order"
-  User:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      username:
-        type: "string"
-      firstName:
-        type: "string"
-      lastName:
-        type: "string"
-      email:
-        type: "string"
-      password:
-        type: "string"
-      phone:
-        type: "string"
-      userStatus:
-        type: "integer"
-        format: "int32"
-        description: "User Status"
-    xml:
-      name: "User"
-externalDocs:
-  description: "Find out more about Swagger"
-  url: "http://swagger.io"
+            type: object
+            properties:
+              error:
+                type: string
+                example: 'Unauthorized'
+  parameters:
+    fornecedorId:
+      name: id
+      in: path
+      required: true
+      description: The ID of the user to retrieve
+      schema:
+        type: integer
+        example: 1
