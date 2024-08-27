@@ -846,7 +846,7 @@ components:
                 A2_CIVIL:
                   type: string
                   lenght: 1
-                  options: "1=Solteiro;2=Casado;3=Divorciado;4=Viuvo"
+                  options: "1=Solteiro;2=Casado;3=Divorciado;4=Viuvo;5=Companheiro(a)"
                   description: "Estado civil"
 
                 A2_ROYMIN:
@@ -1085,7 +1085,7 @@ components:
                 A2_DEDBSPC:
                   type: string
                   lenght: 1
-                  options: "1=Legado;2=ICMS e IPI;3=ICMS;4=IPI"
+                  options: "1=Legado;2=ICMS e IPI;3=ICMS;4=IPI;5=Nenhum;6=Soma IPI"
                   description: "Ded. Base de PIS/COFINS"
 
                 A2_RECFMD:
@@ -1184,7 +1184,7 @@ components:
                 A2_SITESBH:
                   type: string
                   lenght: 1
-                  options: "1=Ex Pr bde Ser;2=Pr de Ser c/ Ded;3=Con Civ;4=Ag de Tu/Adm Fun"
+                  options: "1=Ex Pr bde Ser;2=Pr de Ser c/ Ded;3=Con Civ;4=Ag de Tu/Adm Fun;5=Pro e Pub/Int;6=Pro e Pub/Int Is;7=Não In/Re/Rep"
                   description: "Situação Especial de Resp"
 
                 A2_RESPTRI:
@@ -1216,7 +1216,7 @@ components:
                 A2_TPJ:
                   type: string
                   lenght: 1
-                  options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte;3=MEI - Microempreendedor Individual;4=Cooperativa"
+                  options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte;3=MEI - Microempreendedor Individual;4=Cooperativa;5=Não optante"
                   description: "Tipo de Pessoa Jurídica"
 
                 A2_INSCMU:
@@ -1357,7 +1357,7 @@ components:
                 A2_FRETISS:
                   type: string
                   lenght: 1
-                  options: "1=Valor mnimo;2=Sempre retm"
+                  options: "1=Valor mínimo;2=Sempre retém"
                   description: "Forma reteno ISSQN"
 
                 A2_MINIRF:
@@ -1484,7 +1484,7 @@ components:
                 A2_MOTNIF:
                   type: string
                   lenght: 1
-                  options: "1=Dispensado do NIF;2=Pas no exige NIF"
+                  options: "1=Dispensado do NIF;2=País não exige NIF"
                   description: "Mot. N.Preench NIF"
 
                 A2_REGPB:
@@ -1696,7 +1696,7 @@ components:
         A4_RATFRE:
           type: string
           lenght: 1
-          options: "1=Peso;2=Quantidade"
+          options: "1=Peso;2=Quantidade;3=Volume;4=Item"
           description: "Rateio do Frete"
 
         A4_COMPLEM:
@@ -1724,7 +1724,7 @@ components:
         A4_TPTRANS:
           type: string
           lenght: 1
-          options: "1=Inscrito;2=Não inscrito"
+          options: "1=Inscrito;2=Não inscrito;3=Autônomo"
           description: "Tipo do transportador"
 
         A4_COLIG:
@@ -2000,7 +2000,7 @@ components:
         A1_TPFRET:
           type: string
           lenght: 1
-          options: "C=CIF;F=FOB"
+          options: "C=CIF;F=FOB;T=Por conta terceiros;R=Por conta remetente;D=Por conta destinatário;S=Sem frete"
           description: "Tipo de Frete do cliente"
 
         A1_COND:
@@ -2023,7 +2023,7 @@ components:
         A1_RISCO:
           type: string
           lenght: 1
-          options: "A=Risco A;B=Risco B"
+          options: "A=Risco A;B=Risco B;C=Risco C;D=Risco D;E=Risco E"
           description: "Grau de Risco do cliente"
 
         A1_LC:
@@ -2041,7 +2041,7 @@ components:
         A1_CLASSE:
           type: string
           lenght: 1
-          options: "A=Classe A;B=Classe B"
+          options: "A=Classe A;B=Classe B;C=Classe C"
           description: "Classe de Credito"
 
         A1_LCFIN:
@@ -2119,7 +2119,7 @@ components:
         A1_CLASVEN:
           type: string
           lenght: 1
-          options: "A=Classe A;B=Classe B"
+          options: "A=Classe A;B=Classe B;C=Classe C"
           description: "Classificacao de Vendas"
 
         A1_TMPSTD:
@@ -2305,7 +2305,7 @@ components:
         A1_CALCSUF:
           type: string
           lenght: 1
-          options: "S=Sim;N=Não"
+          options: "S=Sim;N=Nao;I=ICMS"
           description: "Calcula Desc. p/ Suframa"
 
         A1_DTNASC:
@@ -2414,7 +2414,7 @@ components:
         A1_TPESSOA:
           type: string
           lenght: 2
-          options: "CI=Comercio/Industria;PF=Pessoa Fisica"
+          options: "CI=Comercio/Industria;PF=Pessoa Fisica;OS=Prestacäo de Servico;EP=Empresa Publica"
           description: "Tipo de Pessoa"
 
         A1_SATIV3:
@@ -2508,7 +2508,7 @@ components:
         A1_TIPCLI:
           type: string
           lenght: 1
-          options: "1=Importador;2=Consignee"
+          options: "1=Importador;2=Consignee;3=Notify;4=Todos"
           description: "Tipo Cliente Exportação"
 
         A1_DEST_1:
@@ -2598,19 +2598,19 @@ components:
         A1_RECCOFI:
           type: string
           lenght: 1
-          options: "S=Sim;N=Não"
+          options: "S=Sim;N=Nao;P=Empresa Pública"
           description: "Recolhe COFINS  ?"
 
         A1_RECCSLL:
           type: string
           lenght: 1
-          options: "S=Sim;N=Não"
+          options: "S=Sim;N=Nao;P=Empresa Pública"
           description: "Recolhe CSLL ?"
 
         A1_RECPIS:
           type: string
           lenght: 1
-          options: "S=Sim;N=Nao"
+          options: "S=Sim;N=Nao;P=Empresa Pública"
           description: "Recolhe PIS ?"
 
         A1_HISTMK:
@@ -2621,7 +2621,7 @@ components:
         A1_TIPPER:
           type: string
           lenght: 2
-          options: "02=Toda segunda;03=Toda terca"
+          options: "02=Toda segunda;03=Toda terca;04=Toda quarta;05=Toda quinta;06=Toda sexta;10=a cada 10 dias;15=a cada 15 dias;30=todo fim de mes"
           description: "Tipo de Periodo"
 
         A1_SALFIN:
@@ -2805,7 +2805,7 @@ components:
         A1_TIPPRFL:
           type: string
           lenght: 1
-          options: "1=Perfil 1;2=Perfil 2"
+          options: "1=Perfil 1;2=Perfil 2;3=Perfil 3;4=Perfil 4;5=Perfil 5;6=Perfil 6"
           description: "Tipo de Perfil do cliente"
 
         A1_PRF_VLD:
@@ -2899,7 +2899,7 @@ components:
         A1_RESERVE:
           type: string
           lenght: 1
-          options: "1=Pendente inclusão;2=Pendente alteração"
+          options: "1=Pendente inclusão;2=Pendente alteração;3=Pendente exclusão;4=Sincronizado"
           description: "Situação no Reserve"
 
         A1_IRBAX:
@@ -2934,7 +2934,7 @@ components:
         A1_ABATIMP:
           type: string
           lenght: 1
-          options: "1=Calculo do Sistema;2=Efetua Retencao"
+          options: "1=Calculo do Sistema;2=Efetua Retencao;3=Nao efetua retencao"
           description: "Modo Abatim. Imposto"
 
         A1_PERFECP:
@@ -2968,7 +2968,7 @@ components:
         A1_ORIGCT:
           type: string
           lenght: 1
-          options: "1=Mailing;2=Campanha"
+          options: "1=Mailing;2=Campanha;3=Web;4=Indicação;5=Evento;6=Anúncio;7=Parceiro;8=Relações públicas;9=Seminário;A=Boca-a-boca;B=Outros"
           description: "Origem do Cliente"
 
         A1_ALIFIXA:
@@ -2980,7 +2980,7 @@ components:
         A1_TPMEMB:
           type: string
           lenght: 1
-          options: "1=Unidade de Negócio;2=Papeis do Usuario"
+          options: "1=Unidade de Negócio;2=Papeis do Usuario;3=Equipe"
           description: "Tipo do Membro"
 
         A1_NOMTER:
@@ -2996,7 +2996,7 @@ components:
         A1_CRDMA:
           type: string
           lenght: 1
-          options: "1=Nao Incent.;2=Construtora"
+          options: "1=Nao Incent.;2=Construtora;3=Outros"
           description: "Crédito Estimulo Manaus"
 
         A1_DSCMEMB:
@@ -3036,13 +3036,13 @@ components:
         A1_TPNFSE:
           type: string
           lenght: 2
-          options: "0=Outro;1=SUS"
+          options: "0=Outro;1=SUS;2=Executivo;3=Bancos;4=Comercio/Industria;5=Legislativo/Judiciario"
           description: "Tipo de pessoa NFSE"
 
         A1_ENTID:
           type: string
           lenght: 2
-          options: "00=PJ D Pv;01=ÓrgA Fd"
+          options: "00=PJ D Pv;01=Órg,A Fd;02=Aq Ap;03=EP/SocEcMta/PJ;04=//PJ-Tr P;05=//-Sv Pr F;06=//-Dm Sv;07=//-D E;08=//-A Pf;09=//-Cb;10=Pg n E"
           description: "Tipo de Entidade"
           example: "99"
 
@@ -3188,7 +3188,7 @@ components:
         A1_TPJ:
           type: string
           lenght: 1
-          options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte"
+          options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte;3=MEI - Microempreendedor Individual;4=Não Optante"
           description: "Tipo de Pessoa Jurídica"
 
         A1_FILTRF:
@@ -3254,7 +3254,7 @@ components:
         BM_STATUS:
           type: string
           lenght: 1
-          options: "1=Novo;2=Remanufaturado"
+          options: "1=Novo;2=Remanufaturado;3=Reciclado;4=Usado"
           description: "Status do Grupo"
 
         BM_GRUREL:
@@ -3300,7 +3300,7 @@ components:
         BM_TIPMOV:
           type: string
           lenght: 1
-          options: "0=Paciente/Centro de Custo;1=Centro de Custo"
+          options: "0=Paciente/Centro de Custo;1=Centro de Custo;2=Pacotes"
           description: "Tipo da Movimentacao"
 
         BM_CODGRT:
@@ -3316,7 +3316,7 @@ components:
         BM_CLASGRU:
           type: string
           lenght: 1
-          options: "1=Outros;2=Material Automotivo"
+          options: "1=Outros;2=Material Automotivo;3=Insumos Agrícolas;4=Turismo;5=Serviço"
           description: "Classificacao de Grupo de"
 
         BM_FORMUL:
