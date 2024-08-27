@@ -2494,7 +2494,7 @@ components:
           description: "Código do agente"
 
         A1_VM_MARC:
-          type: M
+          type: string
           lenght: 20
           description: "Cod.Marcação"
 
@@ -2574,7 +2574,7 @@ components:
           description: "Observacoes"
 
         A1_VM_OBS:
-          type: M
+          type: string
           lenght: 60
           description: "Observações"
 
@@ -2614,7 +2614,7 @@ components:
           description: "Recolhe PIS ?"
 
         A1_HISTMK:
-          type: M
+          type: string
           lenght: 35
           description: "Historico do Atendimento"
 
@@ -2819,7 +2819,7 @@ components:
           description: "Codigo do campo memo de P"
 
         A1_PRF_OBS:
-          type: M
+          type: string
           lenght: 10
           description: "Observacao do Perfil"
 
@@ -3330,7 +3330,7 @@ components:
           description: "Tipo de Segmento"
 
         BM_DTUMOV:
-          type: D
+          type: string
           lenght: 8
           description: "Data Transf. uMov.me"
 
@@ -3346,17 +3346,17 @@ components:
           description: "Exige Conciliação?"
 
         BM_CORP:
-          type: L
+          type: boolean
           lenght: 1
           description: "Segmente Corporativo"
 
         BM_EVENTO:
-          type: L
+          type: boolean
           lenght: 1
           description: "Segmento Evento"
 
         BM_LAZER:
-          type: L
+          type: boolean
           lenght: 1
           description: "Segmento Lazer"
 
