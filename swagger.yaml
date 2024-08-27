@@ -22,7 +22,7 @@ tags:
   - name: Transportadora
     # description: Transportadora
 paths:
-  /api/v1/create:
+  /api/v1/createFornecedor:
     post:
       tags:
         - Fornecedor
@@ -62,7 +62,7 @@ paths:
       security:
         - apiKeyAuth: []
   
-  /api/v1/getById/{id}:
+  /api/v1/getFornecedorById/{id}:
     get:
       tags:
         - Fornecedor
