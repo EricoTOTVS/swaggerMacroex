@@ -14,12 +14,12 @@ info:
 servers:
   - url: 'http://localhost:3000'
     description: Development server
-  - url: 'https://api.example.com'
-    description: Production server
+  # - url: 'https://api.example.com'
+    # description: Production server
 tags:
   - name: Fornecedor
     # description: Fornecedor
-  # - name: Transportadora
+  - name: Transportadora
     # description: Transportadora
 paths:
   /api/v1/create:
