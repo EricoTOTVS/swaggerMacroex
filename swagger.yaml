@@ -20,9 +20,8 @@ tags:
   - name: Fornecedor
     # description: Fornecedor
   - name: Transportadora
-    # description: Transportadora
   - name: Cliente
-    # description: Cliente
+  - name: GrupoDeProdutos
 paths:
   /api/v1/createFornecedor:
     post:
@@ -146,6 +145,43 @@ paths:
           application/json:
             schema:
              $ref: '#/components/schemas/Cliente'
+              
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: '1'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: 'Invalid input, please confirm your parameters'
+      security:
+        - apiKeyAuth: []
+  
+  /api/v1/grupoDeProdutos:
+    post:
+      tags:
+        - GrupoDeProdutos
+      summary: EndPoint para criar grupo de produtos
+      operationId: GrupoDeProdutos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+             $ref: '#/components/schemas/GrupoDeProdutos'
               
       responses:
         '200':
@@ -3175,7 +3211,158 @@ components:
         - A1_TIPO
         - A1_EST
         - A1_MUN
+    
+    GrupoDeProdutos:
+      type: object
+      properties:
+        BM_FILIAL:
+          type: string
+          lenght: 4
+          description: "Filial"
 
+        BM_GRUPO:
+          type: string
+          lenght: 4
+          description: "Codigo do Grupo"
+
+        BM_DESC:
+          type: string
+          lenght: 30
+          description: "Descricao do Grupo"
+
+        BM_PICPAD:
+          type: string
+          lenght: 30
+          description: "Picture Padrao do Campo"
+
+        BM_PROORI:
+          type: string
+          lenght: 1
+          options: "1=Original;0=Nao Original"
+          description: "Procedencia do Produto"
+
+        BM_CODMAR:
+          type: string
+          lenght: 3
+          description: "Codigo da Marca"
+
+        BM_DESMAR:
+          type: string
+          lenght: 30
+          description: "Descricao da Marca"
+
+        BM_STATUS:
+          type: string
+          lenght: 1
+          options: "1=Novo;2=Remanufaturado"
+          description: "Status do Grupo"
+
+        BM_GRUREL:
+          type: string
+          lenght: 40
+          description: "Grupo Relacionado"
+
+        BM_TIPGRU:
+          type: string
+          lenght: 2
+          description: "Tipo de Grupo"
+
+        BM_DESTGR:
+          type: string
+          lenght: 20
+          description: "Descricao do Tipo Grupo"
+
+        BM_MARKUP:
+          type: number
+          lenght: 10
+          decimal: 6
+          description: "Indice de Mark-Up"
+          example: "999.999999"
+
+        BM_PRECO:
+          type: string
+          lenght: 3
+          description: "Tabela de Preco"
+
+        BM_MARGPRE:
+          type: number
+          lenght: 6
+          decimal: 2
+          description: "% Margem de Preferência"
+          example: "999.99"
+
+        BM_LENREL:
+          type: number
+          lenght: 2
+          description: "Tam Chave Item Relacionad"
+          example: "99"
+
+        BM_TIPMOV:
+          type: string
+          lenght: 1
+          options: "0=Paciente/Centro de Custo;1=Centro de Custo"
+          description: "Tipo da Movimentacao"
+
+        BM_CODGRT:
+          type: string
+          lenght: 2
+          description: "Código Grupo de Produtos"
+
+        BM_DESGRT:
+          type: string
+          lenght: 20
+          description: "Nome do Tipo do Grupo"
+
+        BM_CLASGRU:
+          type: string
+          lenght: 1
+          options: "1=Outros;2=Material Automotivo"
+          description: "Classificacao de Grupo de"
+
+        BM_FORMUL:
+          type: string
+          lenght: 6
+          description: "Formula"
+
+        BM_TPSEGP:
+          type: string
+          lenght: 1
+          description: "Tipo de Segmento"
+
+        BM_DTUMOV:
+          type: D
+          lenght: 8
+          description: "Data Transf. uMov.me"
+
+        BM_HRUMOV:
+          type: string
+          lenght: 5
+          description: "Hora Transf. uMov.me"
+
+        BM_CONC:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Exige Conciliação?"
+
+        BM_CORP:
+          type: L
+          lenght: 1
+          description: "Segmente Corporativo"
+
+        BM_EVENTO:
+          type: L
+          lenght: 1
+          description: "Segmento Evento"
+
+        BM_LAZER:
+          type: L
+          lenght: 1
+          description: "Segmento Lazer"
+
+      required:
+        - BM_FILIAL
+        - BM_GRUPO
   responses:
     UnauthorizedError:
       description: Authentication information is missing or invalid
