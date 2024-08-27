@@ -21,6 +21,8 @@ tags:
     # description: Fornecedor
   - name: Transportadora
     # description: Transportadora
+  - name: Cliente
+    # description: Cliente
 paths:
   /api/v1/createFornecedor:
     post:
@@ -107,6 +109,43 @@ paths:
           application/json:
             schema:
              $ref: '#/components/schemas/Transportadora'
+              
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: '1'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: 'Invalid input, please confirm your parameters'
+      security:
+        - apiKeyAuth: []
+
+  /api/v1/createCliente:
+    post:
+      tags:
+        - Cliente
+      summary: EndPoint para criar cliente
+      operationId: createCliente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+             $ref: '#/components/schemas/Cliente'
               
       responses:
         '200':
@@ -1687,6 +1726,1456 @@ components:
         - A4_FILIAL
         - A4_COD
         - A4_NOME
+
+    Cliente:
+      type: object
+      properties:
+        A1_FILIAL:
+          type: string
+          lenght: 4
+          description: "Filial do Sistema"
+
+        A1_COD:
+          type: string
+          lenght: 6
+          description: "Codigo do Cliente"
+
+        A1_LOJA:
+          type: string
+          lenght: 2
+          description: "Loja do Cliente"
+
+        A1_CGC:
+          type: string
+          lenght: 14
+          description: "CNPJ/CPF do cliente"
+          example: "99.999.999/9999-99"
+
+        A1_PESSOA:
+          type: string
+          lenght: 1
+          options: "F=Fisica;J=Juridica"
+          description: "Pessoa Fisica/Juridica"
+
+        A1_NOME:
+          type: string
+          lenght: 40
+          description: "Nome do cliente"
+
+        A1_END:
+          type: string
+          lenght: 80
+          description: "Endereco do cliente"
+
+        A1_NREDUZ:
+          type: string
+          lenght: 20
+          description: "Nome Reduzido do cliente"
+
+        A1_BAIRRO:
+          type: string
+          lenght: 40
+          description: "Bairro do cliente"
+
+        A1_TIPO:
+          type: string
+          lenght: 1
+          options: "F=Cons.Final"
+          description: "Tipo do Cliente"
+
+        A1_EST:
+          type: string
+          lenght: 2
+          description: "Estado do cliente"
+
+        A1_ESTADO:
+          type: string
+          lenght: 20
+          description: "Nome do Estado Fornecedor"
+
+        A1_COD_MUN:
+          type: string
+          lenght: 5
+          description: "Código do Municipio"
+
+        A1_CEP:
+          type: string
+          lenght: 8
+          description: "Cod Enderecamento Postal"
+          example: "99999-999"
+
+        A1_MUN:
+          type: string
+          lenght: 60
+          description: "Municipio do cliente"
+
+        A1_DSCREG:
+          type: string
+          lenght: 15
+          description: "Descrição da Região"
+
+        A1_REGIAO:
+          type: string
+          lenght: 3
+          description: "Regiao do Cliente"
+
+        A1_NATUREZ:
+          type: string
+          lenght: 10
+          description: "Codigo da Nat Financeira"
+
+        A1_IBGE:
+          type: string
+          lenght: 11
+          description: "Codigo do IBGE"
+
+        A1_DDI:
+          type: string
+          lenght: 6
+          description: "Codigo do DDI"
+          example: "999999"
+
+        A1_DDD:
+          type: string
+          lenght: 3
+          description: "Codigo do DDD"
+          example: "999"
+
+        A1_ENDCOB:
+          type: string
+          lenght: 40
+          description: "End.de cobr. do cliente"
+
+        A1_ENDENT:
+          type: string
+          lenght: 40
+          description: "End.de entr. do cliente"
+
+        A1_TRIBFAV:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Pessoa Trib. Favor."
+
+        A1_COMPENT:
+          type: string
+          lenght: 50
+          description: "Compl. do End. de Entrega"
+
+        A1_TEL:
+          type: string
+          lenght: 15
+          description: "Telefone do cliente"
+          example: "999999999999999"
+
+        A1_ENDREC:
+          type: string
+          lenght: 40
+          description: "End.de Receb. do cliente"
+
+        A1_CONTATO:
+          type: string
+          lenght: 15
+          description: "Nome do Contato"
+
+        A1_FAX:
+          type: string
+          lenght: 15
+          description: "Numero do FAX do cliente"
+          example: "999999999999999"
+
+        A1_TELEX:
+          type: string
+          lenght: 10
+          description: "Telex do cliente"
+
+        A1_PFISICA:
+          type: string
+          lenght: 18
+          description: "Reg.Geral/Ced.Estrangeiro"
+
+        A1_INSCR:
+          type: string
+          lenght: 18
+          description: "Inscricao Estadual"
+
+        A1_PAIS:
+          type: string
+          lenght: 3
+          description: "Codigo do País"
+
+        A1_INSCRM:
+          type: string
+          lenght: 18
+          description: "Inscricao Municipal"
+
+        A1_VEND:
+          type: string
+          lenght: 6
+          description: "Codigo do Vendedor"
+
+        A1_PAISDES:
+          type: string
+          lenght: 25
+          description: "Descr. Pais"
+
+        A1_COMIS:
+          type: number
+          lenght: 5
+          decimal: 2
+          description: "Aliquota de Comissao"
+          example: "99.99"
+
+        A1_CONTA:
+          type: string
+          lenght: 20
+          description: "Conta Contabil do cliente"
+
+        A1_BCO1:
+          type: string
+          lenght: 3
+          description: "BANCO 1"
+
+        A1_BCO2:
+          type: string
+          lenght: 3
+          description: "BANCO 2"
+
+        A1_BCO3:
+          type: string
+          lenght: 3
+          description: "BANCO 3"
+
+        A1_BCO4:
+          type: string
+          lenght: 3
+          description: "BANCO 4"
+
+        A1_BCO5:
+          type: string
+          lenght: 3
+          description: "BANCO 5"
+
+        A1_TRANSP:
+          type: string
+          lenght: 6
+          description: "Codigo da Transportadora"
+
+        A1_TPFRET:
+          type: string
+          lenght: 1
+          options: "C=CIF;F=FOB"
+          description: "Tipo de Frete do cliente"
+
+        A1_COND:
+          type: string
+          lenght: 3
+          description: "Condicao de Pagamento"
+
+        A1_DESC:
+          type: number
+          lenght: 2
+          description: "Desconto ao cliente"
+          example: "99"
+
+        A1_PRIOR:
+          type: string
+          lenght: 1
+          description: "Prioridade do cliente"
+          example: "9"
+
+        A1_RISCO:
+          type: string
+          lenght: 1
+          options: "A=Risco A;B=Risco B"
+          description: "Grau de Risco do cliente"
+
+        A1_LC:
+          type: number
+          lenght: 14
+          decimal: 2
+          description: "Limite de Cred.do cliente"
+          example: "999999999.99"
+
+        A1_VENCLC:
+          type: string
+          lenght: 8
+          description: "Vencimento do Lim. Credit"
+
+        A1_CLASSE:
+          type: string
+          lenght: 1
+          options: "A=Classe A;B=Classe B"
+          description: "Classe de Credito"
+
+        A1_LCFIN:
+          type: number
+          lenght: 14
+          decimal: 2
+          description: "Lim Credito Secundario"
+          example: "999999999.99"
+
+        A1_MOEDALC:
+          type: number
+          lenght: 2
+          description: "Moeda do Limite de credit"
+          example: "99"
+
+        A1_MSALDO:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Maior Saldo do cliente"
+          example: "9999999999999.99"
+
+        A1_MCOMPRA:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Maior Compra do cliente"
+          example: "9999999999999.99"
+
+        A1_METR:
+          type: number
+          lenght: 7
+          decimal: 2
+          description: "Méd.de atrasos do cliente"
+          example: "9999.99"
+
+        A1_PRICOM:
+          type: string
+          lenght: 8
+          description: "Data 1a Compra do cliente"
+
+        A1_ULTCOM:
+          type: string
+          lenght: 8
+          description: "Data da ultima Compra"
+
+        A1_NROCOM:
+          type: number
+          lenght: 5
+          description: "Nro de compras do cliente"
+          example: "99999"
+
+        A1_FORMVIS:
+          type: string
+          lenght: 3
+          description: "Formula da Visita"
+
+        A1_TEMVIS:
+          type: number
+          lenght: 3
+          description: "Frequencia de Visitas"
+          example: "999"
+
+        A1_ULTVIS:
+          type: string
+          lenght: 8
+          description: "Data da ultima Visita"
+
+        A1_TMPVIS:
+          type: string
+          lenght: 5
+          description: "Tempo da Visita"
+          example: "99:99"
+
+        A1_CLASVEN:
+          type: string
+          lenght: 1
+          options: "A=Classe A;B=Classe B"
+          description: "Classificacao de Vendas"
+
+        A1_TMPSTD:
+          type: string
+          lenght: 5
+          description: "Tempo Padrao p/Deslocam."
+          example: "99:99"
+
+        A1_MENSAGE:
+          type: string
+          lenght: 3
+          description: "Mensagem do cliente"
+
+        A1_SALDUP:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Saldo Duplic. do cliente"
+          example: "9999999999999.99"
+
+        A1_RECISS:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Recolhe ISS?"
+
+        A1_NROPAG:
+          type: number
+          lenght: 4
+          description: "Nro de Pagtos do cliente"
+          example: "9999"
+
+        A1_SALPEDL:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Saldo Pedidos Liberados"
+          example: "9999999999999.99"
+
+        A1_TRANSF:
+          type: string
+          lenght: 1
+          description: "Flag p/transf. arquivos"
+
+        A1_SUFRAMA:
+          type: string
+          lenght: 12
+          description: "Codigo na SUFRAMA"
+
+        A1_ATR:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Valor dos Atrasos"
+          example: "9999999999999.99"
+
+        A1_VACUM:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Valor Acum. Vendas no Ano"
+          example: "9999999999999.99"
+
+        A1_SALPED:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Saldo de Pedidos"
+          example: "9999999999999.99"
+
+        A1_TITPROT:
+          type: number
+          lenght: 3
+          description: "Titulos Protestados"
+          example: "999"
+
+        A1_DTULTIT:
+          type: string
+          lenght: 8
+          description: "Data do Ult. Titulos Dev."
+
+        A1_CHQDEVO:
+          type: number
+          lenght: 3
+          description: "Numero de Cheques Devolv."
+          example: "999"
+
+        A1_MATR:
+          type: number
+          lenght: 4
+          description: "Maior atraso do cliente"
+          example: "9999"
+
+        A1_DTULCHQ:
+          type: string
+          lenght: 8
+          description: "Dt.de Devol. Ult. Cheque"
+
+        A1_MAIDUPL:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Valor da maior Duplicata"
+          example: "9999999999999.99"
+
+        A1_TABELA:
+          type: string
+          lenght: 3
+          description: "Tabela de preco padrao"
+
+        A1_INCISS:
+          type: string
+          lenght: 1
+          options: "S=Sim;N=Não"
+          description: "ISS incluso no preço"
+
+        A1_SALDUPM:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Saldo em Moeda Forte"
+          example: "9999999999999.99"
+
+        A1_PAGATR:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Pag. feitos com atraso"
+          example: "9999999999999.99"
+
+        A1_CXPOSTA:
+          type: string
+          lenght: 20
+          description: "Caixa Postal"
+
+        A1_ATIVIDA:
+          type: string
+          lenght: 7
+          description: "Codigo da Atividade"
+
+        A1_CARGO1:
+          type: string
+          lenght: 15
+          description: "Cargo do Contato Coml."
+
+        A1_CARGO2:
+          type: string
+          lenght: 15
+          description: "Cargo do Contato CPD"
+
+        A1_CARGO3:
+          type: string
+          lenght: 15
+          description: "Cargo do Contato C.Rec."
+
+        A1_SUPER:
+          type: string
+          lenght: 6
+          description: "Franquia Responsavel"
+
+        A1_RTEC:
+          type: string
+          lenght: 6
+          description: "Representante Tecnico"
+
+        A1_ALIQIR:
+          type: number
+          lenght: 5
+          decimal: 2
+          description: "Aliquota IRRF"
+          example: "99.99"
+
+        A1_RG:
+          type: string
+          lenght: 15
+          description: "Cedula de Identidade"
+
+        A1_OBSERV:
+          type: string
+          lenght: 40
+          description: "Observacao para relatorio"
+
+        A1_CALCSUF:
+          type: string
+          lenght: 1
+          options: "S=Sim;N=Não"
+          description: "Calcula Desc. p/ Suframa"
+
+        A1_DTNASC:
+          type: string
+          lenght: 8
+          description: "Data de Nasc. ou Abertura"
+
+        A1_SALPEDB:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Saldo Pedido Bloq.Credito"
+          example: "9999999999999.99"
+
+        A1_CLIFAT:
+          type: string
+          lenght: 6
+          description: "Cliente a Faturar"
+
+        A1_GRPTRIB:
+          type: string
+          lenght: 3
+          description: "Grupo de Clientes"
+
+        A1_BAIRROC:
+          type: string
+          lenght: 30
+          description: "Bairro de cobranca"
+
+        A1_CEPC:
+          type: string
+          lenght: 8
+          description: "Cep de Cobranca"
+          example: "99999-999"
+
+        A1_MUNC:
+          type: string
+          lenght: 15
+          description: "Municipio de Cobranca"
+
+        A1_ESTC:
+          type: string
+          lenght: 2
+          description: "Uf de Cobranca"
+
+        A1_CEPE:
+          type: string
+          lenght: 8
+          description: "Cep de Entrega"
+          example: "99999-999"
+
+        A1_BAIRROE:
+          type: string
+          lenght: 20
+          description: "Bairro de Entrega"
+
+        A1_MUNE:
+          type: string
+          lenght: 60
+          description: "Municipio de Entrega"
+
+        A1_ESTE:
+          type: string
+          lenght: 2
+          description: "Estado de Entrega"
+
+        A1_SATIV1:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 1"
+          example: "999999"
+
+        A1_DSATIV1:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 1"
+
+        A1_SATIV2:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 2"
+          example: "999999"
+
+        A1_CODPAIS:
+          type: string
+          lenght: 5
+          description: "Cód. país Banco Central"
+          example: "99999"
+
+        A1_DSATIV2:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 2"
+
+        A1_TPISSRS:
+          type: string
+          lenght: 2
+          description: "Tipo de Escrituração"
+          example: "99"
+
+        A1_CODLOC:
+          type: string
+          lenght: 8
+          description: "Código da Localidade"
+
+        A1_TPESSOA:
+          type: string
+          lenght: 2
+          options: "CI=Comercio/Industria;PF=Pessoa Fisica"
+          description: "Tipo de Pessoa"
+
+        A1_SATIV3:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 3"
+          example: "999999"
+
+        A1_DSATIV3:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 3"
+
+        A1_SATIV4:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 4"
+          example: "999999"
+
+        A1_DSATIV4:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 4"
+
+        A1_SATIV5:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 5"
+          example: "999999"
+
+        A1_DSATIV5:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 5"
+
+        A1_SATIV6:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 6"
+          example: "999999"
+
+        A1_DSATIV6:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 6"
+
+        A1_SATIV7:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 7"
+          example: "999999"
+
+        A1_DSATIV7:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 7"
+
+        A1_SATIV8:
+          type: string
+          lenght: 6
+          description: "Segmentacao de Ativid. 8"
+          example: "999999"
+
+        A1_DSATIV8:
+          type: string
+          lenght: 60
+          description: "Descrição Segmento 8"
+
+        A1_CODMARC:
+          type: string
+          lenght: 6
+          description: "Marcacao"
+
+        A1_CODAGE:
+          type: string
+          lenght: 6
+          description: "Código do agente"
+
+        A1_VM_MARC:
+          type: M
+          lenght: 20
+          description: "Cod.Marcação"
+
+        A1_COMAGE:
+          type: number
+          lenght: 15
+          decimal: 8
+          description: "% Comissão agente"
+          example: "999999.99999999"
+
+        A1_TIPCLI:
+          type: string
+          lenght: 1
+          options: "1=Importador;2=Consignee"
+          description: "Tipo Cliente Exportação"
+
+        A1_DEST_1:
+          type: string
+          lenght: 3
+          description: "Destino 1"
+
+        A1_EMAIL:
+          type: string
+          lenght: 30
+          description: "E-Mail"
+
+        A1_DEST_2:
+          type: string
+          lenght: 3
+          description: "Destino 2"
+
+        A1_CODMUN:
+          type: string
+          lenght: 5
+          description: "Cod. Mun. ZF Manaus e ALC"
+
+        A1_HPAGE:
+          type: string
+          lenght: 30
+          description: "Home-Page"
+
+        A1_DEST_3:
+          type: string
+          lenght: 3
+          description: "Destino 3"
+
+        A1_CBO:
+          type: string
+          lenght: 7
+          description: "Codigo do CBO"
+
+        A1_CNAE:
+          type: string
+          lenght: 9
+          description: "Código CNAE do Cliente"
+          example: "9999-9/99"
+
+        A1_CONDPAG:
+          type: string
+          lenght: 5
+          description: "Cond. Pagto"
+
+        A1_DIASPAG:
+          type: number
+          lenght: 3
+          description: "Dias  Pagto"
+          example: "999"
+
+        A1_DESCPAG:
+          type: string
+          lenght: 60
+          description: "Descricao em Portugues"
+
+        A1_OBS:
+          type: string
+          lenght: 6
+          description: "Observacoes"
+
+        A1_VM_OBS:
+          type: M
+          lenght: 60
+          description: "Observações"
+
+        A1_AGREG:
+          type: string
+          lenght: 4
+          description: "Agregador de liberacao"
+
+        A1_CODHIST:
+          type: string
+          lenght: 6
+          description: "Codigo da Obs. do Hist."
+          example: "999999"
+
+        A1_RECINSS:
+          type: string
+          lenght: 1
+          options: "S=Sim;N=Não"
+          description: "Recolhe INSS <S/N> ?"
+
+        A1_RECCOFI:
+          type: string
+          lenght: 1
+          options: "S=Sim;N=Não"
+          description: "Recolhe COFINS  ?"
+
+        A1_RECCSLL:
+          type: string
+          lenght: 1
+          options: "S=Sim;N=Não"
+          description: "Recolhe CSLL ?"
+
+        A1_RECPIS:
+          type: string
+          lenght: 1
+          options: "S=Sim;N=Nao"
+          description: "Recolhe PIS ?"
+
+        A1_HISTMK:
+          type: M
+          lenght: 35
+          description: "Historico do Atendimento"
+
+        A1_TIPPER:
+          type: string
+          lenght: 2
+          options: "02=Toda segunda;03=Toda terca"
+          description: "Tipo de Periodo"
+
+        A1_SALFIN:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Saldo LC secundario"
+          example: "9999999999999.99"
+
+        A1_CONTAB:
+          type: string
+          lenght: 15
+          description: "Conta contabil importacäo"
+
+        A1_SALFINM:
+          type: number
+          lenght: 16
+          decimal: 2
+          description: "Saldo LC Secundario na MF"
+          example: "9999999999999.99"
+
+        A1_B2B:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Utiliza B2B?"
+
+        A1_GRPVEN:
+          type: string
+          lenght: 6
+          description: "Grupo de Vendas."
+
+        A1_MSBLQL:
+          type: string
+          lenght: 1
+          options: "1=Inativo;2=Ativo"
+          description: "Status do Registro"
+
+        A1_INSCRUR:
+          type: string
+          lenght: 18
+          description: "Inscricao produtor rural"
+
+        A1_CLICNV:
+          type: string
+          lenght: 1
+          options: "0=Nao;1=Sim"
+          description: "O Cliente e¦ Convenio?"
+
+        A1_COMPLEM:
+          type: string
+          lenght: 50
+          description: "Complemento do endereço"
+
+        A1_HRCAD:
+          type: string
+          lenght: 5
+          description: "Hora de Cadastro"
+          example: "99:99"
+
+        A1_DTCAD:
+          type: string
+          lenght: 8
+          description: "Data de Cadastro"
+
+        A1_CLIPRI:
+          type: string
+          lenght: 6
+          description: "Cliente Primário"
+
+        A1_LOJPRI:
+          type: string
+          lenght: 2
+          description: "Loja do Cliente Primário"
+
+        A1_CODSEG:
+          type: string
+          lenght: 6
+          description: "Código do Segmento"
+
+        A1_DESSEG:
+          type: string
+          lenght: 40
+          description: "Descrição do Segmento"
+
+        A1_NUMRA:
+          type: string
+          lenght: 15
+          description: "Numero da RA aluno"
+
+        A1_SITUA:
+          type: string
+          lenght: 2
+          description: "Situacão Front Loja"
+
+        A1_SUBCOD:
+          type: string
+          lenght: 1
+          description: "Sub codigo"
+
+        A1_CDRDES:
+          type: string
+          lenght: 6
+          description: "Regiao do Cliente"
+
+        A1_REGDES:
+          type: string
+          lenght: 30
+          description: "Descr. Regiao do Cliente"
+
+        A1_FILDEB:
+          type: string
+          lenght: 4
+          description: "Filial de Debito"
+
+        A1_CODFOR:
+          type: string
+          lenght: 15
+          description: "Cod.Fornec.para o cliente"
+
+        A1_ABICS:
+          type: string
+          lenght: 4
+          description: "Cod. Abics"
+          example: "9999"
+
+        A1_BLEMAIL:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Boleto Via Email (Cnab)"
+
+        A1_TIPOCLI:
+          type: string
+          lenght: 2
+          description: "Tipo do Cliente"
+
+        A1_VINCULO:
+          type: string
+          lenght: 2
+          description: "Pessoa Vinculada"
+
+        A1_DTINIV:
+          type: string
+          lenght: 8
+          description: "Data Inicial do Vinculo"
+
+        A1_DTFIMV:
+          type: string
+          lenght: 8
+          description: "Data Final do Vinculo"
+
+        A1_LOCCONS:
+          type: string
+          lenght: 2
+          description: "Armazem Destino"
+
+        A1_CODMUNE:
+          type: string
+          lenght: 5
+          description: "Municipio da Entrega"
+          example: "9"
+
+        A1_PERFIL:
+          type: number
+          lenght: 2
+          description: "Nota Perfil do Cliente"
+          example: "99"
+
+        A1_HRTRANS:
+          type: string
+          lenght: 5
+          description: "Translado"
+          example: "99:99"
+
+        A1_UNIDVEN:
+          type: string
+          lenght: 6
+          description: "Unidade de Venda"
+
+        A1_TIPPRFL:
+          type: string
+          lenght: 1
+          options: "1=Perfil 1;2=Perfil 2"
+          description: "Tipo de Perfil do cliente"
+
+        A1_PRF_VLD:
+          type: string
+          lenght: 8
+          description: "Data de validade do Perfi"
+
+        A1_PRF_COD:
+          type: string
+          lenght: 6
+          description: "Codigo do campo memo de P"
+
+        A1_PRF_OBS:
+          type: M
+          lenght: 10
+          description: "Observacao do Perfil"
+
+        A1_REGPB:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Regime Paraíba"
+
+        A1_TPREG:
+          type: string
+          lenght: 1
+          options: "1=Não Cumulativo;2=Cumulativo"
+          description: "Tipo de Regime"
+
+        A1_USADDA:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Cliente aderiu ao DDA"
+
+        A1_SIMPLES:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Clie. optante SIMPLES/SC"
+
+        A1_MSEXP:
+          type: string
+          lenght: 8
+          description: "Ident.Exp.Dados"
+
+        A1_NIF:
+          type: string
+          lenght: 40
+          description: "Num. de Ident. Fiscal"
+          example: "9"
+
+        A1_CODSIAF:
+          type: string
+          lenght: 4
+          description: "Cod.Municipio SIAFI"
+
+        A1_INDRET:
+          type: string
+          lenght: 2
+          description: "Indicador de Retencao"
+
+        A1_ENDNOT:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Endereço não formatado"
+
+        A1_CEINSS:
+          type: string
+          lenght: 14
+          description: "Cadastro Especifico INSS"
+
+        A1_IDHIST:
+          type: string
+          lenght: 20
+          description: "Id.Historico"
+
+        A1_FRETISS:
+          type: string
+          lenght: 1
+          options: "1=Cons Vlr Mínimo;2=Sempre Retém"
+          description: "Forma de retenção do ISS"
+
+        A1_CTARE:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Contribuinte TARE ?"
+
+        A1_RESERVE:
+          type: string
+          lenght: 1
+          options: "1=Pendente inclusão;2=Pendente alteração"
+          description: "Situação no Reserve"
+
+        A1_IRBAX:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "IRPJ baixa"
+
+        A1_ORIGEM:
+          type: string
+          lenght: 2
+          description: "Origem do Cliente"
+
+        A1_IPWEB:
+          type: string
+          lenght: 20
+          description: "IP WebSite do Cliente"
+
+        A1_PERCATM:
+          type: number
+          lenght: 5
+          decimal: 2
+          description: "Pecentual de Carga Media"
+          example: "99.99"
+
+        A1_REGESIM:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Reg. Simlificado MT"
+
+        A1_ABATIMP:
+          type: string
+          lenght: 1
+          options: "1=Calculo do Sistema;2=Efetua Retencao"
+          description: "Modo Abatim. Imposto"
+
+        A1_PERFECP:
+          type: number
+          lenght: 5
+          decimal: 2
+          description: "Per.Carga devida ao Fundo"
+          example: "99.99"
+
+        A1_IENCONT:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Destaca IE não Contr."
+
+        A1_CODMEMB:
+          type: string
+          lenght: 14
+          description: "Código do Membro"
+
+        A1_CHVCAM:
+          type: string
+          lenght: 14
+          description: "Código da Campanha"
+
+        A1_CODTER:
+          type: string
+          lenght: 6
+          description: "Código do Território"
+
+        A1_ORIGCT:
+          type: string
+          lenght: 1
+          options: "1=Mailing;2=Campanha"
+          description: "Origem do Cliente"
+
+        A1_ALIFIXA:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Ind. Alíquota fixa"
+
+        A1_TPMEMB:
+          type: string
+          lenght: 1
+          options: "1=Unidade de Negócio;2=Papeis do Usuario"
+          description: "Tipo do Membro"
+
+        A1_NOMTER:
+          type: string
+          lenght: 40
+          description: "Nome do Território"
+
+        A1_ENTORI:
+          type: string
+          lenght: 6
+          description: "Entidade de Origem"
+
+        A1_CRDMA:
+          type: string
+          lenght: 1
+          options: "1=Nao Incent.;2=Construtora"
+          description: "Crédito Estimulo Manaus"
+
+        A1_DSCMEMB:
+          type: string
+          lenght: 100
+          description: "Descrição do Membro"
+
+        A1_TPDP:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Calcula TPDP"
+
+        A1_RFABOV:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Recolhe FABOV"
+
+        A1_RFACS:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Recolhe FACS"
+
+        A1_PRSTSER:
+          type: string
+          lenght: 1
+          description: "Ind. Prestador de Serv."
+
+        A1_SIMPNAC:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Optante Simples Nacional"
+
+        A1_TPNFSE:
+          type: string
+          lenght: 2
+          options: "0=Outro;1=SUS"
+          description: "Tipo de pessoa NFSE"
+
+        A1_ENTID:
+          type: string
+          lenght: 2
+          options: "00=PJ D Pv;01=ÓrgA Fd"
+          description: "Tipo de Entidade"
+          example: "99"
+
+        A1_MATFUN:
+          type: string
+          lenght: 6
+          description: "Matricula do usuário"
+
+        A1_DESCAM:
+          type: string
+          lenght: 40
+          description: "Descrição da Campanha"
+
+        A1_CODFID:
+          type: string
+          lenght: 40
+          description: "Código Cartão Fidelidade"
+
+        A1_MINIRF:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Valor Mínimo de IRRF"
+
+        A1_USERLGI:
+          type: string
+          lenght: 17
+          description: "Log de Inclusão"
+
+        A1_USERLGA:
+          type: string
+          lenght: 17
+          description: "Log de Alteração"
+
+        A1_INCULT:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Incentivo a Cultura"
+
+        A1_HREXPO:
+          type: string
+          lenght: 8
+          description: "Hora da ultima Exportação"
+
+        A1_FOMEZER:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Participação Fome Zero"
+
+        A1_ISSRSLC:
+          type: string
+          lenght: 1
+          description: "LC Enq. ISS"
+
+        A1_RECFET:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Recolhe FETHAB"
+
+        A1_RECIRRF:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Nao"
+          description: "Cliente recolhera IRRF"
+
+        A1_TDA:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Taxa Dif. Acesso"
+
+        A1_INCLTMG:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Incentivo Prod.Leite MG"
+
+        A1_RIMAMT:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Recolhe IMA-MT"
+
+        A1_RFASEMT:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Recolhe FASE-MT"
+
+        A1_RECFMD:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Recolhe FAMAD"
+
+        A1_OUTRMUN:
+          type: string
+          lenght: 10
+          description: "Cod. Outros Municipios"
+
+        A1_TIMEKEE:
+          type: string
+          lenght: 8
+          description: "Advogado apontador Horas"
+
+        A1_INOVAUT:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Inovar Auto"
+
+        A1_RESFAT:
+          type: string
+          lenght: 1
+          options: "1=Nota Normal;2=Nota Debito"
+          description: "Forma Faturamento Viagem"
+          example: "9"
+
+        A1_NVESTN:
+          type: number
+          lenght: 2
+          description: "Nvl de Acesso a Estr. Neg"
+          example: "99"
+
+        A1_TPCAMP:
+          type: string
+          lenght: 1
+          description: "Tipo de Campanha"
+
+        A1_IDESTN:
+          type: string
+          lenght: 30
+          description: "Id. de Acesso Estr. Neg."
+
+        A1_IMGUMOV:
+          type: string
+          lenght: 100
+          description: "Ver imagem uMov.me"
+
+        A1_TPJ:
+          type: string
+          lenght: 1
+          options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte"
+          description: "Tipo de Pessoa Jurídica"
+
+        A1_FILTRF:
+          type: string
+          lenght: 4
+          description: "Filial para transferência"
+
+        A1_CONTRIB:
+          type: string
+          lenght: 1
+          options: "1=Sim;2=Não"
+          description: "Contribuinte do ICMS"
+      required:
+        - A1_FILIAL
+        - A1_COD
+        - A1_LOJA
+        - A1_NOME
+        - A1_END
+        - A1_NREDUZ
+        - A1_TIPO
+        - A1_EST
+        - A1_MUN
+
   responses:
     UnauthorizedError:
       description: Authentication information is missing or invalid
