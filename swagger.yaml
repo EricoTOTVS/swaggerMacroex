@@ -588,7 +588,7 @@ components:
         A2_VINCULA:
           type: string
           length: 1
-          options: "1=Sem Vinculacao;2=ComSem Influencia de Preco;3=ComCom Influencia de Preco"
+          options: "1=Sem Vinculacao;2=Com,Sem Influencia de Preco;3=Com,Com Influencia de Preco"
           description: "Tipo Vinculacao"
           example: "option"
 
@@ -1066,21 +1066,21 @@ components:
         A2_INDRUR:
           type: string
           length: 1
-          options: "0=No  prod.rural;1=Seg.Espec.Geral PF;2=Seg.Espec.Ent.PAA PF;3=Ent.PAA PJ"
+          options: "0=Não é prod.rural;1=Seg.Espec.Geral PF;2=Seg.Espec.Ent.PAA PF;3=Ent.PAA PJ"
           description: "Indicador produtor rural"
           example: "option"
 
         A2_UFFIC:
           type: string
           length: 2
-          options: "ND=No Declarado;RE=Reexportao;CB=Consumo de Bordo;MN=Mercadoria Nacionalizada"
+          options: "ND=Não Declarado;RE=Reexportação;CB=Consumo de Bordo;MN=Mercadoria Nacionalizada"
           description: "UF Ficticia"
           example: "option"
 
         A2_TPREG:
           type: string
           length: 1
-          options: "1=No Cumulativo;2=Cumulativo"
+          options: "1=Não Cumulativo;2=Cumulativo"
           description: "Tipo de Regime"
           example: "option"
 
@@ -1633,7 +1633,7 @@ components:
         A2_INOVAUT:
           type: string
           length: 1
-          options: "1=Participa;2=No Participa;3=Convidar"
+          options: "1=Participa;2=Não Participa;3=Convidar"
           description: "Inovar Auto"
           example: "option"
 
@@ -1950,7 +1950,7 @@ components:
         A1_TIPO:
           type: string
           length: 1
-          options: "F=Cons.Final"
+          options: "F=Cons.Final;L=Produtor Rural;R=Revendedor;S=Solidario;X=Exportacao"
           description: "Tipo do Cliente"
           example: "option"
 
@@ -3902,7 +3902,7 @@ components:
         B1_RASTRO:
           type: string
           length: 1
-          options: "S=SubLote;L=Lote"
+          options: "S=SubLote;L=Lote;N=Nao utiliza"
           description: "Rastreabilidade Produto"
           example: "option"
 
@@ -4141,7 +4141,7 @@ components:
         B1_BALANCA:
           type: string
           length: 1
-          options: "0=NÒo usa;1=Preþo;2=Peso;3=Unidade"
+          options: "0=Não usa;1=Preþo;2=Peso;3=Unidade"
           description: "Pesavel na Balanca"
           example: "option"
 
@@ -4963,7 +4963,7 @@ components:
         B1_PORCPRL:
           type: string
           length: 2
-          options: "20=20%;30=30%"
+          options: " 20=20%;30=30%;40=40%"
           description: "Porcentagem PRL"
           example: "option"
 
