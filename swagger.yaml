@@ -306,6 +306,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Não"
                   description: "Contrib. Previdenciario"
+                  example: "option"
 
                 A2_ESTADO:
                   type: string
@@ -338,6 +339,7 @@ components:
                   lenght: 1
                   options: "F=Fisico;J=Juridico;X=Outros"
                   description: "Tipo do Fornecedor"
+                  example: "option"
 
                 A2_CX_POST:
                   type: string
@@ -523,12 +525,14 @@ components:
                   lenght: 1
                   options: "J=Juridico;F=Pessoa Fisica;L=Familiar"
                   description: "Tp.Fornec.ref.Contr.Seg. "
+                  example: "option"
 
                 A2_RECISS:
                   type: string
                   lenght: 1
                   options: "S=Sim;N=Nao"
                   description: "Recolhe ISS ?"
+                  example: "option"
 
                 A2_PAIS:
                   type: string
@@ -555,6 +559,7 @@ components:
                   lenght: 1
                   options: "1=Homologado;2=Nao Homologado"
                   description: "Fornecedor Homologado"
+                  example: "option"
 
                 A2_GRUPO:
                   type: string
@@ -586,6 +591,7 @@ components:
                   lenght: 1
                   options: "1=Sem Vinculacao;2=ComSem Influencia de Preco;3=ComCom Influencia de Preco"
                   description: "Tipo Vinculacao"
+                  example: "option"
 
                 A2_REPRES:
                   type: string
@@ -648,6 +654,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Identifica Repres.na L.I."
+                  example: "option"
 
                 A2_REPR_BA:
                   type: string
@@ -675,12 +682,14 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Comissao Retida no Pais"
+                  example: "option"
 
                 A2_COMI_SO:
                   type: string
                   lenght: 1
                   options: "1=FOB;2=CFR;3=EX-Works;4=F.A.S."
                   description: "Tipo Comissao"
+                  example: "option"
 
                 A2_EMAIL:
                   type: string
@@ -739,6 +748,7 @@ components:
                   lenght: 1
                   options: "S=Sim;N=Nao"
                   description: "Calcula INSS p/ Fornec. ?"
+                  example: "option"
 
                 A2_TELEX:
                   type: string
@@ -750,6 +760,7 @@ components:
                   lenght: 2
                   options: "CI=Comercio/Industria;PF=Pessoa Fisica;OS=Prestaco de Servico"
                   description: "Tipo de Pessoa"
+                  example: "option"
 
                 A2_CODLOC:
                   type: string
@@ -785,6 +796,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe CIDE"
+                  example: "option"
 
                 A2_GRPTRIB:
                   type: string
@@ -839,18 +851,21 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Utiliza B2B?"
+                  example: "option"
 
                 A2_PLCRRES:
                   type: string
                   lenght: 1
                   options: "S=Sim;N=Nao"
                   description: "Obrigat. Dig. Resp. Mov ?"
+                  example: "option"
 
                 A2_PLFIL:
                   type: string
                   lenght: 1
                   options: "S=Sim;N=Nao"
                   description: "Filial do Grupo"
+                  example: "option"
 
                 A2_SIGLCR:
                   type: string
@@ -892,6 +907,7 @@ components:
                   lenght: 1
                   options: "1=Solteiro;2=Casado;3=Divorciado;4=Viuvo;5=Companheiro(a)"
                   description: "Estado civil"
+                  example: "option"
 
                 A2_ROYMIN:
                   type: N
@@ -911,6 +927,7 @@ components:
                   lenght: 1
                   options: "1=Nao;2=Sim"
                   description: "Recebe Pagamento?"
+                  example: "option"
 
                 A2_ENDCOMP:
                   type: string
@@ -922,6 +939,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Bloqueia o Fornecedor"
+                  example: "option"
 
                 A2_GRPDEP:
                   type: string
@@ -948,6 +966,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe SEST"
+                  example: "option"
 
                 A2_FILDEB:
                   type: string
@@ -959,18 +978,21 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhimento de PIS"
+                  example: "option"
 
                 A2_RECCSLL:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhimento da CSLL"
+                  example: "option"
 
                 A2_RECCOFI:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhimento da COFINS"
+                  example: "option"
 
                 A2_ABICS:
                   type: string
@@ -1004,6 +1026,7 @@ components:
                   lenght: 1
                   options: "1=Normal;2=IRRF Baixa;3=Simples;4=Empresa Individual"
                   description: "Cálculo do IRRF."
+                  example: "option"
 
                 A2_VINCULO:
                   type: string
@@ -1034,6 +1057,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Reten. a taxa de ISI"
+                  example: "option"
 
                 A2_ISICM:
                   type: string
@@ -1045,36 +1069,42 @@ components:
                   lenght: 1
                   options: "0=No  prod.rural;1=Seg.Espec.Geral PF;2=Seg.Espec.Ent.PAA PF;3=Ent.PAA PJ"
                   description: "Indicador produtor rural"
+                  example: "option"
 
                 A2_UFFIC:
                   type: string
                   lenght: 2
                   options: "ND=No Declarado;RE=Reexportao;CB=Consumo de Bordo;MN=Mercadoria Nacionalizada"
                   description: "UF Ficticia"
+                  example: "option"
 
                 A2_TPREG:
                   type: string
                   lenght: 1
                   options: "1=No Cumulativo;2=Cumulativo"
                   description: "Tipo de Regime"
+                  example: "option"
 
                 A2_ISSRSLC:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "LC Enq. ISS"
+                  example: "option"
 
                 A2_SUBCON:
                   type: string
                   lenght: 1
                   options: "1=Sub Contratista;2=No Sub Contratista"
                   description: "SUBCON - Sub Contratista"
+                  example: "option"
 
                 A2_RFASEMT:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe FASE-MT"
+                  example: "option"
 
                 A2_CCICMS:
                   type: string
@@ -1087,18 +1117,21 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe IMA-MT"
+                  example: "option"
 
                 A2_RFACS:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe FACS"
+                  example: "option"
 
                 A2_CONTRIB:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Contribuinte do ICMS"
+                  example: "option"
 
                 A2_TPCON:
                   type: string
@@ -1110,6 +1143,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe FABOV"
+                  example: "option"
 
                 A2_NEMPR:
                   type: string
@@ -1127,18 +1161,21 @@ components:
                   lenght: 1
                   options: "0=Sem Gross UP;1=Imp. Serv. IRRF;2=Imp. Serv. IRRF + CIDE;3=Imp. Serv. IRRF + Val. Servio"
                   description: "Base de Cálculo IRRF"
+                  example: "option"
 
                 A2_DEDBSPC:
                   type: string
                   lenght: 1
                   options: "1=Legado;2=ICMS e IPI;3=ICMS;4=IPI;5=Nenhum;6=Soma IPI"
                   description: "Ded. Base de PIS/COFINS"
+                  example: "option"
 
                 A2_RECFMD:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe FAMAD"
+                  example: "option"
 
                 A2_CODFI:
                   type: string
@@ -1150,6 +1187,7 @@ components:
                   lenght: 1
                   options: "1=Conta Corrente;2=Poupanca"
                   description: "Tipo de Conta Bancaria"
+                  example: "option"
 
                 A2_CODINSS:
                   type: string
@@ -1161,30 +1199,35 @@ components:
                   lenght: 1
                   options: "1=Conta Corrente;2=Conta poupana"
                   description: "Tipo de Conta Fornecedor"
+                  example: "option"
 
                 A2_REGESIM:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Reg. Simlificado MT"
+                  example: "option"
 
                 A2_CPRB:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Indicativo Reteno CPRB"
+                  example: "option"
 
                 A2_CPOMSP:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Registro CPOM"
+                  example: "option"
 
                 A2_INDCP:
                   type: string
                   lenght: 1
                   options: "1=Sobre a comercializacao da sua producao;2=Sobre a folha de pagamento"
                   description: "Indicativo da opcao rural"
+                  example: "option"
 
                 A2_DRPEXP:
                   type: string
@@ -1196,42 +1239,49 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Incentivo a Cultura"
+                  example: "option"
 
                 A2_TPRNTRC:
                   type: string
                   lenght: 1
                   options: "1=TAC;2=ETC;3=CTC"
                   description: "Tipo RNTRC"
+                  example: "option"
 
                 A2_DESPORT:
                   type: string
                   lenght: 1
                   options: "0=Nao;1=Sim"
                   description: "Associao Desportiva"
+                  example: "option"
 
                 A2_EQPTAC:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Equipara  a um TAC"
+                  example: "option"
 
                 A2_STRNTRC:
                   type: string
                   lenght: 1
                   options: "1=Ativo;2=Inativo"
                   description: "Status RNTRC"
+                  example: "option"
 
                 A2_CALCINP:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Calcula INSS Patronal?"
+                  example: "option"
 
                 A2_SITESBH:
                   type: string
                   lenght: 1
                   options: "1=Ex Pr bde Ser;2=Pr de Ser c/ Ded;3=Con Civ;4=Ag de Tu/Adm Fun;5=Pro e Pub/Int;6=Pro e Pub/Int Is;7=Não In/Re/Rep"
                   description: "Situação Especial de Resp"
+                  example: "option"
 
                 A2_RESPTRI:
                   type: string
@@ -1253,6 +1303,7 @@ components:
                   lenght: 1
                   options: "1=Pedido Compra;2=Recebimento;3=Nao Imprime;4=Documento Entrada"
                   description: "Identificacao de Produto"
+                  example: "option"
 
                 A2_CLIENTE:
                   type: string
@@ -1264,18 +1315,21 @@ components:
                   lenght: 1
                   options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte;3=MEI - Microempreendedor Individual;4=Cooperativa;5=Não optante"
                   description: "Tipo de Pessoa Jurídica"
+                  example: "option"
 
                 A2_INSCMU:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Ins. no Munc. do Tomador"
+                  example: "option"
 
                 A2_SIMPNAC:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Optante Simples Nacional"
+                  example: "option"
 
                 A2_NUMRA:
                   type: string
@@ -1305,6 +1359,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Contribuinte TARE ?"
+                  example: "option"
 
                 A2_DTNASC:
                   type: string
@@ -1324,6 +1379,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe FETHAB"
+                  example: "option"
 
                 A2_PAISEX:
                   type: string
@@ -1336,6 +1392,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Recolhe FUNDESA."
+                  example: "option"
 
                 A2_CATEG:
                   type: string
@@ -1362,6 +1419,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Disponvel md. Jurdico"
+                  example: "option"
 
                 A2_MUNSC:
                   type: string
@@ -1379,6 +1437,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Pessoa Trib. Favor."
+                  example: "option"
 
                 A2_TELRE:
                   type: string
@@ -1409,12 +1468,14 @@ components:
                   lenght: 1
                   options: "1=Valor mínimo;2=Sempre retém"
                   description: "Forma reteno ISSQN"
+                  example: "option"
 
                 A2_MINIRF:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Valor Mnimo de IRRF"
+                  example: "option"
 
                 A2_BREEX:
                   type: string
@@ -1444,6 +1505,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Incentivo Prod.Leite-MG"
+                  example: "option"
 
                 A2_TRBEX:
                   type: string
@@ -1456,6 +1518,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Pagamento pelo SIGAGFE"
+                  example: "option"
 
                 A2_RNTRC:
                   type: string
@@ -1479,6 +1542,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Participao no Fome Zero"
+                  example: "option"
 
                 A2_CODSIAF:
                   type: string
@@ -1526,6 +1590,7 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Fornecedor de Mailing"
+                  example: "option"
 
                 A2_ENDNOT:
                   type: string
@@ -1538,18 +1603,21 @@ components:
                   lenght: 1
                   options: "1=Dispensado do NIF;2=País não exige NIF"
                   description: "Mot. N.Preench NIF"
+                  example: "option"
 
                 A2_REGPB:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Regime Paraba"
+                  example: "option"
 
                 A2_MINPUB:
                   type: string
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Valor Mín. PCC e IR EmPub"
+                  example: "option"
 
                 A2_LOJCLI:
                   type: string
@@ -1561,12 +1629,14 @@ components:
                   lenght: 1
                   options: "1=Sim;2=Nao"
                   description: "Calcula IRRF Progressivo"
+                  example: "option"
 
                 A2_INOVAUT:
                   type: string
                   lenght: 1
                   options: "1=Participa;2=No Participa;3=Convidar"
                   description: "Inovar Auto"
+                  example: "option"
 
                 A2_NOMRESP:
                   type: string
@@ -1578,6 +1648,7 @@ components:
                   lenght: 1
                   options: "1=Imune;2=Isento"
                   description: "Class. Pessoa Jurdica"
+                  example: "option"
 
                 A2_CARGO:
                   type: string
@@ -1589,6 +1660,7 @@ components:
                   lenght: 1
                   options: "0=Filial;1=Posto"
                   description: "Local de Quitacao"
+                  example: "option"
 
                 A2_DVCTA:
                   type: string
@@ -1606,6 +1678,7 @@ components:
                   lenght: 1
                   options: "0=Parmetro;1=Pr-Nota;2=Nota Fiscal;3=Nao utiliza"
                   description: "Indica o local da confe."
+                  example: "option"
 
                 A2_DVAGE:
                   type: string
@@ -1750,6 +1823,7 @@ components:
           lenght: 1
           options: "1=Peso;2=Quantidade;3=Volume;4=Item"
           description: "Rateio do Frete"
+          example: "option"
 
         A4_COMPLEM:
           type: string
@@ -1761,6 +1835,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Participante no Fome Zero"
+          example: "option"
 
         A4_SUFRAMA:
           type: string
@@ -1778,12 +1853,14 @@ components:
           lenght: 1
           options: "1=Inscrito;2=Não inscrito;3=Autônomo"
           description: "Tipo do transportador"
+          example: "option"
 
         A4_COLIG:
           type: string
           lenght: 1
           options: "S=Sim;N=Nao"
           description: "Transportadora Coligada?"
+          example: "option"
 
         A4_INSCRM:
           type: string
@@ -1800,6 +1877,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Endereço não formatado"
+          example: "option"
 
         A4_IDETIQ:
           type: string
@@ -1844,6 +1922,7 @@ components:
           lenght: 1
           options: "F=Fisica;J=Juridica"
           description: "Pessoa Fisica/Juridica"
+          example: "option"
 
         A1_NOME:
           type: string
@@ -1870,6 +1949,7 @@ components:
           lenght: 1
           options: "F=Cons.Final"
           description: "Tipo do Cliente"
+          example: "option"
 
         A1_EST:
           type: string
@@ -1944,6 +2024,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Pessoa Trib. Favor."
+          example: "option"
 
         A1_COMPENT:
           type: string
@@ -2054,6 +2135,7 @@ components:
           lenght: 1
           options: "C=CIF;F=FOB;T=Por conta terceiros;R=Por conta remetente;D=Por conta destinatário;S=Sem frete"
           description: "Tipo de Frete do cliente"
+          example: "option"
 
         A1_COND:
           type: string
@@ -2077,6 +2159,7 @@ components:
           lenght: 1
           options: "A=Risco A;B=Risco B;C=Risco C;D=Risco D;E=Risco E"
           description: "Grau de Risco do cliente"
+          example: "option"
 
         A1_LC:
           type: number
@@ -2096,6 +2179,7 @@ components:
           lenght: 1
           options: "A=Classe A;B=Classe B;C=Classe C"
           description: "Classe de Credito"
+          example: "option"
 
         A1_LCFIN:
           type: number
@@ -2177,6 +2261,7 @@ components:
           lenght: 1
           options: "A=Classe A;B=Classe B;C=Classe C"
           description: "Classificacao de Vendas"
+          example: "option"
 
         A1_TMPSTD:
           type: string
@@ -2201,6 +2286,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Recolhe ISS?"
+          example: "option"
 
         A1_NROPAG:
           type: number
@@ -2293,6 +2379,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "ISS incluso no preço"
+          example: "option"
 
         A1_SALDUPM:
           type: number
@@ -2365,6 +2452,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Nao;I=ICMS"
           description: "Calcula Desc. p/ Suframa"
+          example: "option"
 
         A1_DTNASC:
           type: string
@@ -2475,6 +2563,7 @@ components:
           lenght: 2
           options: "CI=Comercio/Industria;PF=Pessoa Fisica;OS=Prestacäo de Servico;EP=Empresa Publica"
           description: "Tipo de Pessoa"
+          example: "option"
 
         A1_SATIV3:
           type: string
@@ -2569,6 +2658,7 @@ components:
           lenght: 1
           options: "1=Importador;2=Consignee;3=Notify;4=Todos"
           description: "Tipo Cliente Exportação"
+          example: "option"
 
         A1_DEST_1:
           type: string
@@ -2653,24 +2743,28 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Recolhe INSS <S/N> ?"
+          example: "option"
 
         A1_RECCOFI:
           type: string
           lenght: 1
           options: "S=Sim;N=Nao;P=Empresa Pública"
           description: "Recolhe COFINS  ?"
+          example: "option"
 
         A1_RECCSLL:
           type: string
           lenght: 1
           options: "S=Sim;N=Nao;P=Empresa Pública"
           description: "Recolhe CSLL ?"
+          example: "option"
 
         A1_RECPIS:
           type: string
           lenght: 1
           options: "S=Sim;N=Nao;P=Empresa Pública"
           description: "Recolhe PIS ?"
+          example: "option"
 
         A1_HISTMK:
           type: string
@@ -2682,6 +2776,7 @@ components:
           lenght: 2
           options: "02=Toda segunda;03=Toda terca;04=Toda quarta;05=Toda quinta;06=Toda sexta;10=a cada 10 dias;15=a cada 15 dias;30=todo fim de mes"
           description: "Tipo de Periodo"
+          example: "option"
 
         A1_SALFIN:
           type: number
@@ -2707,6 +2802,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Utiliza B2B?"
+          example: "option"
 
         A1_GRPVEN:
           type: string
@@ -2718,6 +2814,7 @@ components:
           lenght: 1
           options: "1=Inativo;2=Ativo"
           description: "Status do Registro"
+          example: "option"
 
         A1_INSCRUR:
           type: string
@@ -2729,6 +2826,7 @@ components:
           lenght: 1
           options: "0=Nao;1=Sim"
           description: "O Cliente e¦ Convenio?"
+          example: "option"
 
         A1_COMPLEM:
           type: string
@@ -2813,6 +2911,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Boleto Via Email (Cnab)"
+          example: "option"
 
         A1_TIPOCLI:
           type: string
@@ -2845,7 +2944,6 @@ components:
           type: string
           lenght: 5
           description: "Municipio da Entrega"
-          example: "9"
 
         A1_PERFIL:
           type: number
@@ -2869,6 +2967,7 @@ components:
           lenght: 1
           options: "1=Perfil 1;2=Perfil 2;3=Perfil 3;4=Perfil 4;5=Perfil 5;6=Perfil 6"
           description: "Tipo de Perfil do cliente"
+          example: "option"
 
         A1_PRF_VLD:
           type: string
@@ -2891,6 +2990,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Regime Paraíba"
+          example: "option"
 
         A1_TPREG:
           type: string
@@ -2903,12 +3003,14 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Cliente aderiu ao DDA"
+          example: "option"
 
         A1_SIMPLES:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Clie. optante SIMPLES/SC"
+          example: "option"
 
         A1_MSEXP:
           type: string
@@ -2919,7 +3021,6 @@ components:
           type: string
           lenght: 40
           description: "Num. de Ident. Fiscal"
-          example: "9"
 
         A1_CODSIAF:
           type: string
@@ -2936,6 +3037,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Endereço não formatado"
+          example: "option"
 
         A1_CEINSS:
           type: string
@@ -2952,24 +3054,28 @@ components:
           lenght: 1
           options: "1=Cons Vlr Mínimo;2=Sempre Retém"
           description: "Forma de retenção do ISS"
+          example: "option"
 
         A1_CTARE:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Contribuinte TARE ?"
+          example: "option"
 
         A1_RESERVE:
           type: string
           lenght: 1
           options: "1=Pendente inclusão;2=Pendente alteração;3=Pendente exclusão;4=Sincronizado"
           description: "Situação no Reserve"
+          example: "option"
 
         A1_IRBAX:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "IRPJ baixa"
+          example: "option"
 
         A1_ORIGEM:
           type: string
@@ -2993,12 +3099,14 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Reg. Simlificado MT"
+          example: "option"
 
         A1_ABATIMP:
           type: string
           lenght: 1
           options: "1=Calculo do Sistema;2=Efetua Retencao;3=Nao efetua retencao"
           description: "Modo Abatim. Imposto"
+          example: "option"
 
         A1_PERFECP:
           type: number
@@ -3012,6 +3120,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Destaca IE não Contr."
+          example: "option"
 
         A1_CODMEMB:
           type: string
@@ -3033,18 +3142,21 @@ components:
           lenght: 1
           options: "1=Mailing;2=Campanha;3=Web;4=Indicação;5=Evento;6=Anúncio;7=Parceiro;8=Relações públicas;9=Seminário;A=Boca-a-boca;B=Outros"
           description: "Origem do Cliente"
+          example: "option"
 
         A1_ALIFIXA:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Ind. Alíquota fixa"
+          example: "option"
 
         A1_TPMEMB:
           type: string
           lenght: 1
           options: "1=Unidade de Negócio;2=Papeis do Usuario;3=Equipe"
           description: "Tipo do Membro"
+          example: "option"
 
         A1_NOMTER:
           type: string
@@ -3061,6 +3173,7 @@ components:
           lenght: 1
           options: "1=Nao Incent.;2=Construtora;3=Outros"
           description: "Crédito Estimulo Manaus"
+          example: "option"
 
         A1_DSCMEMB:
           type: string
@@ -3072,18 +3185,21 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Calcula TPDP"
+          example: "option"
 
         A1_RFABOV:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Recolhe FABOV"
+          example: "option"
 
         A1_RFACS:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Recolhe FACS"
+          example: "option"
 
         A1_PRSTSER:
           type: string
@@ -3095,12 +3211,14 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Optante Simples Nacional"
+          example: "option"
 
         A1_TPNFSE:
           type: string
           lenght: 2
           options: "0=Outro;1=SUS;2=Executivo;3=Bancos;4=Comercio/Industria;5=Legislativo/Judiciario"
           description: "Tipo de pessoa NFSE"
+          example: "option"
 
         A1_ENTID:
           type: string
@@ -3129,6 +3247,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Valor Mínimo de IRRF"
+          example: "option"
 
         A1_USERLGI:
           type: string
@@ -3145,6 +3264,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Incentivo a Cultura"
+          example: "option"
 
         A1_HREXPO:
           type: string
@@ -3156,6 +3276,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Participação Fome Zero"
+          example: "option"
 
         A1_ISSRSLC:
           type: string
@@ -3167,42 +3288,49 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Recolhe FETHAB"
+          example: "option"
 
         A1_RECIRRF:
           type: string
           lenght: 1
           options: "1=Sim;2=Nao"
           description: "Cliente recolhera IRRF"
+          example: "option"
 
         A1_TDA:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Taxa Dif. Acesso"
+          example: "option"
 
         A1_INCLTMG:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Incentivo Prod.Leite MG"
+          example: "option"
 
         A1_RIMAMT:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Recolhe IMA-MT"
+          example: "option"
 
         A1_RFASEMT:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Recolhe FASE-MT"
+          example: "option"
 
         A1_RECFMD:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Recolhe FAMAD"
+          example: "option"
 
         A1_OUTRMUN:
           type: string
@@ -3219,13 +3347,14 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Inovar Auto"
+          example: "option"
 
         A1_RESFAT:
           type: string
           lenght: 1
           options: "1=Nota Normal;2=Nota Debito"
           description: "Forma Faturamento Viagem"
-          example: "9"
+          example: "option"
 
         A1_NVESTN:
           type: number
@@ -3253,6 +3382,7 @@ components:
           lenght: 1
           options: "1=ME - Micro Empresa;2=EPP - Empresas de Pequeno Porte;3=MEI - Microempreendedor Individual;4=Não Optante"
           description: "Tipo de Pessoa Jurídica"
+          example: "option"
 
         A1_FILTRF:
           type: string
@@ -3264,6 +3394,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Contribuinte do ICMS"
+          example: "option"
       required:
         - A1_FILIAL
         - A1_COD
@@ -3303,6 +3434,7 @@ components:
           lenght: 1
           options: "1=Original;0=Nao Original"
           description: "Procedencia do Produto"
+          example: "option"
 
         BM_CODMAR:
           type: string
@@ -3319,6 +3451,7 @@ components:
           lenght: 1
           options: "1=Novo;2=Remanufaturado;3=Reciclado;4=Usado"
           description: "Status do Grupo"
+          example: "option"
 
         BM_GRUREL:
           type: string
@@ -3365,6 +3498,7 @@ components:
           lenght: 1
           options: "0=Paciente/Centro de Custo;1=Centro de Custo;2=Pacotes"
           description: "Tipo da Movimentacao"
+          example: "option"
 
         BM_CODGRT:
           type: string
@@ -3381,6 +3515,7 @@ components:
           lenght: 1
           options: "1=Outros;2=Material Automotivo;3=Insumos Agrícolas;4=Turismo;5=Serviço"
           description: "Classificacao de Grupo de"
+          example: "option"
 
         BM_FORMUL:
           type: string
@@ -3408,6 +3543,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Exige Conciliação?"
+          example: "option"
 
         BM_CORP:
           type: boolean
@@ -3546,6 +3682,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Produto Import. Z.Franca"
+          example: "option"
 
         B1_BITMAP:
           type: string
@@ -3569,6 +3706,7 @@ components:
           lenght: 1
           options: "M=Multiplicador;D=Divisor"
           description: "Tipo de Conversao da UM"
+          example: "option"
 
         B1_ALTER:
           type: string
@@ -3620,6 +3758,7 @@ components:
           lenght: 1
           options: "1=Moeda1;2=Moeda2;3=Moeda3;4=Moeda4;5=Moeda5"
           description: "Moeda do Custo Standard"
+          example: "option"
 
         B1_UCOM:
           type: string
@@ -3662,6 +3801,7 @@ components:
           lenght: 1
           options: "H=Horas;D=Dias;S=Semana;M=Mes;A=Ano"
           description: "Tipo Prazo entrega(D/M/A)"
+          example: "option"
 
         B1_LE:
           type: number
@@ -3703,6 +3843,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: 'Informa "S" se e familia'
+          example: "option"
 
         B1_QB:
           type: number
@@ -3725,12 +3866,14 @@ components:
           lenght: 1
           options: "D=Direto;I=Indireto"
           description: "Apropr.Direta ou Indireta"
+          example: "option"
 
         B1_TIPODEC:
           type: string
           lenght: 1
           options: "N=Normal;A=Arred.5/4;I=Incrementa;T=Trunca"
           description: "Tipo de Decimais p/ OP"
+          example: "option"
 
         B1_ORIGEM:
           type: string
@@ -3747,12 +3890,14 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: 'Informa "S" se e fantasm'
+          example: "option"
 
         B1_RASTRO:
           type: string
           lenght: 1
           options: "S=SubLote;L=Lote"
           description: "Rastreabilidade Produto"
+          example: "option"
 
         B1_UREV:
           type: string
@@ -3771,6 +3916,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "S-se comprado fora estado"
+          example: "option"
 
         B1_COMIS:
           type: number
@@ -3784,6 +3930,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Forn. de Dominio do Canal"
+          example: "option"
 
         B1_DTREFP1:
           type: string
@@ -3807,6 +3954,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Nao;E=Especial"
           description: "Entra no Mrp?"
+          example: "option"
 
         B1_PRVALID:
           type: number
@@ -3837,12 +3985,14 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Incide Contr.Seg.Social"
+          example: "option"
 
         B1_IRRF:
           type: string
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Incide imposto renda"
+          example: "option"
 
         B1_CODBAR:
           type: string
@@ -3859,6 +4009,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Produto pertence grade"
+          example: "option"
 
         B1_FORMLOT:
           type: string
@@ -3870,6 +4021,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Controla Enderecamento"
+          example: "option"
 
         B1_FPCOD:
           type: string
@@ -3892,6 +4044,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Nao;A=Ambos"
           description: "Contrato de Parceria"
+          example: "option"
 
         B1_DESC_GI:
           type: string
@@ -3917,6 +4070,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Não"
           description: "Produto Importado"
+          example: "option"
 
         B1_VM_I:
           type: string
@@ -3938,6 +4092,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Anuente ?"
+          example: "option"
 
         B1_OPC:
           type: string
@@ -3981,6 +4136,7 @@ components:
           lenght: 1
           options: "0=NÒo usa;1=Preþo;2=Peso;3=Unidade"
           description: "Pesavel na Balanca"
+          example: "option"
 
         B1_TECLA:
           type: string
@@ -3998,18 +4154,21 @@ components:
           lenght: 1
           options: "M=Materiais;Q=SigaQuality"
           description: "Tipo de C.Q. a ser usado"
+          example: "option"
 
         B1_SOLICIT:
           type: string
           lenght: 1
           options: "S=Sim;N=Nao"
           description: "Restricao de Solicitantes"
+          example: "option"
 
         B1_QUADPRO:
           type: string
           lenght: 1
           options: "1=Classe I;2=Classe II;3=Classe III;4=Classe IV"
           description: "Classe de reposicao"
+          example: "option"
 
         B1_BASE3:
           type: string
@@ -4026,6 +4185,7 @@ components:
           lenght: 1
           options: "1=Permite;2=Nao permite"
           description: "Control. custeio para OP"
+          example: "option"
 
         B1_GRUPCOM:
           type: string
@@ -4037,6 +4197,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Nao"
           description: "Despesa de Importaçao"
+          example: "option"
 
         B1_NUMCQPR:
           type: number
@@ -4065,6 +4226,7 @@ components:
           lenght: 1
           options: "S=Sim;N=Nao"
           description: "Calcula INSS"
+          example: "option"
 
         B1_ESPECIF:
           type: string
@@ -4177,18 +4339,21 @@ components:
           lenght: 1
           options: "1=Normal;2=Cancelado;3=Novo;4=Lucrativo"
           description: "Tipo da Sugestao"
+          example: "option"
 
         B1_CLASSVE:
           type: string
           lenght: 1
           options: "1=Normal;2=Promocao;3=Descarte;4=Eliminado"
           description: "Status Venda p/ Sugestao"
+          example: "option"
 
         B1_MIDIA:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Calcula Imposto p/Midia?"
+          example: "option"
 
         B1_QTMIDIA:
           type: number
@@ -4209,13 +4374,14 @@ components:
           lenght: 1
           options: "0=Sim;1=Não"
           description: "Peca c/ Envio obrigatorio"
+          example: "option"
 
         B1_QTDSER:
           type: string
           lenght: 1
           options: "1=1a Unidade de Medida;2=2a Unidade de Medida"
           description: "Vlda Num. Serie 1a/2a UM"
-          example: "9"
+          example: "option"
 
         B1_SERIE:
           type: string
@@ -4368,6 +4534,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Controla Potencia de Lote"
+          example: "option"
 
         B1_POTENCI:
           type: number
@@ -4395,12 +4562,14 @@ components:
           lenght: 1
           options: "0=Centro de Custo;1=Paciente;2=Farmacia;3=Ambos"
           description: "Requisitado para:"
+          example: "option"
 
         B1_SELO:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Utiliza Selo de Controle"
+          example: "option"
 
         B1_LOTVEN:
           type: number
@@ -4419,6 +4588,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Utiliza FEFO"
+          example: "option"
 
         B1_IAT:
           type: string
@@ -4495,12 +4665,14 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Incide Fust/Funttel"
+          example: "option"
 
         B1_DCI:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Prod DCI Mensal"
+          example: "option"
 
         B1_COEFDCR:
           type: number
@@ -4535,6 +4707,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Bloqueio de Tela"
+          example: "option"
 
         B1_DTCORTE:
           type: string
@@ -4571,6 +4744,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Produto é Vale Presente?"
+          example: "option"
 
         B1_TPPROD:
           type: string
@@ -4587,6 +4761,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Efetua a retenção-PIS"
+          example: "option"
 
         B1_CHASSI:
           type: string
@@ -4615,6 +4790,7 @@ components:
           lenght: 1
           options: "0=Preço Tabelado/Maximo;1=Valor Agregado;2=Lista Negativa;3=Lista Positiva;4=Lista Neutra"
           description: "Referencia Base ST"
+          example: "option"
 
         B1_MARKUP:
           type: number
@@ -4633,6 +4809,7 @@ components:
           lenght: 1
           options: "1=Não Cumulativo;2=Cumulativo"
           description: "Tipo de Regime"
+          example: "option"
 
         B1_VLR_PIS:
           type: number
@@ -4689,6 +4866,7 @@ components:
           lenght: 1
           options: "1=M.P;2=P.A"
           description: "Estorno de Credito de IPI"
+          example: "option"
 
         B1_CODPROC:
           type: string
@@ -4711,12 +4889,14 @@ components:
           lenght: 1
           options: "1=Sim;2 =Não"
           description: "Proveniente de Integracao"
+          example: "option"
 
         B1_APOPRO:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Apontamento por Produto"
+          example: "option"
 
         B1_GRPTIDC:
           type: string
@@ -4728,6 +4908,7 @@ components:
           lenght: 1
           options: "0=Nao;1=Sim"
           description: "Calcula Cred.ICMS-Art.271"
+          example: "option"
 
         B1_FECP:
           type: number
@@ -4765,6 +4946,7 @@ components:
           lenght: 1
           options: "P=Produzindo;C=Comprando"
           description: "Atende a Necessidade?"
+          example: "option"
 
         B1_SITTRIB:
           type: string
@@ -4776,6 +4958,7 @@ components:
           lenght: 2
           options: "20=20%;30=30%"
           description: "Porcentagem PRL"
+          example: "option"
 
         B1_AFETHAB:
           type: number
@@ -4789,6 +4972,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Carga Especial?"
+          example: "option"
 
         B1_IMPNCM:
           type: number
@@ -4833,6 +5017,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Art 65 do RICMS/PR"
+          example: "option"
 
         B1_PRINCMG:
           type: number
@@ -4851,12 +5036,14 @@ components:
           lenght: 1
           options: "1=Receita;2=Deduz Seg.;3=Deduz Trans."
           description: "CFEM - Receita ou Deduz"
+          example: "option"
 
         B1_CFEM:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Compõe Cal. CFEM"
+          example: "option"
 
         B1_ALFECRN:
           type: number
@@ -4870,24 +5057,28 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Produto contém garantia?"
+          example: "option"
 
         B1_AJUDIF:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Ajuste / Diferimento"
+          example: "option"
 
         B1_COFINS:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Efetua a retenção-COFINS"
+          example: "option"
 
         B1_CSLL:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Efetua a Retenção-CSLL"
+          example: "option"
 
         B1_AFACS:
           type: number
@@ -4901,6 +5092,7 @@ components:
           lenght: 1
           options: "1=Cons Vlr Minimo;2=Sempre Retem"
           description: "Forme retenção ISSQN"
+          example: "option"
 
         B1_ADMIN:
           type: string
@@ -4945,6 +5137,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Retém PIS/COFINS operação"
+          example: "option"
 
         B1_CNAE:
           type: string
@@ -4956,12 +5149,14 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Material Reciclavel"
+          example: "option"
 
         B1_FECOP:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Calcula FECOP"
+          example: "option"
 
         B1_CODANT:
           type: string
@@ -4985,6 +5180,7 @@ components:
           lenght: 1
           options: "0=Não;1=Sim"
           description: "Cont Restituição ICMS-ST"
+          example: "option"
 
         B1_GRPTI:
           type: string
@@ -5003,6 +5199,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Calcula TPDP"
+          example: "option"
 
         B1_MSEXP:
           type: string
@@ -5014,18 +5211,21 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Gera Relatorio Prodepe"
+          example: "option"
 
         B1_TFETHAB:
           type: string
           lenght: 1
           options: "1=Soja;2=Algodão;3=Gado;4=Madeira;5=Milho"
           description: "Tipo FETHAB"
+          example: "option"
 
         B1_RSATIVO:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Rastro Ativo - IPI"
+          example: "option"
 
         B1_REGRISS:
           type: string
@@ -5037,19 +5237,21 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Rg. Simplificado MT"
+          example: "option"
 
         B1_MEPLES:
           type: string
           lenght: 1
           options: "1=EP;2=LES"
           description: "Execução do Serviço"
-          example: "9"
+          example: "option"
 
         B1_IVAAJU:
           type: string
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Calcula IVA Ajustado"
+          example: "option"
 
         B1_BASE:
           type: string
@@ -5071,6 +5273,7 @@ components:
           lenght: 1
           options: "N=Não;S=Sim"
           description: "Incidencia de FETHAB"
+          example: "option"
 
         B1_BASE2:
           type: string
@@ -5099,6 +5302,7 @@ components:
           lenght: 1
           options: "S=Sim;2=Não"
           description: "Produto ICMS ST A. 944I"
+          example: "option"
 
         B1_ALFECOP:
           type: number
@@ -5117,6 +5321,7 @@ components:
           lenght: 1
           options: "1=Sim;2=Não"
           description: "Calcula o Imposto FETHAB"
+          example: "option"
 
         B1_PR43080:
           type: number
