@@ -12,24 +12,23 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-  - url: "http://localhost:3000"
+  - url: "https://webhook.app.hubhero.com.br/webhook/"
     description: Development server
   # - url: 'https://api.example.com'
   # description: Production server
 tags:
   - name: Fornecedor
-    # description: Fornecedor
   - name: Transportadora
   - name: Cliente
   - name: GrupoDeProdutos
   - name: Produtos
 
 paths:
-  /api/v1/createFornecedor:
+  /api/v1/fornecedor:
     post:
       tags:
         - Fornecedor
-      summary: EndPoint para criar fornecedor
+      summary: EndPoint para criar um fornecedor
       # description: |
       # EndPoint de Fornecedor.
       operationId: createFornecedor
@@ -64,21 +63,48 @@ paths:
                     example: "Invalid input, please confirm your parameters"
       security:
         - apiKeyAuth: []
-
-  /api/v1/getFornecedorById:
+  
     get:
       tags:
         - Fornecedor
-      summary: EndPoint para pegar um fornecedor pelo Id
+      summary: EndPoint para retornar todos os fornecedores
+      operationId: getAllFornecedores
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Fornecedor"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+  /api/v1/fornecedor/{A2_COD}:
+    get:
+      tags:
+        - Fornecedor
+      summary: EndPoint para retornar um fornecedor pelo código
       operationId: getFornecedorById
       parameters:
-        - name: "Id"
-          in: query
-          description: Numero do Id do fornecedor
+        - name: "A2_COD"
+          in: path
+          description: Número do código do fornecedor
           required: true
           schema:
             type: string
-            default: 1
+            example: "1"
       responses:
         "200":
           description: Successful response
@@ -98,7 +124,88 @@ paths:
                     example: "Invalid input, please confirm your parameters"
       security:
         - apiKeyAuth: []
-  /api/v1/createTransportadora:
+
+    put:
+      tags:
+        - Fornecedor
+      summary: EndPoint para alterar um fornecedor pelo código
+      operationId: UpdateFornecedor
+      parameters:
+        - name: "A2_COD"
+          in: path
+          description: Número do código do fornecedor
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Fornecedor"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: "1"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    delete:
+      tags:
+        - Fornecedor
+      summary: EndPoint para deletar um fornecedor pelo código
+      operationId: deleteFornecedorById
+      parameters:
+        - name: "A2_COD"
+          in: path
+          description: Número do código do fornecedor
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Fornecedor 1 deletado com sucesso"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+  /api/v1/transportadora:
     post:
       tags:
         - Transportadora
@@ -135,11 +242,151 @@ paths:
       security:
         - apiKeyAuth: []
 
-  /api/v1/createCliente:
+    get:
+      tags:
+        - Transportadora
+      summary: EndPoint para retornar todas transportadoras
+      operationId: getAllTransportadora
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Transportadora"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+  /api/v1/transportadora/{A4_COD}:
+    get:
+      tags:
+        - Transportadora
+      summary: EndPoint para retornar uma transportadora pelo código
+      operationId: getTransportadoraById
+      parameters:
+        - name: "A4_COD"
+          in: path
+          description: Número do código da transportadora
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Transportadora"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    put:
+      tags:
+        - Transportadora
+      summary: EndPoint para alterar uma transportadora pelo código
+      operationId: UpdateTransportadora
+      parameters:
+        - name: "A4_COD"
+          in: path
+          description: Número do código da transportadora
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Transportadora"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: "1"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    delete:
+      tags:
+        - Transportadora
+      summary: EndPoint para deletar uma transportadora pelo código
+      operationId: deleteTransportadoraById
+      parameters:
+        - name: "A4_COD"
+          in: path
+          description: Número do código da transportadora
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Transportadora 1 deletado com sucesso"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+  /api/v1/cliente:
     post:
       tags:
         - Cliente
-      summary: EndPoint para criar cliente
+      summary: EndPoint para criar um cliente
       operationId: createCliente
       requestBody:
         required: true
@@ -172,12 +419,153 @@ paths:
       security:
         - apiKeyAuth: []
 
-  /api/v1/createGrupoDeProdutos:
+    get:
+        tags:
+          - Cliente
+        summary: EndPoint para retornar todos os clientes
+        operationId: getAllClientes
+        responses:
+          "200":
+            description: Successful response
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Cliente"
+          "400":
+            description: Invalid input
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
+                      example: "Invalid input, please confirm your parameters"
+        security:
+          - apiKeyAuth: []
+  
+  /api/v1/cliente/{A1_COD}:
+    get:
+      tags:
+        - Cliente
+      summary: EndPoint para retornar um cliente pelo código
+      operationId: getClienteById
+      parameters:
+        - name: "A1_COD"
+          in: path
+          description: Número do código do cliente
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Cliente"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    put:
+      tags:
+        - Cliente
+      summary: EndPoint para alterar um cliente pelo código
+      operationId: UpdateCliente
+      parameters:
+        - name: "A1_COD"
+          in: path
+          description: Número do código do cliente
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Cliente"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: "1"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    delete:
+      tags:
+        - Cliente
+      summary: EndPoint para deletar um cliente pelo código
+      operationId: deleteClienteById
+      parameters:
+        - name: "A1_COD"
+          in: path
+          description: Número do código do cliente
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Cliente 1 deletado com sucesso"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+  /api/v1/grupoDeProdutos:
     post:
       tags:
         - GrupoDeProdutos
       summary: EndPoint para criar grupo de produtos
-      operationId: GrupoDeProdutos
+      operationId: createGrupoDeProdutos
       requestBody:
         required: true
         content:
@@ -209,11 +597,152 @@ paths:
       security:
         - apiKeyAuth: []
 
-  /api/v1/createProdutos:
+    get:
+      tags:
+        - GrupoDeProdutos
+      summary: EndPoint para retornar todos os grupo de produtos
+      operationId: getAllGrupoDeProdutos
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GrupoDeProdutos"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+    
+  /api/v1/grupoDeProdutos/{BM_GRUPO}:
+    get:
+      tags:
+        - GrupoDeProdutos
+      summary: EndPoint para retornar um grupo de produtos pelo código
+      operationId: getGrupoDeProdutosById
+      parameters:
+        - name: "BM_GRUPO"
+          in: path
+          description: Número do código do grupo de produtos
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GrupoDeProdutos"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    put:
+      tags:
+        - GrupoDeProdutos
+      summary: EndPoint para alterar um grupo de produtos pelo código
+      operationId: UpdateGrupoDeProdutos
+      parameters:
+        - name: "BM_GRUPO"
+          in: path
+          description: Número do código do grupo de produtos
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GrupoDeProdutos"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: "1"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    delete:
+      tags:
+        - GrupoDeProdutos
+      summary: EndPoint para deletar um grupo de produtos pelo código
+      operationId: deleteGrupoDeProdutosById
+      parameters:
+        - name: "BM_GRUPO"
+          in: path
+          description: Número do código do grupo de produtos
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Grupo de produtos 1 deletado com sucesso"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+  /api/v1/produtos:
     post:
       tags:
         - Produtos
-      summary: EndPoint para criar produtos
+      summary: EndPoint para criar um produto
       operationId: Produtos
       requestBody:
         required: true
@@ -245,6 +774,147 @@ paths:
                     example: "Invalid input, please confirm your parameters"
       security:
         - apiKeyAuth: []
+    get:
+        tags:
+          - Produtos
+        summary: EndPoint para retornar todos os produtos
+        operationId: getAllProdutos
+        responses:
+          "200":
+            description: Successful response
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Produtos"
+          "400":
+            description: Invalid input
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
+                      example: "Invalid input, please confirm your parameters"
+        security:
+          - apiKeyAuth: []
+
+  /api/v1/produtos/{B1_COD}:
+    get:
+      tags:
+        - Produtos
+      summary: EndPoint para retornar um produto pelo código
+      operationId: getProdutoById
+      parameters:
+        - name: "B1_COD"
+          in: path
+          description: Número do código do produto
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Produtos"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    put:
+      tags:
+        - Produtos
+      summary: EndPoint para alterar um produto pelo código
+      operationId: UpdateProduto
+      parameters:
+        - name: "B1_COD"
+          in: path
+          description: Número do código do produtos
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Produtos"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Id:
+                    type: string
+                    example: "1"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+
+    delete:
+      tags:
+        - Produtos
+      summary: EndPoint para deletar um produto pelo código
+      operationId: deleteProdutoById
+      parameters:
+        - name: "B1_COD"
+          in: path
+          description: Número do código do produto
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Produto 1 deletado com sucesso"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid input, please confirm your parameters"
+      security:
+        - apiKeyAuth: []
+  
 components:
   securitySchemes:
     apiKeyAuth:
