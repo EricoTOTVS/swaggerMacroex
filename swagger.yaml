@@ -151,10 +151,7 @@ paths:
             application/json:
               schema:
                 type: object
-                properties:
-                  Id:
-                    type: string
-                    example: "1"
+                $ref: "#/components/schemas/Fornecedor"
         "400":
           description: Invalid input
           content:
@@ -328,10 +325,7 @@ paths:
             application/json:
               schema:
                 type: object
-                properties:
-                  Id:
-                    type: string
-                    example: "1"
+                $ref: "#/components/schemas/Transportadora"
         "400":
           description: Invalid input
           content:
@@ -506,10 +500,7 @@ paths:
             application/json:
               schema:
                 type: object
-                properties:
-                  Id:
-                    type: string
-                    example: "1"
+                $ref: "#/components/schemas/Cliente"
         "400":
           description: Invalid input
           content:
@@ -684,10 +675,7 @@ paths:
             application/json:
               schema:
                 type: object
-                properties:
-                  Id:
-                    type: string
-                    example: "1"
+                $ref: "#/components/schemas/GrupoDeProdutos"
         "400":
           description: Invalid input
           content:
@@ -861,10 +849,7 @@ paths:
             application/json:
               schema:
                 type: object
-                properties:
-                  Id:
-                    type: string
-                    example: "1"
+                $ref: "#/components/schemas/Produtos"
         "400":
           description: Invalid input
           content:
@@ -2354,7 +2339,7 @@ components:
           length: 1
           description: "Digito Verific. Agencia"
       required:
-         [
+         [  
          "A2_FILIAL",
          "A2_COD",
          "A2_LOJA",
