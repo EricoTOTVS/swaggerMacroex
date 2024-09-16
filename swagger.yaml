@@ -726,7 +726,7 @@ paths:
       security:
         - apiKeyAuth: []
 
-  /api/v1/produtos:
+  /api/v1/produto:
     post:
       tags:
         - Produtos
@@ -789,7 +789,7 @@ paths:
         security:
           - apiKeyAuth: []
 
-  /api/v1/produtos/{B1_COD}:
+  /api/v1/produto/:{B1_COD}:
     get:
       tags:
         - Produtos
