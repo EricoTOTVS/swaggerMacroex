@@ -286,6 +286,7 @@ paths:
                     example: "Invalid input, please confirm your parameters"
       security:
         - apiKeyAuth: []
+        
   /api/v1/transportadora/:{A4_COD}:
     get:
       tags:
