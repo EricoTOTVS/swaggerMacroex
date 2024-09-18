@@ -91,7 +91,7 @@ paths:
       security:
         - apiKeyAuth: []
 
-  /api/v1/fornecedor/:{A2_COD}/:{A2_LOJA}:
+  /api/v1/fornecedor/{A2_COD}/{A2_LOJA}:
     get:
       tags:
         - Fornecedor
@@ -287,7 +287,7 @@ paths:
       security:
         - apiKeyAuth: []
         
-  /api/v1/transportadora/:{A4_COD}:
+  /api/v1/transportadora/{A4_COD}:
     get:
       tags:
         - Transportadora
@@ -462,7 +462,7 @@ paths:
         security:
           - apiKeyAuth: []
   
-  /api/v1/cliente/:{A1_COD}/:{A1_LOJA}:
+  /api/v1/cliente/{A1_COD}/{A1_LOJA}:
     get:
       tags:
         - Cliente
@@ -658,7 +658,7 @@ paths:
       security:
         - apiKeyAuth: []
     
-  /api/v1/grupoDeProdutos/:{BM_GRUPO}:
+  /api/v1/grupoDeProdutos/{BM_GRUPO}:
     get:
       tags:
         - GrupoDeProdutos
@@ -832,7 +832,7 @@ paths:
         security:
           - apiKeyAuth: []
 
-  /api/v1/produto/:{B1_COD}:
+  /api/v1/produto/{B1_COD}:
     get:
       tags:
         - Produtos
