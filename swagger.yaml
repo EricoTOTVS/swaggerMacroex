@@ -54,22 +54,23 @@ paths:
                 type: object
                 properties:
                   success:
-                    type: string
-                    example: success
+                    type: boolean
+                    example: true
                   code:
-                    type: string
+                    type: integer
                     example: 200
                   message:
                     type: object
-                    info:
-                      type: string
-                      example: Fornecedor incluido com sucesso!
-                    A2_COD:
-                      type: string
-                      example: 000001
-                    A2_LOJA:
-                      type: string
-                      example: 01
+                    properties:
+                      info:
+                        type: string
+                        example: Fornecedor incluído com sucesso!
+                      A2_COD:
+                        type: string
+                        example: 000001
+                      A2_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
