@@ -78,9 +78,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -105,9 +114,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -146,9 +164,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -193,9 +220,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -237,9 +273,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -274,9 +319,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -301,9 +355,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -335,9 +398,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -375,9 +447,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -412,9 +493,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -449,9 +539,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -476,9 +575,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -517,9 +625,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -564,9 +681,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -608,9 +734,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -645,9 +780,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -672,9 +816,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -706,9 +859,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -746,9 +908,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -783,9 +954,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -820,9 +1000,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
     get:
@@ -846,9 +1035,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -880,9 +1078,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -920,9 +1127,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -957,9 +1173,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -994,9 +1219,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
     get:
@@ -1020,9 +1254,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1075,9 +1318,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1136,9 +1388,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1194,9 +1455,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1231,9 +1501,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
     get:
@@ -1257,9 +1536,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1326,9 +1614,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1401,9 +1698,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1473,9 +1779,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1510,9 +1825,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
     get:
@@ -1536,9 +1860,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1570,9 +1903,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1610,9 +1952,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1647,9 +1998,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1684,9 +2044,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
     get:
@@ -1710,9 +2079,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1765,9 +2143,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1826,9 +2213,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1884,9 +2280,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1921,9 +2326,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
     get:
@@ -1947,9 +2361,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -1981,9 +2404,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -2021,9 +2453,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
@@ -2058,9 +2499,18 @@ paths:
               schema:
                 type: object
                 properties:
-                  error:
-                    type: string
-                    example: "Invalid input, please confirm your parameters"
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 400
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Descrição do erro.
       security:
         - basicAuth: []
 
