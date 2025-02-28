@@ -90,6 +90,25 @@ paths:
                       info:
                         type: string
                         example: Descrição do erro.
+        "500":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: "{\"code\":500,\"detailedMessage\":\"\",\"message\":\"Internal Server Error\"}"
       security:
         - basicAuth: []
 
@@ -126,6 +145,25 @@ paths:
                       info:
                         type: string
                         example: Descrição do erro.
+        "500":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: "{\"code\":500,\"detailedMessage\":\"\",\"message\":\"Internal Server Error\"}"
       security:
         - basicAuth: []
 
@@ -176,6 +214,25 @@ paths:
                       info:
                         type: string
                         example: Descrição do erro.
+        "500":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: "{\"code\":500,\"detailedMessage\":\"\",\"message\":\"Internal Server Error\"}"
       security:
         - basicAuth: []
 
@@ -232,6 +289,25 @@ paths:
                       info:
                         type: string
                         example: Descrição do erro.
+        "500":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: "{\"code\":500,\"detailedMessage\":\"\",\"message\":\"Internal Server Error\"}"
       security:
         - basicAuth: []
 
@@ -285,6 +361,25 @@ paths:
                       info:
                         type: string
                         example: Descrição do erro.
+        "500":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: "{\"code\":500,\"detailedMessage\":\"\",\"message\":\"Internal Server Error\"}"
       security:
         - basicAuth: []
 
