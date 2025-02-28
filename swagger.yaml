@@ -309,9 +309,21 @@ paths:
               schema:
                 type: object
                 properties:
-                  Id:
-                    type: string
-                    example: "1"
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Transportadora incluido com sucesso!
+                      A4_COD:
+                        type: string
+                        example: 000001
         "400":
           description: Invalid input
           content:
@@ -1566,16 +1578,16 @@ paths:
                       info:
                         type: string
                         example: Título a pagar incluido com sucesso!
-                      E1_PREFIXO:
+                      E2_PREFIXO:
                         type: string
                         example: MAN
-                      E1_NUM:
+                      E2_NUM:
                         type: string
                         example: 99/9999
-                      E1_PARCELA:
+                      E2_PARCELA:
                         type: string
                         example: 000001
-                      E1_TIPO:
+                      E2_TIPO:
                         type: string
                         example: FT
                       E2_FORNEC:
