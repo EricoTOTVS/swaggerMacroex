@@ -269,7 +269,25 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/Fornecedor"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Fornecedor alterado com sucesso!
+                      A2_COD:
+                        type: string
+                        example: 000001
+                      A2_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -603,7 +621,22 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/Transportadora"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Transportadora alterado com sucesso!
+                      A4_COD:
+                        type: string
+                        example: 000001
         "400":
           description: Invalid input
           content:
@@ -947,7 +980,25 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/Cliente"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Cliente alterado com sucesso!
+                      A1_COD:
+                        type: string
+                        example: 000001
+                      A1_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -1284,7 +1335,25 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/GrupoDeProdutos"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Grupo de produtos alterado com sucesso!
+                      BM_GRUPO:
+                        type: string
+                        example: 000001
+                      R_E_C_N_O_:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -1610,7 +1679,22 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/Produtos"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Produto alterado com sucesso!
+                      B1_COD:
+                        type: string
+                        example: 000001
         "400":
           description: Invalid input
           content:
@@ -1987,7 +2071,31 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/TitulosAReceber"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Título a receber alterado com sucesso!
+                      E1_PREFIXO:
+                        type: string
+                        example: MAN
+                      E1_NUM:
+                        type: string
+                        example: 99/9999
+                      E1_PARCELA:
+                        type: string
+                        example: 000001
+                      E1_TIPO:
+                        type: string
+                        example: PRE
         "400":
           description: Invalid input
           content:
@@ -2419,7 +2527,37 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/TitulosAReceber"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Título a pagar alterado com sucesso!
+                      E2_PREFIXO:
+                        type: string
+                        example: MAN
+                      E2_NUM:
+                        type: string
+                        example: 99/9999
+                      E2_PARCELA:
+                        type: string
+                        example: 000001
+                      E2_TIPO:
+                        type: string
+                        example: FT
+                      E2_FORNEC:
+                        type: string
+                        example: 000011
+                      E2_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -2780,7 +2918,22 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/ItemContabil"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Item Contabil alterado com sucesso!
+                      CTD_ITEM:
+                        type: string
+                        example: 000001
         "400":
           description: Invalid input
           content:
@@ -3157,7 +3310,31 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/PreNotaEntrada"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Pré nota de entrada alterado com sucesso!
+                      F1_DOC:
+                        type: string
+                        example: 000001
+                      F1_SERIE:
+                        type: string
+                        example: 001
+                      F1_FORNECE:
+                        type: string
+                        example: 000001
+                      F1_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -3510,7 +3687,28 @@ paths:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/PedidoDeVenda"
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Pedido de venda alterado com sucesso!
+                      C5_NUM:
+                        type: string
+                        example: 000001
+                      C5_CLIENTE:
+                        type: string
+                        example: 001
+                      C5_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
