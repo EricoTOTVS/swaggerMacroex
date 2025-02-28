@@ -4115,6 +4115,8 @@ components:
           "A2_EST",
           "A2_MUN",
           "A2_TIPO",
+          "A2_PAIS",
+          "A2_EMAIL"
         ]
 
     Transportadora:
@@ -4310,7 +4312,11 @@ components:
           type: string
           length: 6
           description: "Cod. E-Commerce."
-      required: ["A4_FILIAL", "A4_COD", "A4_NOME"]
+      required: [
+        "A4_FILIAL", 
+        "A4_COD", 
+        "A4_NOME"
+        ]
 
     Cliente:
       type: object
@@ -5819,12 +5825,21 @@ components:
           "A1_FILIAL",
           "A1_COD",
           "A1_LOJA",
+          "A1_CGC",
           "A1_NOME",
           "A1_END",
           "A1_NREDUZ",
+          "A1_BAIRRO",
           "A1_TIPO",
           "A1_EST",
+          "A1_COD_MUN",
+          "A1_CEP",
           "A1_MUN",
+          "A1_DDD",
+          "A1_TEL",
+          "A1_INSCR",
+          "A1_PAIS",
+          "A1_EMAIL"
         ]
 
     GrupoDeProdutos:
