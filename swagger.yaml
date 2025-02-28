@@ -356,10 +356,27 @@ paths:
             application/json:
               schema:
                 type: object
+                schema:
+                type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "Fornecedor 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Fornecedor deletado com sucesso!
+                      A2_COD:
+                        type: string
+                        example: 000001
+                      A2_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -699,9 +716,21 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "Transportadora 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Transportadora deletado com sucesso!
+                      A4_COD:
+                        type: string
+                        example: 000001
         "400":
           description: Invalid input
           content:
@@ -1068,9 +1097,24 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "Cliente 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Cliente deletado com sucesso!
+                      A1_COD:
+                        type: string
+                        example: 000001
+                      A1_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -1416,9 +1460,24 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "Grupo de produtos 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Grupo de produtos deletado com sucesso!
+                      BM_GRUPO:
+                        type: string
+                        example: 000001
+                      R_E_C_N_O_:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -1757,9 +1816,21 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "Produto 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Produto deletado com sucesso!
+                      B1_COD:
+                        type: string
+                        example: 000001
         "400":
           description: Invalid input
           content:
@@ -2179,9 +2250,30 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "titulo a receber 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Título a receber deletado com sucesso!
+                      E1_PREFIXO:
+                        type: string
+                        example: MAN
+                      E1_NUM:
+                        type: string
+                        example: 99/9999
+                      E1_PARCELA:
+                        type: string
+                        example: 000001
+                      E1_TIPO:
+                        type: string
+                        example: PRE
         "400":
           description: Invalid input
           content:
@@ -2655,9 +2747,36 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "titulo a pagar 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Título a pagar deletado com sucesso!
+                      E2_PREFIXO:
+                        type: string
+                        example: MAN
+                      E2_NUM:
+                        type: string
+                        example: 99/9999
+                      E2_PARCELA:
+                        type: string
+                        example: 000001
+                      E2_TIPO:
+                        type: string
+                        example: FT
+                      E2_FORNEC:
+                        type: string
+                        example: 000011
+                      E2_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -2996,9 +3115,21 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "item contabil 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Item Contabil deletado com sucesso!
+                      CTD_ITEM:
+                        type: string
+                        example: 000001
         "400":
           description: Invalid input
           content:
@@ -3418,9 +3549,30 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "Pre nota de entrada 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Pré nota de entrada deletado com sucesso!
+                      F1_DOC:
+                        type: string
+                        example: 000001
+                      F1_SERIE:
+                        type: string
+                        example: 001
+                      F1_FORNECE:
+                        type: string
+                        example: 000001
+                      F1_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
@@ -3771,9 +3923,27 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    example: true
+                  code:
+                    type: integer
+                    example: 200
                   message:
-                    type: string
-                    example: "Pre nota de entrada 1 deletado com sucesso"
+                    type: object
+                    properties:
+                      info:
+                        type: string
+                        example: Pedido de venda deletado com sucesso!
+                      C5_NUM:
+                        type: string
+                        example: 000001
+                      C5_CLIENTE:
+                        type: string
+                        example: 001
+                      C5_LOJA:
+                        type: string
+                        example: 01
         "400":
           description: Invalid input
           content:
