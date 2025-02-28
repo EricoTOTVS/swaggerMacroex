@@ -356,8 +356,6 @@ paths:
             application/json:
               schema:
                 type: object
-                schema:
-                type: object
                 properties:
                   success:
                     type: boolean
