@@ -9082,6 +9082,16 @@ components:
               decimal: 2
               description: "%Red.Dec.43080"
               example: "999.99"
+          required:
+            [
+            "B1_FILIAL",
+            "B1_COD",
+            "B1_GRUPO",
+            "B1_DESC",
+            "B1_TIPO",
+            "B1_UM",
+            "B1_LOCPAD",
+            ]
         SB5:
           type: object
           properties:
@@ -10338,17 +10348,11 @@ components:
               type: string
               length: 254
               description: "Palavra Chave"
-
-      required:
-        [
-          "B1_FILIAL",
-          "B1_COD",
-          "B1_GRUPO",
-          "B1_DESC",
-          "B1_TIPO",
-          "B1_UM",
-          "B1_LOCPAD",
-        ]
+          required:
+            [
+            "B5_CEME"
+            ]
+      
 
     TitulosAReceber:
       type: object
