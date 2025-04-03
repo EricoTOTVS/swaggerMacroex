@@ -9088,1246 +9088,1246 @@ components:
             B5_FILIAL:
               type: C
               length: 4
-              description: Filial do Sistema
+              description: "Filial do Sistema"
 
             B5_COD:
               type: C
               length: 15
-              description: Codigo do Produto
+              description: "Codigo do Produto"
 
             B5_PRV2:
               type: N
               length: 14
-              description: Preco de venda 2
+              description: "Preco de venda 2"
 
             B5_PRV3:
               type: N
               length: 14
-              description: Preco de venda 3
+              description: "Preco de venda 3"
 
             B5_PRV4:
               type: N
               length: 14
-              description: Preco de venda 4
+              description: "Preco de venda 4"
 
             B5_PRV5:
               type: N
               length: 14
-              description: Preco de venda 5
+              description: "Preco de venda 5"
 
             B5_PRV6:
               type: N
               length: 14
-              description: Preco de venda 6
+              description: "Preco de venda 6"
 
             B5_ECDESCR:
               type: M
               length: 10
-              description: Descrição do Produto
+              description: "Descrição do Produto"
 
             B5_PRV7:
               type: N
               length: 14
-              description: Preco de venda 7
+              description: "Preco de venda 7"
 
             B5_CEME:
               type: C
               length: 200
-              description: Descricao cientifica
+              description: "Descricao cientifica"
 
             B5_ECENQUA:
               type: C
               length: 20
-              description: Cód Interno Enquadramento
+              description: "Cód Interno Enquadramento"
 
             B5_ECPESOE:
               type: N
               length: 10
-              description: Peso da Embalagem
+              description: "Peso da Embalagem"
 
             B5_CODCLI:
               type: C
               length: 15
-              description: Codigo no Cliente
+              description: "Codigo no Cliente"
 
             B5_CERT:
               type: C
               length: 1
-              options: S=Sim;N=Nao
-              description: S->se tiver certificado
+              options: "S=Sim;N=Nao"
+              description: "S->se tiver certificado"
 
             B5_ECALTEM:
               type: N
               length: 10
-              description: Altura Embalagem
+              description: "Altura Embalagem"
 
             B5_COMPR:
               type: N
               length: 9
-              description: Comprimento
+              description: "Comprimento"
 
             B5_DES:
               type: C
               length: 15
-              description: Codigo do Desenho da Peca
+              description: "Codigo do Desenho da Peca"
 
             B5_EMB1:
               type: C
               length: 10
-              description: Descricao da embalagem 1
+              description: "Descricao da embalagem 1"
 
             B5_EMB2:
               type: C
               length: 10
-              description: Descricao da embalagem 2
+              description: "Descricao da embalagem 2"
 
             B5_ESPESS:
               type: N
               length: 9
-              description: Espessura do material
+              description: "Espessura do material"
 
             B5_ESTMAT:
               type: C
               length: 1
-              options: S=Solido;L=Liquido;G=Gasoso
-              description: Estado fisico do material
+              options: "S=Solido;L=Liquido;G=Gasoso"
+              description: "Estado fisico do material"
 
             B5_LARG:
               type: N
               length: 9
-              description: Largura do material
+              description: "Largura do material"
 
             B5_QE1:
               type: N
               length: 5
               example: 99999
-              description: Qtde da embalagem 1
+              description: "Qtde da embalagem 1"
 
             B5_QE2:
               type: N
               length: 5
               example: 99999
-              description: Qtde da embalagem 2
+              description: "Qtde da embalagem 2"
 
             B5_CONVDIP:
               type: N
               length: 9
-              description: Fator de Conv. da DIPI
+              description: "Fator de Conv. da DIPI"
 
             B5_UMDIPI:
               type: C
               length: 2
-              description: Unid. Medida da DIPI
+              description: "Unid. Medida da DIPI"
 
             B5_CARPER:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Carga Perigosa
+              options: "1=Sim;2=Nao"
+              description: "Carga Perigosa"
 
             B5_DTREFP2:
               type: D
               length: 8
-              description: Data de Ref. do Preco 2
+              description: "Data de Ref. do Preco 2"
 
             B5_IDADEM:
               type: N
               length: 2
-              description: Idade Maxima do Veiculo
+              description: "Idade Maxima do Veiculo"
 
             B5_DTREFP3:
               type: D
               length: 8
-              description: Data de Ref. do Preco 3
+              description: "Data de Ref. do Preco 3"
 
             B5_DTREFP4:
               type: D
               length: 8
-              description: Data de Ref. do Preco 4
+              description: "Data de Ref. do Preco 4"
 
             B5_DTREFP5:
               type: D
               length: 8
-              description: Data de Ref. do Preco 5
+              description: "Data de Ref. do Preco 5"
 
             B5_DTREFP6:
               type: D
               length: 8
-              description: Data de Ref. do Preco 6
+              description: "Data de Ref. do Preco 6"
 
             B5_DTREFP7:
               type: D
               length: 8
-              description: Data de Ref. do Preco 7
+              description: "Data de Ref. do Preco 7"
 
             B5_COMPRLC:
               type: N
               length: 9
-              description: Comprimento Armazenagem
+              description: "Comprimento Armazenagem"
 
             B5_LARGLC:
               type: N
               length: 9
-              description: Largura Armazenagem
+              description: "Largura Armazenagem"
 
             B5_ALTURLC:
               type: N
               length: 9
-              description: Altura Armazenagem
+              description: "Altura Armazenagem"
 
             B5_FATARMA:
               type: N
               length: 5
-              description: Fator de Armazenamento
+              description: "Fator de Armazenamento"
 
             B5_EMPMAX:
               type: N
               length: 5
-              description: Empilhagem Maxima do Prod
+              description: "Empilhagem Maxima do Prod"
 
             B5_ROTACAO:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Rotaciona Prod. p/ Armaz.
+              options: "1=Sim;2=Nao"
+              description: "Rotaciona Prod. p/ Armaz."
 
             B5_VOLUME:
               type: N
               length: 11
-              description: Volume M3
+              description: "Volume M3"
 
             B5_CODCAI:
               type: C
               length: 6
-              description: Código Analítico do Item
+              description: "Código Analítico do Item"
 
             B5_LOCALIZ:
               type: C
               length: 15
-              description: não usado
+              description: "não usado"
 
             B5_CODGRP:
               type: C
               length: 4
-              description: Grupo Veiculos/Oficina
+              description: "Grupo Veiculos/Oficina"
 
             B5_CODITE:
               type: C
               length: 27
-              description: Produto Veiculos/Oficina
+              description: "Produto Veiculos/Oficina"
 
             B5_AM4PORC:
               type: N
               length: 5
-              description: Multiplicador AM 4%
+              description: "Multiplicador AM 4%"
 
             B5_ZF4PORC:
               type: N
               length: 5
-              description: Multiplicador ZF 4%
+              description: "Multiplicador ZF 4%"
 
             B5_CODZON:
               type: C
               length: 6
-              description: Zona Armaz.
+              description: "Zona Armaz."
 
             B5_UMIND:
               type: C
               length: 1
-              options: 1=1a Unidade de Medida;2=2a Unidade de Medida
-              description: Un. de Medida Industrial
+              options: "1=1a Unidade de Medida;2=2a Unidade de Medida"
+              description: "Un. de Medida Industrial"
 
             B5_SERVENT:
               type: C
               length: 3
-              description: Servico Padrão p/Entradas
+              description: "Servico Padrão p/Entradas"
 
             B5_SERVINT:
               type: C
               length: 3
-              description: Servico p/ Transf. Intern
+              description: "Servico p/ Transf. Intern"
 
             B5_SERVSAI:
               type: C
               length: 3
-              description: Servico Padrao p/Saidas
+              description: "Servico Padrao p/Saidas"
 
             B5_LVLEMB:
               type: N
               length: 14
-              description: Limite Valor de Embarque
+              description: "Limite Valor de Embarque"
 
             B5_LPSEMB:
               type: N
               length: 12
-              description: Limite Peso  de Embarque
+              description: "Limite Peso  de Embarque"
 
             B5_PERCUB:
               type: N
               length: 6
-              description: Percentual de Cubagem
+              description: "Percentual de Cubagem"
 
             B5_INTDI:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Integração DI
+              options: "1=Sim;2=Não"
+              description: "Integração DI"
 
             B5_IMPGRUP:
               type: C
               length: 1
-              description: Impressao do Produto
+              description: "Impressao do Produto"
 
             B5_BENDL:
               type: C
               length: 1
-              description: Benef Import. DLL288/67
+              description: "Benef Import. DLL288/67"
 
             B5_PINSUMO:
               type: C
               length: 1
-              description: Ident. se o prod e insumo
+              description: "Ident. se o prod e insumo"
 
             B5_PORTMS:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Utiliza no portal TMS
+              options: "1=Sim;2=Nao"
+              description: "Utiliza no portal TMS"
 
             B5_PRODDNF:
               type: N
               length: 3
-              description: Codigo do Produto da DNF
+              description: "Codigo do Produto da DNF"
 
             B5_NPULMAO:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Utiliz estrut. Pulmao WMS
+              options: "1=Sim;2=Nao"
+              description: "Utiliz estrut. Pulmao WMS"
 
             B5_INDPETR:
               type: C
               length: 1
-              options: 0=Sem Petr/Comb;1=Deriv. Petr;2=Petr/Comb nao deriv. Petr
-              description: Ind. Operacao
+              options: "0=Sem Petr/Comb;1=Deriv. Petr;2=Petr/Comb nao deriv. Petr"
+              description: "Ind. Operacao"
 
             B5_EMBAGRO:
               type: C
               length: 3
-              description: Código da Embalagem
+              description: "Código da Embalagem"
 
             B5_INSSPAT:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Incide INSS Patronal
+              options: "1=Sim;2=Não"
+              description: "Incide INSS Patronal"
 
             B5_REGMAPA:
               type: C
               length: 10
-              description: Registro Agro. MAPA
+              description: "Registro Agro. MAPA"
 
             B5_INSUMO:
               type: N
               length: 3
-              description: Codigo do Insumo
+              description: "Codigo do Insumo"
 
             B5_VOLRECI:
               type: N
               length: 5
-              description: Capacidade do Recipiente
+              description: "Capacidade do Recipiente"
 
             B5_CODISRF:
               type: N
               length: 6
-              description: Codigo SRF DIF-Bebidas
+              description: "Codigo SRF DIF-Bebidas"
 
             B5_USOITE:
               type: C
               length: 1
-              options: C=Comercial;I=Industrial
-              description: Uso do Item
+              options: "C=Comercial;I=Industrial"
+              description: "Uso do Item"
 
             B5_LOCALI2:
               type: C
               length: 15
-              description: Endereço Padrão do Produt
+              description: "Endereço Padrão do Produt"
 
             B5_CONCENT:
               type: N
               length: 6
-              description: Concentracäo do Produto
+              description: "Concentracäo do Produto"
 
             B5_DENSID:
               type: N
               length: 6
-              description: Densidade do Produto
+              description: "Densidade do Produto"
 
             B5_FTIN:
               type: N
               length: 7
-              description: Percentual FTI Nacional
+              description: "Percentual FTI Nacional"
 
             B5_FTIF:
               type: N
               length: 7
-              description: Perc. FTI Faturamento
+              description: "Perc. FTI Faturamento"
 
             B5_PROPOR1:
               type: N
               length: 7
-              description: Proporção 1-Crd Estímulo
+              description: "Proporção 1-Crd Estímulo"
 
             B5_PROPOR2:
               type: N
               length: 7
-              description: Proporcäo 2-Crd Estímulo
+              description: "Proporcäo 2-Crd Estímulo"
 
             B5_CRDEST1:
               type: N
               length: 7
-              description: % Credito Estímulo 1
+              description: "% Credito Estímulo 1"
 
             B5_CRDEST2:
               type: N
               length: 7
-              description: % Credito Estímulo 2
+              description: "% Credito Estímulo 2"
 
             B5_SERVEMB:
               type: C
               length: 3
-              description: Servico p/Saida e Embalag
+              description: "Servico p/Saida e Embalag"
 
             B5_CALORIA:
               type: N
               length: 7
-              description: Base Calórica do Produto
+              description: "Base Calórica do Produto"
 
             B5_PESO:
               type: N
               length: 12
-              description: Peso do Produto
+              description: "Peso do Produto"
 
             B5_TOTGOR:
               type: N
               length: 7
-              description: Gordura do Produto
+              description: "Gordura do Produto"
 
             B5_TOTGORS:
               type: N
               length: 7
-              description: Total de Gordura Saturada
+              description: "Total de Gordura Saturada"
 
             B5_TOTGORT:
               type: N
               length: 7
-              description: Total de Gordura Trans
+              description: "Total de Gordura Trans"
 
             B5_COR:
               type: C
               length: 15
-              description: Cor do Produto
+              description: "Cor do Produto"
 
             B5_ALTURA:
               type: N
               length: 9
-              description: Altura do Produto
+              description: "Altura do Produto"
 
             B5_MODELO:
               type: C
               length: 30
-              description: Modelo do Produto
+              description: "Modelo do Produto"
 
             B5_ESPECIE:
               type: C
               length: 5
-              description: Especie do Produto
+              description: "Especie do Produto"
 
             B5_QUALIDA:
               type: C
               length: 5
-              description: Qualidade do Produto
+              description: "Qualidade do Produto"
 
             B5_ONU:
               type: C
               length: 4
-              description: Nº ONU
+              description: "Nº ONU"
 
             B5_ITEM:
               type: C
               length: 2
-              description: Item
+              description: "Item"
 
             B5_CODTP:
               type: C
               length: 3
-              description: Codigo Tipo Mercadoria
+              description: "Codigo Tipo Mercadoria"
 
             B5_CMPEXTR:
               type: C
               length: 1
-              options: S=Sim;N=Não
-              description: Produto Extrativista
+              options: "S=Sim;N=Não"
+              description: "Produto Extrativista"
 
             B5_EAN141:
               type: N
               length: 6
               example: 999999
-              description: Indicador da qtd EAN14
+              description: "Indicador da qtd EAN14"
 
             B5_EAN142:
               type: N
               length: 6
               example: 999999
-              description: Indicador da qtd EAN14
+              description: "Indicador da qtd EAN14"
 
             B5_EAN143:
               type: N
               length: 6
               example: 999999
-              description: Indicador da qtd EAN14
+              description: "Indicador da qtd EAN14"
 
             B5_EAN144:
               type: N
               length: 6
               example: 999999
-              description: Indicador de ctd EAN14
+              description: "Indicador de ctd EAN14"
 
             B5_EAN145:
               type: N
               length: 6
               example: 999999
-              description: Indicador da qtd EAN14
+              description: "Indicador da qtd EAN14"
 
             B5_EAN146:
               type: N
               length: 6
               example: 999999
-              description: Indicador da qtd EAN14
+              description: "Indicador da qtd EAN14"
 
             B5_EAN147:
               type: N
               length: 6
               example: 999999
-              description: Indicador da qtd EAN14
+              description: "Indicador da qtd EAN14"
 
             B5_EAN148:
               type: N
               length: 6
               example: 999999
-              description: Indicador da qtd EAN14
+              description: "Indicador da qtd EAN14"
 
             B5_TIPUNIT:
               type: C
               length: 1
-              options: 0=Nao;1=Sim
-              description: Tipo Unitario
+              options: "0=Nao;1=Sim"
+              description: "Tipo Unitario"
 
             B5_QTDVAR:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Quantidade variavel
+              options: "1=Sim;2=Nao"
+              description: "Quantidade variavel"
 
             B5_IMPETI:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Imprime Etiqueta ?
+              options: "1=Sim;2=Nao"
+              description: "Imprime Etiqueta ?"
 
             B5_VLDOPER:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Valida Seq. das operacoes
+              options: "1=Sim;2=Nao"
+              description: "Valida Seq. das operacoes"
 
             B5_VLDREQ:
               type: C
               length: 1
-              options: 1=Valida na primeira operacao; 2=Valida na ultima operacao; 3= Nao Valida
-              description: Valida Requis. x Producao
+              options: "1=Valida na primeira operacao; 2=Valida na ultima operacao; 3= Nao Valida"
+              description: "Valida Requis. x Producao"
 
             B5_DTINV:
               type: D
               length: 8
-              description: Data do Inventario
+              description: "Data do Inventario"
 
             B5_PERIOT:
               type: N
               length: 3
               example: 999
-              description: Periodo em Dias
+              description: "Periodo em Dias"
 
             B5_NSERIE:
               type: C
               length: 1
-              options: S=Sim;N=Nao
-              description: Numero de serie
+              options: "S=Sim;N=Nao"
+              description: "Numero de serie"
 
             B5_QEI:
               type: N
               length: 12
-              description: Qtde por Emb. de impres.
+              description: "Qtde por Emb. de impres."
 
             B5_QEL:
               type: N
               length: 12
-              description: Qtde por Emb. de leitura
+              description: "Qtde por Emb. de leitura"
 
             B5_CDDMDBA:
               type: C
               length: 5
-              description: Cód.Tab.Prod.Diferido DMD
+              description: "Cód.Tab.Prod.Diferido DMD"
 
             B5_SITDIEF:
               type: C
               length: 2
-              description: Cod.Situacao DIEF-CE
+              description: "Cod.Situacao DIEF-CE"
 
             B5_DESCNFE:
               type: M
               length: 500
-              description: Inf. Adicionais da NFE
+              description: "Inf. Adicionais da NFE"
 
             B5_TABINC:
               type: C
               length: 2
-              description: Código Tabela Incidência
+              description: "Código Tabela Incidência"
 
             B5_CODGRU:
               type: C
               length: 2
-              description: Código do grupo
+              description: "Código do grupo"
 
             B5_MARCA:
               type: C
               length: 60
-              description: Marca Comercial
+              description: "Marca Comercial"
 
             B5_DIASHL:
               type: N
               length: 3
-              description: Horizonte de Liberação
+              description: "Horizonte de Liberação"
 
             B5_DIASHF:
               type: N
               length: 3
-              description: Horizonte Firme
+              description: "Horizonte Firme"
 
             B5_REVPROD:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Revisão da Estrutura
+              options: "1=Sim;2=Não"
+              description: "Revisão da Estrutura"
 
             B5_CODTRAM:
               type: C
               length: 4
-              description: Cod.Tribut.Amazonas
+              description: "Cod.Tribut.Amazonas"
 
             B5_TPSERV:
               type: C
               length: 1
-              options: 1=CC/Ref;2=Conc/Out
-              description: Tipo de Serviço
+              options: "1=CC/Ref;2=Conc/Out"
+              description: "Tipo de Serviço"
 
             B5_WMSEMB:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Utiliza Embalagem
+              options: "1=Sim;2=Não"
+              description: "Utiliza Embalagem"
 
             B5_NATBEN:
               type: C
               length: 2
-              description: Nat. Benefico
+              description: "Nat. Benefico"
 
             B5_SEMENTE:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Semente?
+              options: "1=Sim;2=Nao"
+              description: "Semente?"
 
             B5_CULTRA:
               type: C
               length: 10
-              description: Cultura
+              description: "Cultura"
 
             B5_DTDECRE:
               type: D
               length: 8
-              description: Data do decreto
+              description: "Data do decreto"
 
             B5_CTVAR:
               type: C
               length: 10
-              description: Código da Cultivar
+              description: "Código da Cultivar"
 
             B5_CATEG:
               type: C
               length: 2
-              description: Categoria
+              description: "Categoria"
 
             B5_PENE:
               type: C
               length: 4
-              description: Peneira
+              description: "Peneira"
 
             B5_COMPEND:
               type: C
               length: 1
-              options: 1=Permite;2=Nao Permite
-              description: Compartilha Endereco?
+              options: "1=Permite;2=Nao Permite"
+              description: "Compartilha Endereco?"
 
             B5_FUNCEP:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Produto no FUNCEP
+              options: "1=Sim;2=Nao"
+              description: "Produto no FUNCEP"
 
             B5_TPESOC:
               type: C
               length: 2
-              description: Classif. Tipo Serviço
+              description: "Classif. Tipo Serviço"
 
             B5_MARGPRE:
               type: N
               length: 6
-              description: % Margem Preferencia
+              description: "% Margem Preferencia"
 
             B5_VLRCID:
               type: N
               length: 9
-              description: Valor do ICMS de Pauta
+              description: "Valor do ICMS de Pauta"
 
             B5_IDHIST:
               type: C
               length: 20
-              description: ID Histórico
+              description: "ID Histórico"
 
             B5_PROJDES:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Vinculado ao Projeto Dese
+              options: "1=Sim;2=Não"
+              description: "Vinculado ao Projeto Dese"
 
             B5_ENDSAI:
               type: C
               length: 15
-              description: Endereco Saida
+              description: "Endereco Saida"
 
             B5_VERIND:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Verifica Prod Industr.
+              options: "1=Sim;2=Não"
+              description: "Verifica Prod Industr."
 
             B5_NRECAGR:
               type: C
               length: 15
-              description: Num Receita Agrononica
+              description: "Num Receita Agrononica"
 
             B5_INGATV:
               type: C
               length: 40
-              description: Nome Ingrediente  Ativo
+              description: "Nome Ingrediente  Ativo"
 
             B5_FORCAO:
               type: C
               length: 70
-              description: Formulação.
+              description: "Formulação."
 
             B5_TPCOMMO:
               type: C
               length: 1
-              options: 0=Não se Aplica;2=Algodão
-              description: Tipo Commodities
+              options: "0=Não se Aplica;2=Algodão"
+              description: "Tipo Commodities"
 
             B5_REDALIQ:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Redução de Alíquota
+              options: "1=Sim;2=Não"
+              description: "Redução de Alíquota"
 
             B5_FCIPRV:
               type: N
               length: 14
-              description: Preço Estim. Venda - FCI
+              description: "Preço Estim. Venda - FCI"
 
             B5_ZFMULTO:
               type: N
               length: 6
-              description: Multiplicador ZF Outros
+              description: "Multiplicador ZF Outros"
 
             B5_ZFMULTS:
               type: N
               length: 6
-              description: Multiplicador ZF S/SE
+              description: "Multiplicador ZF S/SE"
 
             B5_CODATIV:
               type: C
               length: 8
-              description: Código da Atividade Econô
+              description: "Código da Atividade Econô"
 
             B5_CODSERC:
               type: C
               length: 9
-              description: Codigo SERC do Produto
+              description: "Codigo SERC do Produto"
 
             B5_TAKEUP:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Take-Up?
+              options: "1=Sim;2=Não"
+              description: "Take-Up?"
 
             B5_CDFATD:
               type: C
               length: 5
-              description: Familia Tecnica
+              description: "Familia Tecnica"
 
             B5_CLASSE:
               type: C
               length: 70
-              description: Classe  Agrotóxicos.
+              description: "Classe  Agrotóxicos."
 
             B5_ECSEQ:
               type: C
               length: 15
-              description: Seq Exportação Intermedia
+              description: "Seq Exportação Intermedia"
 
             B5_DESCSER:
               type: M
               length: 10
-              description: DescriÇÃo do ServiÇo
+              description: "DescriÇÃo do ServiÇo"
 
             B5_ECEAN1:
               type: C
               length: 20
-              description: Codigo EAN13
+              description: "Codigo EAN13"
 
             B5_ISEN:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Produto Isento
+              options: "1=Sim;2=Nao"
+              description: "Produto Isento"
 
             B5_ECSUBT:
               type: C
               length: 100
-              description: Subtitulo
+              description: "Subtitulo"
 
             B5_CONCEN:
               type: C
               length: 25
-              description: Concentração.
+              description: "Concentração."
 
             B5_AMMULTS:
               type: N
               length: 6
-              description: Multiplicador AM S/SE
+              description: "Multiplicador AM S/SE"
 
             B5_AMMULTO:
               type: N
               length: 6
-              description: Multiplicador AM Outros
+              description: "Multiplicador AM Outros"
 
             B5_NATALBE:
               type: C
               length: 2
-              description: Nat.Alt.Benef
+              description: "Nat.Alt.Benef"
 
             B5_VLZERO:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Vl Merc. Zerado CT-e
+              options: "1=Sim;2=Não"
+              description: "Vl Merc. Zerado CT-e"
 
             B5_ARREQTD:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Arredonda Qt Distribuição
+              options: "1=Sim;2=Não"
+              description: "Arredonda Qt Distribuição"
 
             B5_ENDECD:
               type: C
               length: 15
-              description: Endereco Entrada Cross-Do
+              description: "Endereco Entrada Cross-Do"
 
             B5_ENDSCD:
               type: C
               length: 15
-              description: Endereco Saida Cross-Dock
+              description: "Endereco Saida Cross-Dock"
 
             B5_SERECD:
               type: C
               length: 3
-              description: Serviço Entrada Cross-Doc
+              description: "Serviço Entrada Cross-Doc"
 
             B5_SERSCD:
               type: C
               length: 3
-              description: Servico Saida Cross-Docki
+              description: "Servico Saida Cross-Docki"
 
             B5_SERVTDV:
               type: C
               length: 3
-              description: Serviço de Tranf. Devoluç
+              description: "Serviço de Tranf. Devoluç"
 
             B5_ECLARGE:
               type: N
               length: 10
-              description: Largura da Embalagem
+              description: "Largura da Embalagem"
 
             B5_INDCPRB:
               type: C
               length: 1
-              options: 0=Não;1=Sim
-              description: Indicador CPRB
+              options: "0=Não;1=Sim"
+              description: "Indicador CPRB"
 
             B5_DTDECAL:
               type: D
               length: 8
-              description: Data do decreto de alt.
+              description: "Data do decreto de alt."
 
             B5_2CODBAR:
               type: C
               length: 15
-              description: Codigo de barras da 2° un
+              description: "Codigo de barras da 2° un"
 
             B5_NUMBEAL:
               type: C
               length: 5
-              description: Número Decreto Alteração
+              description: "Número Decreto Alteração"
 
             B5_ECDESF:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Envia Descrição
+              options: "1=Sim;2=Não"
+              description: "Envia Descrição"
 
             B5_PRZCQ:
               type: N
               length: 2
-              description: Prazo de Entrega do CQ
+              description: "Prazo de Entrega do CQ"
 
             B5_ISDSHIP:
               type: C
               length: 1
-              options: 0=Não;1=Sim
-              description: Venda Direta DPM
+              options: "0=Não;1=Sim"
+              description: "Venda Direta DPM"
 
             B5_ISIDUNI:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Id único
+              options: "1=Sim;2=Não"
+              description: "Id único"
 
             B5_FORMMRP:
               type: C
               length: 1
-              options: 1=Pelo programa;2=Por OP;3=Por necessidade
-              description: Formato de geração MRP.
+              options: "1=Pelo programa;2=Por OP;3=Por necessidade"
+              description: "Formato de geração MRP."
 
             B5_NBS:
               type: C
               length: 9
-              description: Cód. Nom. Bras. de Serv.
+              description: "Cód. Nom. Bras. de Serv."
 
             B5_ECINDIC:
               type: M
               length: 10
-              description: Indicacao
+              description: "Indicacao"
 
             B5_NUMBEN:
               type: C
               length: 5
-              description: Numero do Decreto
+              description: "Numero do Decreto"
 
             B5_ANOBEN:
               type: C
               length: 4
               example: 9999
-              description: Ano de Vigência do Benef.
+              description: "Ano de Vigência do Benef."
 
             B5_CLAUBA:
               type: C
               length: 3
-              description: Classific. Produto UBA
+              description: "Classific. Produto UBA"
 
             B5_TRATAM:
               type: C
               length: 6
-              description: Tipo de tratamento
+              description: "Tipo de tratamento"
 
             B5_ECAPRES:
               type: M
               length: 10
-              description: Apresentacao
+              description: "Apresentacao"
 
             B5_ECIMGFI:
               type: C
               length: 90
-              description: Imagem Prod
+              description: "Imagem Prod"
 
             B5_INSPAT:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Calc INSS Patronal
+              options: "1=Sim;2=Não"
+              description: "Calc INSS Patronal"
 
             B5_UMPRC:
               type: C
               length: 2
-              description: Unidade de Medida Preço
+              description: "Unidade de Medida Preço"
 
             B5_ECDTEX:
               type: C
               length: 8
-              description: Dt. Exportação Intermed
+              description: "Dt. Exportação Intermed"
 
             B5_CTRWMS:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Controla WMS
+              options: "1=Sim;2=Não"
+              description: "Controla WMS"
 
             B5_DESTRAT:
               type: C
               length: 40
-              description: Descrição do Tratamento
+              description: "Descrição do Tratamento"
 
             B5_ECFLAG:
               type: C
               length: 1
-              options: 1=Ativo
-              description: E-Commerce  Status
+              options: "1=Ativo"
+              description: "E-Commerce  Status"
 
             B5_ECLARGU:
               type: N
               length: 10
-              description: Largura em metros
+              description: "Largura em metros"
 
             B5_SERVDEV:
               type: C
               length: 3
-              description: Serviço de Devolução
+              description: "Serviço de Devolução"
 
             B5_SERVREQ:
               type: C
               length: 3
-              description: Serviço de Requisição
+              description: "Serviço de Requisição"
 
             B5_BLQINVA:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Blq. p/ Invent. Automat.
+              options: "1=Sim;2=Não"
+              description: "Blq. p/ Invent. Automat."
 
             B5_AGLUMRP:
               type: C
               length: 1
-              description: Aglutinação no MRP
+              description: "Aglutinação no MRP"
 
             B5_ALTTRIB:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Alteracao Forma de Tribut
+              options: "1=Sim;2=Não"
+              description: "Alteracao Forma de Tribut"
 
             B5_CTDACON:
               type: C
               length: 9
-              description: Categoria Prod. Dacon
+              description: "Categoria Prod. Dacon"
 
             B5_DEC7174:
               type: C
               length: 1
-              options: 1=Sim;2=Não
-              description: Decreto 7174
+              options: "1=Sim;2=Não"
+              description: "Decreto 7174"
 
             B5_CODLIN:
               type: C
               length: 6
-              description: Linha da Peça
+              description: "Linha da Peça"
 
             B5_CODFAM:
               type: C
               length: 6
-              description: Família da Peça
+              description: "Família da Peça"
 
             B5_CODGNRE:
               type: N
               length: 3
               example: 999
-              description: Cod.Prod. GNRE
+              description: "Cod.Prod. GNRE"
 
             B5_CATMAT:
               type: C
               length: 20
-              description: Categoria segundo governo
+              description: "Categoria segundo governo"
 
             B5_BLQINVD:
               type: N
               length: 2
-              description: Dias . p/ Bloqueio de Inv
+              description: "Dias . p/ Bloqueio de Inv"
 
             B5_DIASES:
               type: N
               length: 3
-              description: Dias p/ cálculo do ES
+              description: "Dias p/ cálculo do ES"
 
             B5_ECCUBAG:
               type: N
               length: 9
-              description: Cubagem C3
+              description: "Cubagem C3"
 
             B5_ECDTEX2:
               type: C
               length: 8
-              description: Data da Exportacao Interm
+              description: "Data da Exportacao Interm"
 
             B5_ECDTLAN:
               type: D
               length: 8
-              description: Data Lancam.
+              description: "Data Lancam."
 
             B5_PROTOTI:
               type: L
               length: 1
-              description: Produto Protótipo?
+              description: "Produto Protótipo?"
 
             B5_LEADTR:
               type: N
               length: 5
-              description: Lead Time Transferência
+              description: "Lead Time Transferência"
 
             B5_MARPEC:
               type: C
               length: 6
-              description: Marca da Peça
+              description: "Marca da Peça"
 
             B5_MONTA:
               type: C
               length: 1
               example: 9
-              options: 1=Sim;2=Não
-              description: Efetua Montagem?
+              options: "1=Sim;2=Não"
+              description: "Efetua Montagem?"
 
             B5_ECCARAC:
               type: M
               length: 10
-              description: Caracteristicas  Produto
+              description: "Caracteristicas  Produto"
 
             B5_FORSER:
               type: C
               length: 3
-              description: Fórmula do Enderecamento
+              description: "Fórmula do Enderecamento"
 
             B5_PROTCON:
               type: C
               length: 30
-              description: Prot/Convenio ICMS
+              description: "Prot/Convenio ICMS"
 
             B5_TIPO:
               type: C
               length: 1
-              options: 1=Material;2=Serviço
-              description: Tipo de Produto
+              options: "1=Material;2=Serviço"
+              description: "Tipo de Produto"
 
             B5_VERSAO:
               type: C
               length: 3
-              description: Versão do Produto
+              description: "Versão do Produto"
 
             B5_ENVMKT:
               type: C
               length: 1
-              options: 0=Não;1=Sim
-              description: Envia MARKETPLACE
+              options: "0=Não;1=Sim"
+              description: "Envia MARKETPLACE"
 
             B5_TPISERV:
               type: C
               length: 1
-              options: 1=Arma;2=Colete;3=Munições;4=Recursos Humanos;5=Outros;6=Uniforme
-              description: Tipo de insumo p/ serviço
+              options: "1=Arma;2=Colete;3=Munições;4=Recursos Humanos;5=Outros;6=Uniforme"
+              description: "Tipo de insumo p/ serviço"
 
             B5_ENDENT:
               type: C
               length: 15
-              description: Endereco Entrada
+              description: "Endereco Entrada"
 
             B5_TPAPUR:
               type: C
               length: 1
-              description: Tipo Apuracao
+              description: "Tipo Apuracao"
 
             B5_GSLE:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Locacao Equipamento?
+              options: "1=Sim;2=Nao"
+              description: "Locacao Equipamento?"
 
             B5_GSMC:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Material de Consumo?
+              options: "1=Sim;2=Nao"
+              description: "Material de Consumo?"
 
             B5_GSMI:
               type: C
               length: 1
-              options: 1=Sim;2=Nao
-              description: Material Implantacao?
+              options: "1=Sim;2=Nao"
+              description: "Material Implantacao?"
 
             B5_ECBENFI:
               type: M
               length: 10
-              description: Beneficio
+              description: "Beneficio"
 
             B5_ECPROFU:
               type: N
               length: 10
-              description: Profundidade do Produto
+              description: "Profundidade do Produto"
 
             B5_ECCOMP:
               type: N
               length: 10
-              description: Comprimento em metros
+              description: "Comprimento em metros"
 
             B5_ECSEQ2:
               type: C
               length: 15
-              description: Seq Export Intermediaria
+              description: "Seq Export Intermediaria"
 
             B5_ENDREQ:
               type: C
               length: 15
-              description: Endereco Destino Requis.
+              description: "Endereco Destino Requis."
 
             B5_ENDDEV:
               type: C
               length: 15
-              description: Endereco Origem Devolução
+              description: "Endereco Origem Devolução"
 
             B5_GRPIVA:
               type: C
               length: 3
-              description: Grupo IVA
+              description: "Grupo IVA"
 
             B5_FPRZCQ:
               type: C
               length: 3
-              description: Fórmula para prazo CQ
+              description: "Fórmula para prazo CQ"
 
             B5_ECTITU:
               type: C
               length: 100
-              description: Titulo do Produto
+              description: "Titulo do Produto"
 
             B5_ECPCHAV:
               type: C
               length: 254
-              description: Palavra Chave
+              description: "Palavra Chave"
 
       required:
         [
