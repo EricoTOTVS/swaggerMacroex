@@ -9086,37 +9086,37 @@ components:
           type: object
           properties:
             B5_FILIAL:
-              type: C
+              type: string
               length: 4
               description: "Filial do Sistema"
 
             B5_COD:
-              type: C
+              type: string
               length: 15
               description: "Codigo do Produto"
 
             B5_PRV2:
-              type: N
+              type: number
               length: 14
               description: "Preco de venda 2"
 
             B5_PRV3:
-              type: N
+              type: number
               length: 14
               description: "Preco de venda 3"
 
             B5_PRV4:
-              type: N
+              type: number
               length: 14
               description: "Preco de venda 4"
 
             B5_PRV5:
-              type: N
+              type: number
               length: 14
               description: "Preco de venda 5"
 
             B5_PRV6:
-              type: N
+              type: number
               length: 14
               description: "Preco de venda 6"
 
@@ -9126,101 +9126,101 @@ components:
               description: "Descrição do Produto"
 
             B5_PRV7:
-              type: N
+              type: number
               length: 14
               description: "Preco de venda 7"
 
             B5_CEME:
-              type: C
+              type: string
               length: 200
               description: "Descricao cientifica"
 
             B5_ECENQUA:
-              type: C
+              type: string
               length: 20
               description: "Cód Interno Enquadramento"
 
             B5_ECPESOE:
-              type: N
+              type: number
               length: 10
               description: "Peso da Embalagem"
 
             B5_CODCLI:
-              type: C
+              type: string
               length: 15
               description: "Codigo no Cliente"
 
             B5_CERT:
-              type: C
+              type: string
               length: 1
               options: "S=Sim;N=Nao"
               description: "S->se tiver certificado"
 
             B5_ECALTEM:
-              type: N
+              type: number
               length: 10
               description: "Altura Embalagem"
 
             B5_COMPR:
-              type: N
+              type: number
               length: 9
               description: "Comprimento"
 
             B5_DES:
-              type: C
+              type: string
               length: 15
               description: "Codigo do Desenho da Peca"
 
             B5_EMB1:
-              type: C
+              type: string
               length: 10
               description: "Descricao da embalagem 1"
 
             B5_EMB2:
-              type: C
+              type: string
               length: 10
               description: "Descricao da embalagem 2"
 
             B5_ESPESS:
-              type: N
+              type: number
               length: 9
               description: "Espessura do material"
 
             B5_ESTMAT:
-              type: C
+              type: string
               length: 1
               options: "S=Solido;L=Liquido;G=Gasoso"
               description: "Estado fisico do material"
 
             B5_LARG:
-              type: N
+              type: number
               length: 9
               description: "Largura do material"
 
             B5_QE1:
-              type: N
+              type: number
               length: 5
               example: 99999
               description: "Qtde da embalagem 1"
 
             B5_QE2:
-              type: N
+              type: number
               length: 5
               example: 99999
               description: "Qtde da embalagem 2"
 
             B5_CONVDIP:
-              type: N
+              type: number
               length: 9
               description: "Fator de Conv. da DIPI"
 
             B5_UMDIPI:
-              type: C
+              type: string
               length: 2
               description: "Unid. Medida da DIPI"
 
             B5_CARPER:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Carga Perigosa"
@@ -9231,7 +9231,7 @@ components:
               description: "Data de Ref. do Preco 2"
 
             B5_IDADEM:
-              type: N
+              type: number
               length: 2
               description: "Idade Maxima do Veiculo"
 
@@ -9261,388 +9261,388 @@ components:
               description: "Data de Ref. do Preco 7"
 
             B5_COMPRLC:
-              type: N
+              type: number
               length: 9
               description: "Comprimento Armazenagem"
 
             B5_LARGLC:
-              type: N
+              type: number
               length: 9
               description: "Largura Armazenagem"
 
             B5_ALTURLC:
-              type: N
+              type: number
               length: 9
               description: "Altura Armazenagem"
 
             B5_FATARMA:
-              type: N
+              type: number
               length: 5
               description: "Fator de Armazenamento"
 
             B5_EMPMAX:
-              type: N
+              type: number
               length: 5
               description: "Empilhagem Maxima do Prod"
 
             B5_ROTACAO:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Rotaciona Prod. p/ Armaz."
 
             B5_VOLUME:
-              type: N
+              type: number
               length: 11
               description: "Volume M3"
 
             B5_CODCAI:
-              type: C
+              type: string
               length: 6
               description: "Código Analítico do Item"
 
             B5_LOCALIZ:
-              type: C
+              type: string
               length: 15
               description: "não usado"
 
             B5_CODGRP:
-              type: C
+              type: string
               length: 4
               description: "Grupo Veiculos/Oficina"
 
             B5_CODITE:
-              type: C
+              type: string
               length: 27
               description: "Produto Veiculos/Oficina"
 
             B5_AM4PORC:
-              type: N
+              type: number
               length: 5
               description: "Multiplicador AM 4%"
 
             B5_ZF4PORC:
-              type: N
+              type: number
               length: 5
               description: "Multiplicador ZF 4%"
 
             B5_CODZON:
-              type: C
+              type: string
               length: 6
               description: "Zona Armaz."
 
             B5_UMIND:
-              type: C
+              type: string
               length: 1
               options: "1=1a Unidade de Medida;2=2a Unidade de Medida"
               description: "Un. de Medida Industrial"
 
             B5_SERVENT:
-              type: C
+              type: string
               length: 3
               description: "Servico Padrão p/Entradas"
 
             B5_SERVINT:
-              type: C
+              type: string
               length: 3
               description: "Servico p/ Transf. Intern"
 
             B5_SERVSAI:
-              type: C
+              type: string
               length: 3
               description: "Servico Padrao p/Saidas"
 
             B5_LVLEMB:
-              type: N
+              type: number
               length: 14
               description: "Limite Valor de Embarque"
 
             B5_LPSEMB:
-              type: N
+              type: number
               length: 12
               description: "Limite Peso  de Embarque"
 
             B5_PERCUB:
-              type: N
+              type: number
               length: 6
               description: "Percentual de Cubagem"
 
             B5_INTDI:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Integração DI"
 
             B5_IMPGRUP:
-              type: C
+              type: string
               length: 1
               description: "Impressao do Produto"
 
             B5_BENDL:
-              type: C
+              type: string
               length: 1
               description: "Benef Import. DLL288/67"
 
             B5_PINSUMO:
-              type: C
+              type: string
               length: 1
               description: "Ident. se o prod e insumo"
 
             B5_PORTMS:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Utiliza no portal TMS"
 
             B5_PRODDNF:
-              type: N
+              type: number
               length: 3
               description: "Codigo do Produto da DNF"
 
             B5_NPULMAO:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Utiliz estrut. Pulmao WMS"
 
             B5_INDPETR:
-              type: C
+              type: string
               length: 1
               options: "0=Sem Petr/Comb;1=Deriv. Petr;2=Petr/Comb nao deriv. Petr"
               description: "Ind. Operacao"
 
             B5_EMBAGRO:
-              type: C
+              type: string
               length: 3
               description: "Código da Embalagem"
 
             B5_INSSPAT:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Incide INSS Patronal"
 
             B5_REGMAPA:
-              type: C
+              type: string
               length: 10
               description: "Registro Agro. MAPA"
 
             B5_INSUMO:
-              type: N
+              type: number
               length: 3
               description: "Codigo do Insumo"
 
             B5_VOLRECI:
-              type: N
+              type: number
               length: 5
               description: "Capacidade do Recipiente"
 
             B5_CODISRF:
-              type: N
+              type: number
               length: 6
               description: "Codigo SRF DIF-Bebidas"
 
             B5_USOITE:
-              type: C
+              type: string
               length: 1
               options: "C=Comercial;I=Industrial"
               description: "Uso do Item"
 
             B5_LOCALI2:
-              type: C
+              type: string
               length: 15
               description: "Endereço Padrão do Produt"
 
             B5_CONCENT:
-              type: N
+              type: number
               length: 6
               description: "Concentracäo do Produto"
 
             B5_DENSID:
-              type: N
+              type: number
               length: 6
               description: "Densidade do Produto"
 
             B5_FTIN:
-              type: N
+              type: number
               length: 7
               description: "Percentual FTI Nacional"
 
             B5_FTIF:
-              type: N
+              type: number
               length: 7
               description: "Perc. FTI Faturamento"
 
             B5_PROPOR1:
-              type: N
+              type: number
               length: 7
               description: "Proporção 1-Crd Estímulo"
 
             B5_PROPOR2:
-              type: N
+              type: number
               length: 7
               description: "Proporcäo 2-Crd Estímulo"
 
             B5_CRDEST1:
-              type: N
+              type: number
               length: 7
               description: "% Credito Estímulo 1"
 
             B5_CRDEST2:
-              type: N
+              type: number
               length: 7
               description: "% Credito Estímulo 2"
 
             B5_SERVEMB:
-              type: C
+              type: string
               length: 3
               description: "Servico p/Saida e Embalag"
 
             B5_CALORIA:
-              type: N
+              type: number
               length: 7
               description: "Base Calórica do Produto"
 
             B5_PESO:
-              type: N
+              type: number
               length: 12
               description: "Peso do Produto"
 
             B5_TOTGOR:
-              type: N
+              type: number
               length: 7
               description: "Gordura do Produto"
 
             B5_TOTGORS:
-              type: N
+              type: number
               length: 7
               description: "Total de Gordura Saturada"
 
             B5_TOTGORT:
-              type: N
+              type: number
               length: 7
               description: "Total de Gordura Trans"
 
             B5_COR:
-              type: C
+              type: string
               length: 15
               description: "Cor do Produto"
 
             B5_ALTURA:
-              type: N
+              type: number
               length: 9
               description: "Altura do Produto"
 
             B5_MODELO:
-              type: C
+              type: string
               length: 30
               description: "Modelo do Produto"
 
             B5_ESPECIE:
-              type: C
+              type: string
               length: 5
               description: "Especie do Produto"
 
             B5_QUALIDA:
-              type: C
+              type: string
               length: 5
               description: "Qualidade do Produto"
 
             B5_ONU:
-              type: C
+              type: string
               length: 4
               description: "Nº ONU"
 
             B5_ITEM:
-              type: C
+              type: string
               length: 2
               description: "Item"
 
             B5_CODTP:
-              type: C
+              type: string
               length: 3
               description: "Codigo Tipo Mercadoria"
 
             B5_CMPEXTR:
-              type: C
+              type: string
               length: 1
               options: "S=Sim;N=Não"
               description: "Produto Extrativista"
 
             B5_EAN141:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador da qtd EAN14"
 
             B5_EAN142:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador da qtd EAN14"
 
             B5_EAN143:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador da qtd EAN14"
 
             B5_EAN144:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador de ctd EAN14"
 
             B5_EAN145:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador da qtd EAN14"
 
             B5_EAN146:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador da qtd EAN14"
 
             B5_EAN147:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador da qtd EAN14"
 
             B5_EAN148:
-              type: N
+              type: number
               length: 6
               example: 999999
               description: "Indicador da qtd EAN14"
 
             B5_TIPUNIT:
-              type: C
+              type: string
               length: 1
               options: "0=Nao;1=Sim"
               description: "Tipo Unitario"
 
             B5_QTDVAR:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Quantidade variavel"
 
             B5_IMPETI:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Imprime Etiqueta ?"
 
             B5_VLDOPER:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Valida Seq. das operacoes"
 
             B5_VLDREQ:
-              type: C
+              type: string
               length: 1
               options: "1=Valida na primeira operacao; 2=Valida na ultima operacao; 3= Nao Valida"
               description: "Valida Requis. x Producao"
@@ -9653,34 +9653,34 @@ components:
               description: "Data do Inventario"
 
             B5_PERIOT:
-              type: N
+              type: number
               length: 3
               example: 999
               description: "Periodo em Dias"
 
             B5_NSERIE:
-              type: C
+              type: string
               length: 1
               options: "S=Sim;N=Nao"
               description: "Numero de serie"
 
             B5_QEI:
-              type: N
+              type: number
               length: 12
               description: "Qtde por Emb. de impres."
 
             B5_QEL:
-              type: N
+              type: number
               length: 12
               description: "Qtde por Emb. de leitura"
 
             B5_CDDMDBA:
-              type: C
+              type: string
               length: 5
               description: "Cód.Tab.Prod.Diferido DMD"
 
             B5_SITDIEF:
-              type: C
+              type: string
               length: 2
               description: "Cod.Situacao DIEF-CE"
 
@@ -9690,66 +9690,66 @@ components:
               description: "Inf. Adicionais da NFE"
 
             B5_TABINC:
-              type: C
+              type: string
               length: 2
               description: "Código Tabela Incidência"
 
             B5_CODGRU:
-              type: C
+              type: string
               length: 2
               description: "Código do grupo"
 
             B5_MARCA:
-              type: C
+              type: string
               length: 60
               description: "Marca Comercial"
 
             B5_DIASHL:
-              type: N
+              type: number
               length: 3
               description: "Horizonte de Liberação"
 
             B5_DIASHF:
-              type: N
+              type: number
               length: 3
               description: "Horizonte Firme"
 
             B5_REVPROD:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Revisão da Estrutura"
 
             B5_CODTRAM:
-              type: C
+              type: string
               length: 4
               description: "Cod.Tribut.Amazonas"
 
             B5_TPSERV:
-              type: C
+              type: string
               length: 1
               options: "1=CC/Ref;2=Conc/Out"
               description: "Tipo de Serviço"
 
             B5_WMSEMB:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Utiliza Embalagem"
 
             B5_NATBEN:
-              type: C
+              type: string
               length: 2
               description: "Nat. Benefico"
 
             B5_SEMENTE:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Semente?"
 
             B5_CULTRA:
-              type: C
+              type: string
               length: 10
               description: "Cultura"
 
@@ -9759,139 +9759,139 @@ components:
               description: "Data do decreto"
 
             B5_CTVAR:
-              type: C
+              type: string
               length: 10
               description: "Código da Cultivar"
 
             B5_CATEG:
-              type: C
+              type: string
               length: 2
               description: "Categoria"
 
             B5_PENE:
-              type: C
+              type: string
               length: 4
               description: "Peneira"
 
             B5_COMPEND:
-              type: C
+              type: string
               length: 1
               options: "1=Permite;2=Nao Permite"
               description: "Compartilha Endereco?"
 
             B5_FUNCEP:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Produto no FUNCEP"
 
             B5_TPESOC:
-              type: C
+              type: string
               length: 2
               description: "Classif. Tipo Serviço"
 
             B5_MARGPRE:
-              type: N
+              type: number
               length: 6
               description: "% Margem Preferencia"
 
             B5_VLRCID:
-              type: N
+              type: number
               length: 9
               description: "Valor do ICMS de Pauta"
 
             B5_IDHIST:
-              type: C
+              type: string
               length: 20
               description: "ID Histórico"
 
             B5_PROJDES:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Vinculado ao Projeto Dese"
 
             B5_ENDSAI:
-              type: C
+              type: string
               length: 15
               description: "Endereco Saida"
 
             B5_VERIND:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Verifica Prod Industr."
 
             B5_NRECAGR:
-              type: C
+              type: string
               length: 15
               description: "Num Receita Agrononica"
 
             B5_INGATV:
-              type: C
+              type: string
               length: 40
               description: "Nome Ingrediente  Ativo"
 
             B5_FORCAO:
-              type: C
+              type: string
               length: 70
               description: "Formulação."
 
             B5_TPCOMMO:
-              type: C
+              type: string
               length: 1
               options: "0=Não se Aplica;2=Algodão"
               description: "Tipo Commodities"
 
             B5_REDALIQ:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Redução de Alíquota"
 
             B5_FCIPRV:
-              type: N
+              type: number
               length: 14
               description: "Preço Estim. Venda - FCI"
 
             B5_ZFMULTO:
-              type: N
+              type: number
               length: 6
               description: "Multiplicador ZF Outros"
 
             B5_ZFMULTS:
-              type: N
+              type: number
               length: 6
               description: "Multiplicador ZF S/SE"
 
             B5_CODATIV:
-              type: C
+              type: string
               length: 8
               description: "Código da Atividade Econô"
 
             B5_CODSERC:
-              type: C
+              type: string
               length: 9
               description: "Codigo SERC do Produto"
 
             B5_TAKEUP:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Take-Up?"
 
             B5_CDFATD:
-              type: C
+              type: string
               length: 5
               description: "Familia Tecnica"
 
             B5_CLASSE:
-              type: C
+              type: string
               length: 70
               description: "Classe  Agrotóxicos."
 
             B5_ECSEQ:
-              type: C
+              type: string
               length: 15
               description: "Seq Exportação Intermedia"
 
@@ -9901,85 +9901,85 @@ components:
               description: "DescriÇÃo do ServiÇo"
 
             B5_ECEAN1:
-              type: C
+              type: string
               length: 20
               description: "Codigo EAN13"
 
             B5_ISEN:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Produto Isento"
 
             B5_ECSUBT:
-              type: C
+              type: string
               length: 100
               description: "Subtitulo"
 
             B5_CONCEN:
-              type: C
+              type: string
               length: 25
               description: "Concentração."
 
             B5_AMMULTS:
-              type: N
+              type: number
               length: 6
               description: "Multiplicador AM S/SE"
 
             B5_AMMULTO:
-              type: N
+              type: number
               length: 6
               description: "Multiplicador AM Outros"
 
             B5_NATALBE:
-              type: C
+              type: string
               length: 2
               description: "Nat.Alt.Benef"
 
             B5_VLZERO:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Vl Merc. Zerado CT-e"
 
             B5_ARREQTD:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Arredonda Qt Distribuição"
 
             B5_ENDECD:
-              type: C
+              type: string
               length: 15
               description: "Endereco Entrada Cross-Do"
 
             B5_ENDSCD:
-              type: C
+              type: string
               length: 15
               description: "Endereco Saida Cross-Dock"
 
             B5_SERECD:
-              type: C
+              type: string
               length: 3
               description: "Serviço Entrada Cross-Doc"
 
             B5_SERSCD:
-              type: C
+              type: string
               length: 3
               description: "Servico Saida Cross-Docki"
 
             B5_SERVTDV:
-              type: C
+              type: string
               length: 3
               description: "Serviço de Tranf. Devoluç"
 
             B5_ECLARGE:
-              type: N
+              type: number
               length: 10
               description: "Largura da Embalagem"
 
             B5_INDCPRB:
-              type: C
+              type: string
               length: 1
               options: "0=Não;1=Sim"
               description: "Indicador CPRB"
@@ -9990,46 +9990,46 @@ components:
               description: "Data do decreto de alt."
 
             B5_2CODBAR:
-              type: C
+              type: string
               length: 15
               description: "Codigo de barras da 2° un"
 
             B5_NUMBEAL:
-              type: C
+              type: string
               length: 5
               description: "Número Decreto Alteração"
 
             B5_ECDESF:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Envia Descrição"
 
             B5_PRZCQ:
-              type: N
+              type: number
               length: 2
               description: "Prazo de Entrega do CQ"
 
             B5_ISDSHIP:
-              type: C
+              type: string
               length: 1
               options: "0=Não;1=Sim"
               description: "Venda Direta DPM"
 
             B5_ISIDUNI:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Id único"
 
             B5_FORMMRP:
-              type: C
+              type: string
               length: 1
               options: "1=Pelo programa;2=Por OP;3=Por necessidade"
               description: "Formato de geração MRP."
 
             B5_NBS:
-              type: C
+              type: string
               length: 9
               description: "Cód. Nom. Bras. de Serv."
 
@@ -10039,23 +10039,23 @@ components:
               description: "Indicacao"
 
             B5_NUMBEN:
-              type: C
+              type: string
               length: 5
               description: "Numero do Decreto"
 
             B5_ANOBEN:
-              type: C
+              type: string
               length: 4
               example: 9999
               description: "Ano de Vigência do Benef."
 
             B5_CLAUBA:
-              type: C
+              type: string
               length: 3
               description: "Classific. Produto UBA"
 
             B5_TRATAM:
-              type: C
+              type: string
               length: 6
               description: "Tipo de tratamento"
 
@@ -10065,124 +10065,124 @@ components:
               description: "Apresentacao"
 
             B5_ECIMGFI:
-              type: C
+              type: string
               length: 90
               description: "Imagem Prod"
 
             B5_INSPAT:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Calc INSS Patronal"
 
             B5_UMPRC:
-              type: C
+              type: string
               length: 2
               description: "Unidade de Medida Preço"
 
             B5_ECDTEX:
-              type: C
+              type: string
               length: 8
               description: "Dt. Exportação Intermed"
 
             B5_CTRWMS:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Controla WMS"
 
             B5_DESTRAT:
-              type: C
+              type: string
               length: 40
               description: "Descrição do Tratamento"
 
             B5_ECFLAG:
-              type: C
+              type: string
               length: 1
               options: "1=Ativo"
               description: "E-Commerce  Status"
 
             B5_ECLARGU:
-              type: N
+              type: number
               length: 10
               description: "Largura em metros"
 
             B5_SERVDEV:
-              type: C
+              type: string
               length: 3
               description: "Serviço de Devolução"
 
             B5_SERVREQ:
-              type: C
+              type: string
               length: 3
               description: "Serviço de Requisição"
 
             B5_BLQINVA:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Blq. p/ Invent. Automat."
 
             B5_AGLUMRP:
-              type: C
+              type: string
               length: 1
               description: "Aglutinação no MRP"
 
             B5_ALTTRIB:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Alteracao Forma de Tribut"
 
             B5_CTDACON:
-              type: C
+              type: string
               length: 9
               description: "Categoria Prod. Dacon"
 
             B5_DEC7174:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Não"
               description: "Decreto 7174"
 
             B5_CODLIN:
-              type: C
+              type: string
               length: 6
               description: "Linha da Peça"
 
             B5_CODFAM:
-              type: C
+              type: string
               length: 6
               description: "Família da Peça"
 
             B5_CODGNRE:
-              type: N
+              type: number
               length: 3
               example: 999
               description: "Cod.Prod. GNRE"
 
             B5_CATMAT:
-              type: C
+              type: string
               length: 20
               description: "Categoria segundo governo"
 
             B5_BLQINVD:
-              type: N
+              type: number
               length: 2
               description: "Dias . p/ Bloqueio de Inv"
 
             B5_DIASES:
-              type: N
+              type: number
               length: 3
               description: "Dias p/ cálculo do ES"
 
             B5_ECCUBAG:
-              type: N
+              type: number
               length: 9
               description: "Cubagem C3"
 
             B5_ECDTEX2:
-              type: C
+              type: string
               length: 8
               description: "Data da Exportacao Interm"
 
@@ -10192,22 +10192,22 @@ components:
               description: "Data Lancam."
 
             B5_PROTOTI:
-              type: L
+              type: boolean
               length: 1
               description: "Produto Protótipo?"
 
             B5_LEADTR:
-              type: N
+              type: number
               length: 5
               description: "Lead Time Transferência"
 
             B5_MARPEC:
-              type: C
+              type: string
               length: 6
               description: "Marca da Peça"
 
             B5_MONTA:
-              type: C
+              type: string
               length: 1
               example: 9
               options: "1=Sim;2=Não"
@@ -10219,62 +10219,62 @@ components:
               description: "Caracteristicas  Produto"
 
             B5_FORSER:
-              type: C
+              type: string
               length: 3
               description: "Fórmula do Enderecamento"
 
             B5_PROTCON:
-              type: C
+              type: string
               length: 30
               description: "Prot/Convenio ICMS"
 
             B5_TIPO:
-              type: C
+              type: string
               length: 1
               options: "1=Material;2=Serviço"
               description: "Tipo de Produto"
 
             B5_VERSAO:
-              type: C
+              type: string
               length: 3
               description: "Versão do Produto"
 
             B5_ENVMKT:
-              type: C
+              type: string
               length: 1
               options: "0=Não;1=Sim"
               description: "Envia MARKETPLACE"
 
             B5_TPISERV:
-              type: C
+              type: string
               length: 1
               options: "1=Arma;2=Colete;3=Munições;4=Recursos Humanos;5=Outros;6=Uniforme"
               description: "Tipo de insumo p/ serviço"
 
             B5_ENDENT:
-              type: C
+              type: string
               length: 15
               description: "Endereco Entrada"
 
             B5_TPAPUR:
-              type: C
+              type: string
               length: 1
               description: "Tipo Apuracao"
 
             B5_GSLE:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Locacao Equipamento?"
 
             B5_GSMC:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Material de Consumo?"
 
             B5_GSMI:
-              type: C
+              type: string
               length: 1
               options: "1=Sim;2=Nao"
               description: "Material Implantacao?"
@@ -10285,47 +10285,47 @@ components:
               description: "Beneficio"
 
             B5_ECPROFU:
-              type: N
+              type: number
               length: 10
               description: "Profundidade do Produto"
 
             B5_ECCOMP:
-              type: N
+              type: number
               length: 10
               description: "Comprimento em metros"
 
             B5_ECSEQ2:
-              type: C
+              type: string
               length: 15
               description: "Seq Export Intermediaria"
 
             B5_ENDREQ:
-              type: C
+              type: string
               length: 15
               description: "Endereco Destino Requis."
 
             B5_ENDDEV:
-              type: C
+              type: string
               length: 15
               description: "Endereco Origem Devolução"
 
             B5_GRPIVA:
-              type: C
+              type: string
               length: 3
               description: "Grupo IVA"
 
             B5_FPRZCQ:
-              type: C
+              type: string
               length: 3
               description: "Fórmula para prazo CQ"
 
             B5_ECTITU:
-              type: C
+              type: string
               length: 100
               description: "Titulo do Produto"
 
             B5_ECPCHAV:
-              type: C
+              type: string
               length: 254
               description: "Palavra Chave"
 
