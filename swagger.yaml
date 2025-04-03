@@ -9226,7 +9226,8 @@ components:
               description: "Carga Perigosa"
 
             B5_DTREFP2:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data de Ref. do Preco 2"
 
@@ -9236,27 +9237,32 @@ components:
               description: "Idade Maxima do Veiculo"
 
             B5_DTREFP3:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data de Ref. do Preco 3"
 
             B5_DTREFP4:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data de Ref. do Preco 4"
 
             B5_DTREFP5:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data de Ref. do Preco 5"
 
             B5_DTREFP6:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data de Ref. do Preco 6"
 
             B5_DTREFP7:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data de Ref. do Preco 7"
 
@@ -9648,7 +9654,8 @@ components:
               description: "Valida Requis. x Producao"
 
             B5_DTINV:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data do Inventario"
 
@@ -9754,7 +9761,8 @@ components:
               description: "Cultura"
 
             B5_DTDECRE:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data do decreto"
 
@@ -9985,7 +9993,8 @@ components:
               description: "Indicador CPRB"
 
             B5_DTDECAL:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data do decreto de alt."
 
@@ -10187,7 +10196,8 @@ components:
               description: "Data da Exportacao Interm"
 
             B5_ECDTLAN:
-              type: D
+              type: string
+              format: date
               length: 8
               description: "Data Lancam."
 
